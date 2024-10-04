@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {
+            list-style: none;
+        }
+
+        .scene {
+            background-color: black;
+            width: 600px;
+            margin: auto;
+        }
+
+        figure video {
+            width: 100%;
+        }
+
+        .control {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .control li {
+            width: 25%;
+            padding: 10px;
+            background-color: #ccc;
+            text-align: center;
+        }
+
+        .control li.on {
+            background-color: black;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="scene">
+        <figure>
+            <video src="./images/ipad.mp4" loop></video>
+        </figure>
+        <ul class="control">
+            <li class="play">play</li>
+            <li class="pause">pause</li>
+            <li class="stop on">stop</li>
+            <li class="rate1">1배</li>
+            <li class="rate1-5">1.5배</li>
+            <li class="rate2">2배</li>
+            <li class="back">&lt&lt</li>
+            <li class="ford">&gt&gt</li>
+            <li class="s-on">sound on</li>
+            <li class="s-off">sound off</li>
+        </ul>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        const v = $('video').get(0)
+        $('.play').click(function () {
+            buttonControl($(this))
+            v.play()
+        })
+        $('.pause').click(function () {
+            buttonControl($(this))
+            v.pause()
+        })
+        $('.stop').click(function () {
+            buttonControl($(this))
+            v.stop()
+            v.currentTime = 0
+        })
+        $('.rate1').click(function () {
+            buttonControl($(this))
+            v.playbackRate=1
+        })
+        $('.rate1-5').click(function () {
+            buttonControl($(this))
+            v.playbackRate=1.5
+        })
+        $('.rate2').click(function () {
+            buttonControl($(this))
+            v.playbackRate=2
+        })
+        $('.back').click(function () {
+            buttonControl($(this))
+            v.currentTime -= 10
+        })
+        $('.ford').click(function () {
+            buttonControl($(this))
+            v.currentTime += 2
+        })
+        $('.s-on').click(function () {
+            buttonControl($(this))
+            v.muted =true
+        })
+        $('.s-off').click(function () {
+            buttonControl($(this))
+            v.muted =false
+        })
+        function buttonControl(target) {
+            $('.control li').removeClass('on')
+            $(target).addClass('on')
+        }
+    </script>
+</body>
+
+</html>

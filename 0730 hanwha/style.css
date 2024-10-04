@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+
+@font-face {
+    font-family: 'HancomMalangMalang-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2406-1@1.0/HancomMalangMalang-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    width: 1200px;
+    margin: auto;
+}
+
+.container {
+    position: fixed;
+    background-image: url(./images/bg\ \(2\).jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+
+}
+
+.vid {
+    z-index: -1;
+    position: absolute;
+    right: 60%;
+    opacity: .8;
+}
+.vid2{z-index: -1;
+position: absolute;
+top: 10%;
+left: -10%;}
+
+
+.vid img {
+    position: fixed;
+    width: 140%;
+}
+.vid2 img{position: fixed;
+width: 50%;
+opacity: .7;}
+
+.container::after {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, .4);
+
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section,
+.art3 {
+    gap: 15px;
+}
+
+hgroup h2 {
+    font-family: "Black Han Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4.5vw;
+    -webkit-text-stroke: 1px yellow;
+}
+
+hgroup {
+    text-align: center;
+    color: #fff
+}
+
+hgroup p {
+    font-size: 2vw;
+    font-family: 'HancomMalangMalang-Regular';
+}
+
+figure {
+    width: 400px;
+    height: 382px;
+
+}
+.transform{transition: .5s;
+    cursor: pointer;}
+figure:hover .transform{   transform: rotateY(180deg);}
+figure img {
+    width: 100%;
+}
+
+.item figure {
+    width: 100%;
+    height: 50%;
+}
+
+h1 img {
+    width: 100%;
+}
+
+
+.btn {
+    position: absolute;
+    right: 30px;
+    bottom: 50px;
+    align-items: end;
+
+}
+
+button {
+    display: inline-block;
+    color: #fff;
+    font-weight: bold;
+    padding: 0 5px;
+    color: #ff0;
+    font-family: 'HancomMalangMalang-Regular';
+}
+
+.btn i {
+    color: #ff0;
+}
+
+article {
+    background-color: rgba(0, 0, 0, 0.3);
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+article figure {
+    width: 100%;
+}
+
+article figure img {
+    width: 100%;
+}
+
+section {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.item:nth-child(1) {
+    width: 100%;
+    height: 48%;
+    text-align: center;
+    background-image: url(./images/미디어룸.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.item.btn {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
+
+.item:nth-child(2) {
+    background-image: url(./images/조약돌.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    width: 100%;
+    height: 48%;
+    position: relative;
+}
+
+.item a img {
+    width: 30%;
+    position: absolute;
+    right: 30px;
+    top: 160px;
+}
+
+/* .art1,
+.art2 {
+    border: 1px solid rgba(255, 255, 255, .5);
+}
+
+
+.item {
+    border: 1px solid rgba(255, 255, 255, .5);
+} */
+
+footer {
+    width: 100%;
+    margin-top: 50px;
+    height: 200px;
+    background: rgba(0, 0, 0, .6);
+    color: #fff;
+    display: flex;
+
+}
+
+.f-logo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.f-logo img {
+    width: 100%;
+}
+
+.u-tube {
+    width: 10%;
+}
+
+.png {
+    width: 50%;
+}
+
+.png img {
+    width: 100%;
+}
+
+.u-tube img {
+    width: 100%;
+}
+
+.f-logo ul {
+    display: flex;
+    margin-bottom: 50px;
+    gap: 50px;
+}
+
+.f-cont {
+    width: 1200px;
+    margin: auto;
+}
+
+.content{color: #fff;
+position: absolute;
+top:50%;
+left:50%;
+transform: translate(-50%,-50%);
+width: 90%;
+display: none;}
+.content h2{margin-bottom: 15px;}
+/* 모바일 */
+@media screen and (max-width:576px) {
+    body {
+        padding: .75rem;
+    }
+
+    hgroup p {
+        font-size: 4vw;
+    }
+
+    h2 {
+        font-size: 6vw;
+    }
+
+    .art1 {
+        width: 100%;
+    }
+
+    .art2 {
+        width: 100%;
+    }
+
+    article img :not() {
+        padding: 40px;
+    }
+
+    .art3 {
+        height: 200px;
+        width: 100%;
+    }
+
+    .art3 .item {
+        width: 48%;
+        height: 100%;
+    }
+
+    button {
+        font-size: 1.5rem;
+    }
+
+    .item a img {
+        width: 50%;
+    }
+}
+
+/* 테블릿 */
+@media screen and (min-width:577px) {
+    .container {
+        padding: .75rem;
+    }
+
+    /* 
+    html{
+    font-size:16px //1rem
+    }
+    p{
+    font-size:16px;
+    }
+
+    */
+    h1 img {
+        width: auto;
+    }
+
+    .art1 {
+        width: calc(50% - 20px);
+    }
+
+    .art2 {
+        width: 50%;
+    }
+
+    .art3 {
+        height: 400px;
+        width: 100%;
+    }
+
+    button {
+        font-size: 1.5rem;
+    }
+
+    .item:nth-child(1) {
+
+        background-position: left center;
+    }
+
+    .item:nth-child(2) {
+
+        background-position: top center;
+    }
+}
+
+/* pc */
+@media screen and (min-width:980px) {
+    .wrap {
+        min-width: 1200px;
+        margin: auto;
+    }
+
+    h1 img {
+        width: auto;
+    }
+
+    .art1 {
+        width: 30%;
+    }
+
+    .art2 {
+        width: 37%;
+    }
+
+    .art3 {
+        width: 30%;
+        height: 500px;
+    }
+
+    button {
+        font-size: 1.2rem;
+    }
+}

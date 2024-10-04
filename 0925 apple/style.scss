@@ -1,0 +1,201 @@
+@import url(./reset.css);
+
+// .intro{
+//     width: 100vw;
+//     min-height: 100vh;
+//     position: relative;
+//     z-index: 999;
+//     video{
+//         width: 100%;
+//         height: 100%;
+//     }
+// }
+
+body {
+    width: 100%;
+    height: 100vh;
+    // border: 3px solid #ff0000;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    color: #fff;
+
+    a {
+        display: flex;
+
+        h1 {
+            width: 20px;
+            height: 25px;
+            margin: 0 15px 0 50px;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+
+}
+
+
+button {
+    margin-top: 30px;
+    padding: 10px 20px;
+    width: 50px;
+    border-style: none;
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+    color: #fff;
+    display: none;
+
+    &:after {
+        content: '';
+        background: #fff;
+        position: absolute;
+        bottom: 0;
+        height: 1px;
+        left: 0;
+        width: 0;
+        color: #fff;
+        transition: all cubic-bezier(0.17, 0.54, 0.58, 1.1).5s;
+    }
+
+    &:hover {
+        &:after {
+            color: #fff;
+            width: 70px;
+            transition: all cubic-bezier(0.17, 0.54, 0.58, 1.1) .5s;
+        }
+    }
+}
+
+
+.list {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    top: 0;
+    z-index: 99;
+    overflow: hidden;
+
+    figure {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border: 1px solid #000;
+        background-color: #000;
+
+        video {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    ul {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        min-width: 1190px;
+        height: 100%;
+        display: flex;
+
+
+
+        li {
+            width: 25%;
+            height: 100%;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            color: #fff;
+            transition: .4s;
+            opacity: .3;
+
+
+            &:hover {
+                flex: 4;
+                opacity: 1;
+            }
+
+            &:hover button {
+                display: inline-block;
+            }
+
+            &:hover .tx p {
+                display: block;
+            }
+
+            &:hover .tx h1 {
+                display: block;
+            }
+            &:hover .tx h2 {
+                transform: translateY(-10px);
+            }
+
+            .tx {
+                min-width: 250px;
+                margin: auto;
+                padding: 10px;
+
+                h2 {
+                    color: #fff;
+                    margin-bottom: 20px;
+                    font-weight: 300;
+                    transform: translateY(40px);
+transition: .4s;
+                }
+
+                h1 {
+                    font-weight: 300;
+                    font-size: 24px;
+                    margin-bottom: 30px;
+
+                    span {
+                        display: inline-block;
+                        opacity: 0;
+                        transform: translateY(50px);
+                        transition: .5s;
+                        opacity: .5s;
+                    }
+                }
+
+                p {
+                    display: none;
+                }
+            }
+
+            .line {
+                width: 1px;
+                height: 100px;
+                background-color: #ffffff;
+            }
+        }
+
+    }
+}
+
+.frame {
+    position: absolute;
+    z-index: 99;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    // height: 100vh;
+    transition-duration: 0.35s;
+    transition-timing-function: linear;
+    // background-color: #fff;
+
+    .scene {
+        width: 100%;
+        height: 100%;
+    }
+}

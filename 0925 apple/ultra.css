@@ -1,0 +1,500 @@
+@import url(./reset.css);
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+header a {
+  display: flex;
+}
+header a h1 {
+  width: 20px;
+  height: 25px;
+  margin: 0 15px 0 50px;
+}
+header a h1 img {
+  width: 100%;
+}
+
+figure {
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+}
+figure video {
+  width: 100%;
+  min-height: 100%;
+}
+
+article {
+  width: 100%;
+  height: 100%;
+}
+article.art1 {
+  width: 100%;
+  height: 100%;
+  margin-top: 10%;
+}
+article.art1 .txt {
+  width: 42%;
+  min-width: 300px;
+  height: 100px;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+article.art1 .txt h2 {
+  font-size: 4rem;
+}
+article.art1 figure {
+  width: 50%;
+  margin: auto;
+  min-height: 80%;
+  position: relative;
+  margin-top: -100px;
+}
+article.art1 figure video {
+  width: 100%;
+  min-width: 500px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99;
+}
+article.art1 p {
+  width: 35%;
+  min-width: 300px;
+  margin: auto;
+  text-align: center;
+  color: #ccc;
+  font-weight: 300;
+  font-size: 1.3rem;
+  line-height: 2.5rem;
+}
+article.art2 {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  margin-top: 20%;
+  position: relative;
+}
+article.art2 .scroll-title {
+  width: 100%;
+  font-size: 4rem;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, 100px);
+  z-index: 1;
+  transition: transform 0.6s ease-in-out;
+  text-align: center;
+}
+article.art2 figure {
+  width: 100%;
+  height: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+article.art2 figure img {
+  width: 100%;
+}
+article.art3 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+article.art3 figure {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+article.art3 .wr {
+  margin-left: 100px;
+}
+article.art3 .wr li {
+  margin-bottom: 50px;
+}
+article.art3 .wr li h2 {
+  font-size: 4rem;
+}
+article.art3 .wr li p {
+  font-size: 1.5rem;
+  color: #ccc;
+}
+article.art3-1 {
+  width: 100%;
+  height: 100%;
+}
+article.art3-1 .content {
+  width: 60%;
+  margin: auto;
+}
+article.art3-1 .content h2 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+}
+article.art3-1 .content > p {
+  color: #ccc;
+  width: 80%;
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+article.art3-1 .content ul {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+article.art3-1 .content ul li h3 {
+  color: #f56900;
+}
+article.art3-1 .content ul li p,
+article.art3-1 .content ul li span {
+  color: #ccc;
+}
+article.art4 {
+  margin-top: 10%;
+  width: 100%;
+  height: 100vh;
+  background-image: url(./images/running.jpg);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+}
+article.art4 .content {
+  width: 40%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+article.art4 .content h2 {
+  font-size: 4rem;
+  margin-bottom: 30px;
+}
+article.art4 .content p,
+article.art4 .content span {
+  font-size: 1.3rem;
+}
+article.art5 {
+  width: 100%;
+  height: 100%;
+  margin-top: 10%;
+}
+article.art5 h2 {
+  width: 70%;
+  margin: auto;
+  margin-bottom: 80px;
+  font-size: 2rem;
+}
+article.art5 .swiper {
+  width: 70%;
+  height: 450px;
+  border: 1px solid #ffffff;
+  overflow: hidden;
+  position: relative;
+}
+article.art5 .swiper .swiper-wrapper {
+  display: flex;
+  align-items: end;
+}
+article.art5 .swiper .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  background-color: #000;
+  position: relative;
+}
+article.art5 .swiper .swiper-slide:hover .desc {
+  transform: translateY(0);
+}
+article.art5 .swiper .swiper-slide .desc {
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  bottom: 0;
+  transform: translateY(300px);
+  transition: 0.5s;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+}
+article.art5 .swiper .swiper-slide .desc p {
+  width: 80%;
+  margin: auto;
+  line-height: 2rem;
+  font-size: 0.8rem;
+}
+article.art5 .swiper .swiper-slide .desc p span {
+  color: #f56900;
+  font-weight: bold;
+  font-size: 1rem;
+}
+article.art5 .swiper .swiper-slide .swiper-slide img {
+  display: block;
+  width: 80%;
+}
+article.art5 .swiper .arrow {
+  color: #fff;
+}
+article.art6 {
+  margin-top: 10%;
+  width: 100%;
+  height: 100vh;
+  background-image: url(./images/cycling.jpg);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+}
+article.art6 .content {
+  width: 40%;
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+}
+article.art6 .content h2 {
+  font-size: 4rem;
+  margin-bottom: 30px;
+}
+article.art6 .content p,
+article.art6 .content span {
+  font-size: 1.3rem;
+  line-height: 2.5rem;
+  width: 550px;
+}
+article.art7 {
+  width: 100%;
+  height: 100%;
+  margin-top: 10%;
+}
+article.art7 h2 {
+  width: 70%;
+  margin: auto;
+  margin-bottom: 80px;
+  font-size: 2rem;
+}
+article.art7 .swiper {
+  width: 70%;
+  height: 450px;
+  overflow: hidden;
+  position: relative;
+}
+article.art7 .swiper .swiper-wrapper {
+  display: flex;
+  align-items: end;
+}
+article.art7 .swiper .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  background-color: #000;
+  position: relative;
+}
+article.art7 .swiper .swiper-slide:hover .desc {
+  transform: translateY(0);
+}
+article.art7 .swiper .swiper-slide .desc {
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  bottom: 0;
+  transform: translateY(300px);
+  transition: 0.5s;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+}
+article.art7 .swiper .swiper-slide .desc p {
+  width: 80%;
+  margin: auto;
+  line-height: 2rem;
+  font-size: 0.8rem;
+}
+article.art7 .swiper .swiper-slide .desc p span {
+  color: #f56900;
+  font-weight: bold;
+  font-size: 1rem;
+}
+article.art7 .swiper .swiper-slide .swiper-slide img {
+  display: block;
+  width: 80%;
+}
+article.art7 .swiper .arrow {
+  color: #fff;
+}
+article.art8 {
+  margin-top: 10%;
+  width: 100%;
+  height: 100vh;
+  background-image: url(./images/diving.jpg);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+}
+article.art8 .content {
+  width: 40%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+article.art8 .content h2 {
+  font-size: 4rem;
+  margin-bottom: 30px;
+}
+article.art8 .content p,
+article.art8 .content span {
+  font-size: 1.3rem;
+  line-height: 2.5rem;
+  width: 550px;
+}
+article.art9 {
+  width: 100%;
+  height: 100%;
+  margin-top: 10%;
+}
+article.art9 h2 {
+  width: 70%;
+  margin: auto;
+  margin-bottom: 80px;
+  font-size: 2rem;
+}
+article.art9 .swiper {
+  width: 70%;
+  height: 450px;
+  overflow: hidden;
+  position: relative;
+}
+article.art9 .swiper .swiper-wrapper {
+  display: flex;
+  align-items: end;
+}
+article.art9 .swiper .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  background-color: #000;
+  position: relative;
+}
+article.art9 .swiper .swiper-slide:hover .desc {
+  transform: translateY(0);
+}
+article.art9 .swiper .swiper-slide .desc {
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  bottom: 0;
+  transform: translateY(300px);
+  transition: 0.5s;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+}
+article.art9 .swiper .swiper-slide .desc p {
+  width: 80%;
+  margin: auto;
+  line-height: 2rem;
+  font-size: 0.8rem;
+}
+article.art9 .swiper .swiper-slide .desc p span {
+  color: #f56900;
+  font-weight: bold;
+  font-size: 1rem;
+}
+article.art9 .swiper .swiper-slide .swiper-slide img {
+  display: block;
+  width: 80%;
+}
+article.art9 .swiper .arrow {
+  color: #fff;
+}
+
+footer {
+  width: 100%;
+  height: 65vh;
+  position: relative;
+  margin-top: 10%;
+}
+footer .footer {
+  width: 60%;
+  height: 100%;
+  margin: auto;
+}
+footer .footer .title {
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+footer .footer .title li {
+  padding: 30px;
+}
+footer .footer .title li h2 {
+  width: 30px;
+}
+footer .footer .title li h2 img {
+  width: 100%;
+}
+footer .footer .info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #ccc;
+  padding: 20px;
+}
+footer .footer .info li {
+  padding: 5px;
+}
+footer .footer .info li a {
+  display: inline-block;
+  transition: 0.4s;
+}
+footer .footer .info li a:hover {
+  border-bottom: 1px solid #ccc;
+}
+footer .footer .info li:first-child {
+  color: #fff;
+}
+footer .footer .copy {
+  width: 60%;
+  border-top: 1px solid #ffffff;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  gap: 20px;
+  height: 80px;
+  padding: 20px;
+}
+footer .footer .copy > p {
+  font-size: 0.8rem;
+}
+footer .footer .copy ul {
+  display: flex;
+  gap: 10px;
+}
+footer .footer .copy ul li {
+  font-size: 0.7rem;
+}

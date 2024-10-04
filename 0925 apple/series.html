@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./series.css">
+</head>
+
+<body>
+    <header>
+        <a href="#">
+            <h1><img src="./images/logo-black.png" alt=""></h1>
+            <p>Apple</p>
+        </a>
+    </header>
+    <div class="start">
+        <h2>얇아진 두께. 더 커진 존재감.</h2>
+        <video src="./images/wat10 (2).mp4" autoplay></video>
+    </div>
+    <article class="art1">
+        <div class="text">
+            <h2>Apple Watch Series10</h2>
+        </div>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./images/series-swi1.jpg" alt="">
+                    <p>Apple Watch 사상 가장 얇은 디자인
+                        그리고 가장 큰 디스플레이.</p>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/series-swi2.jpg" alt="">
+                    <p>각종 유용한 건강 관련 수치를
+                        확인할 수 있는 ‘활력 징후’ 앱.</p>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/series-swi3.jpg" alt="">
+                    <p>수상 및 수중 활동을 위한
+                        새로운 수심 및 수온 센서.</p>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/series-swi4.jpg" alt="">
+                    <p>Apple Watch 사상 가장 빠른 충전 시간.2
+                        30분에 80% 충전.</p>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/series-swi6.jpg" alt="">
+                    <p style="color: #fff;">당신의 생활 패턴에 맞게 맞춤 설정할 수 있는 ‘활동’ 링 등, 피트니스 경험을 세밀하게 조정할 수 있는 새로운 방법.</p>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+    </article>
+    <article class="art2">
+        <div class="con1">
+            <figure><img src="./images/big.png" alt=""></figure>
+            <div class="display">
+                <div class="cont-left">
+                    <h2>크나큰 디스플레이.</h2>
+                    <p>Apple Watch 역사에 한 획을 긋는 Series 10. Apple Watch 사상 가장 크고 앞선 디스플레이1를 탑재해 그 어느 때보다 많은 정보를 화면에 담아냅니다.
+                        게다가 Apple 최초의 와이드 앵글 OLED 디스플레이 덕분에, 비스듬한 각도로 볼 때의 화면 밝기가 전에 비해 더 밝아졌습니다. 덕분에 보다 쉽게 시계를 한눈에 확인할
+                        수 있죠.</p>
+                </div>
+            </div>
+        </div>
+        <div class="con2">
+            <div class="case">
+                <div class="cont-right">
+                    <h2>얇디얇은 케이스.</h2>
+                    <p>Series 10은 Apple Watch 사상 가장 얇은 두께를 자랑합니다.1
+                        SiP, Digital Crown, 스피커, 전면 크리스털, 안테나 등 거의 모든 요소를 새롭게 디자인한 끝에 이뤄낸 결실이죠. 이 모든 게 한데 모여 그야말로 혁신으로
+                        가득 찬 시계가 완성되었습니다.</p>
+                </div>
+            </div>
+            <figure><img src="./images/case.png" alt=""></figure>
+        </div>
+    </article>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: "auto",
+            centeredSlides: true,
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+
+            },
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+        });
+
+        let prevScrollTop = 0;
+        const elems = document.querySelector('.art2');
+        let title = document.querySelector('.cont-left');
+        let title2 = document.querySelector('.cont-right');
+        let elemsTop = elems.offsetTop - 300;
+        let elemsCenter = elems.offsetTop - 800;
+
+        window.addEventListener('scroll', function () {
+            let currentScrollTop = window.pageYOffset;
+
+            if (currentScrollTop > elemsTop) {
+                title.style.transform = 'translate(-10px, 0)'
+            } else  {
+                title.style.transform = 'translate(-800px, 0px)'
+            }
+        });
+        window.addEventListener('scroll', function () {
+            let currentScrollTop = window.pageYOffset;
+
+            if (currentScrollTop > elemsCenter) {
+                title2.style.transform = 'translate(980px, 0)'
+            } else  {
+                title.style.transform = 'translate(0%, 0px)'
+            }
+        });
+    </script>
+</body>
+
+</html>

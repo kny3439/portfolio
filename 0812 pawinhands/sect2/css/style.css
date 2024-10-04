@@ -1,0 +1,387 @@
+:root {
+    --main-color: #e4802f;
+}
+
+.flex {
+    display: flex;
+}
+
+.align-c {
+    align-items: center;
+}
+
+.just-sb {
+    justify-content: space-between;
+}
+
+.wrap {
+    background-image: url(../images/wrapbg.png);
+    background-size: cover;
+    width: 90%;
+    margin: auto;
+    background-position: center;
+}
+
+/* ------------header----------- */
+header {
+    width: 100%;
+    padding: 40px;
+    height: 130px;
+    position: fixed;
+    z-index: 99;
+    color: #343434;
+
+}
+
+header h1 {
+    width: 10%;
+
+}
+
+.main-menu.on {
+    color: var(--main-color);
+}
+
+header h1 img {
+    width: 100%;
+}
+
+.btn .menu-bar {
+    height: 130px;
+    width: 3px;
+    background-color: #ffffff;
+}
+
+nav a {
+    display: block;
+    transition: 0.5s ease;
+}
+
+li.main-menu:hover>a {
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 20px;
+    height: 2px;
+    background-color: #343434;
+    margin: 4px 0;
+}
+
+/* ------------sect1------------- */
+.sect1 {
+    height: 50vh;
+}
+
+.sect1 .inner {
+    height: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding: 50px;
+}
+
+.sect1 .inner h1 {
+    margin-bottom: 50px;
+}
+
+.sect1 .inner span {
+    border-bottom: 2px solid #FF8C19;
+    width: 200px;
+    margin-left: 10px;
+}
+
+/* --------------------sect2---------------- */
+.sect2 .inner,.sect3 .inner {
+    width: 90%;
+    margin: auto;
+    
+}
+
+.sect2-title,.sect3-title {
+    margin: 10px;
+}
+
+.sect2-title h2,.sect3-title h2 {
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.sect2-title p,.sect3-title p {
+    font-weight: normal;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+/* -----------sect3-------- */
+
+/* --------------sect4--------------- */
+
+.sect4{background-color: #ffffff;}
+
+.sect4 h1 {
+    font-weight: normal;
+padding: 50px 0;
+}
+
+.sect4-list li {
+    display: flex;
+    justify-content: space-between;
+    padding:15px;
+    border-bottom: 1px solid #7f7f7f;
+}
+.sect4-list li:first-child{border-top: 1px solid #000;}
+
+
+
+/* -------------searchBar------------ */
+.searchBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 30px;
+    left: calc(50% - 600px);
+    width: 1200px;
+    padding: 25px 30px;
+    border-radius: 75px;
+    background: #eee;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+
+/* ----------------footer---------------- */
+footer {
+    height: 85vh;
+    background-image: url(../images/footer-bg.jpg);
+    background-size: cover;
+    color: #fff;
+    background-position: center top;
+    position: relative;
+    z-index: 999;
+
+}
+
+footer::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .6);
+}
+
+.footer-contents {
+    position: relative;
+    z-index: 999;
+    width: 90%;
+    margin: auto;
+}
+
+footer .copy {
+    position: relative;
+    z-index: 999;
+}
+
+/* --------mobile-------- */
+@media screen and (max-width:576px) {
+    nav {
+        display: none;
+    }
+
+    .sect1 {
+        width: 100%;
+        margin: auto;
+    }
+
+    .sect2 .inner, .sect3 .inner {
+        text-align: center;
+    }
+
+    .footer-menu {
+        font-size: 1.5rem;
+        position: absolute;
+        bottom: 5%;
+    }
+
+    .footer-menu li {
+        margin: 15% 0;
+    }
+
+    .footer-contents {
+        justify-content: space-between;
+        height: 80%;
+    }
+
+    .footer-contents .sns ul {
+        position: absolute;
+        right: 0;
+        top: 10%;
+        width: 20%;
+    }
+
+    .footer-contents .sns ul img {
+        width: 50%;
+        margin: auto;
+    }
+    .footer-contents .sns ul li{margin-bottom: 20px;}
+
+    .footer-contents .mail {
+        position: absolute;
+        right: 0;
+        bottom: 10%;
+        font-size: 1.2rem;
+    }
+
+    .footer-contents .mail li {
+        margin-top: 10px;
+    }
+
+
+
+    footer .copy {
+        height: 20%;
+        border-top: 2px solid #ffffff;
+        width: 90%;
+        margin: auto;
+        color: #fff;
+    }
+
+    footer .copy ul li {
+        padding: 10px;
+    }
+
+    footer .copy ul li:not(:last-child) {
+        border-right: 1px solid #ffffff;
+    }
+}
+
+/* ------tablet---------- */
+@media screen and (min-width:577px) {
+    nav {
+        display: none;
+    }
+
+    .sect2 .inner,.sect2 .inner {
+        text-align: center;
+    }
+
+    
+    .footer-menu {
+        font-size: 2rem;
+        position: absolute;
+        bottom: 5%;
+    }
+
+    .footer-menu li {
+        margin: 15% 0;
+    }
+
+    .footer-contents {
+        justify-content: space-between;
+        height: 80%;
+    }
+
+    .footer-contents .sns ul {
+        position: absolute;
+        right: 0;
+        top: 10%;
+        width: 40%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-contents .mail {
+        position: absolute;
+        right: 0;
+        bottom: 10%;
+        font-size: 1.5rem;
+    }
+
+    .footer-contents .mail li {
+        margin-top: 10px;
+    }
+
+    .footer-contents .sns ul img {
+        width: 50%;
+        margin: auto;
+    }
+
+    footer .copy {
+        height: 20%;
+        border-top: 2px solid #ffffff;
+        width: 90%;
+        margin: auto;
+        color: #fff;
+    }
+
+    footer .copy ul li {
+        padding: 10px;
+    }
+
+    footer .copy ul li:not(:last-child) {
+        border-right: 1px solid #ffffff;
+    }
+
+
+}
+
+
+/* ---------------pc------------ */
+@media screen and (min-width:981px) {
+
+    .hamburger {
+        display: none;
+    }
+
+    nav {
+        display: block;
+        width: 60%;
+    }
+
+    .main-menu {
+        flex: 1;
+    }
+
+    .sect2 .sect2-contents {
+        display: flex;
+        width: 100%;
+        border: 1px solid #000;
+    }
+
+    .sect2 .art1,
+    .sect2 .art2 {
+        width: 50%;
+    }
+
+    .sect2-title {
+        float: right;
+    }
+    .sect3-title {
+        float: left;
+    }
+
+    .sect4 {
+        width: 80%;
+        margin: auto;
+        border: 1px solid #000;
+
+    }
+.sect4-title{text-align: right;}
+
+
+    .sect4-list li {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px;
+    }
+
+
+}

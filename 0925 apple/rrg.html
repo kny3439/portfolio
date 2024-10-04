@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>타입 변환</h2>
+    <script>
+        console.log(10 + '문자열');
+        console.log('3' * '5');
+        console.log(1 - '문자열');
+
+        const num1 = '10';
+        const num2 = '5';
+        console.log(`현재 num1의 타입: ${typeof(num1)}`);
+        console.log(`현재 num2의 타입: ${typeof(num2)}`);
+        console.log(`Number(num1)의 타입: ${typeof(Number(num1))}`);
+        console.log(`Number(num2)의 타입: ${typeof(Number(num2))}`);
+        console.log(`String(num1)의 타입: ${typeof(String(num1))}`);
+        console.log(`Boolean(num1)의 타입: ${typeof(Boolean(num1))}, ${Boolean(num1)}`);
+        console.log(`Object(num1)의 타입: ${typeof(Object(num1))}, ${Object(num1)}`);
+        console.log(`parseInt(num1)의 타입: ${typeof(parseInt(num1))}, ${parseInt(num1)}`);
+        console.log(`parseFloat(num1)의 타입: ${typeof(parseFloat(num1))}, ${parseFloat(num1)}`);
+
+        console.log('----------');
+
+        console.log(`num1 + num2 = ${num1 + num2}`);
+        console.log(`num1 + num2 = ${Number(num1) + Number(num2)}`);
+        console.log(`num1 + num2 = ${parseInt(num1) + parseInt(num2)}`);
+        
+        console.log('----------------------------------------');
+        let input = prompt('아동, 청소년, 성인 중 하나를 고르세요');
+
+        switch(input) {
+            case '아동':
+                input += ': 입장료 무료';   // "아동: 입장료 무료"
+                break;
+            case '청소년':
+                input += ': 입장료 5,000원';
+                break;
+            case '성인':
+                input += ': 입장료 10,000원';
+                break;
+            default:
+                alert('입력값을 확인하세요!');
+                input = '입력값 확인';
+        }
+        console.log(input);
+
+    </script>
+
+    </script>
+</body>
+
+</html>

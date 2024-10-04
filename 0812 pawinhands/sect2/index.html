@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- ----------------header---------- -->
+        <header class="flex align-c">
+            <div class="logo flex align-c">
+                <h1>
+                    <a href="#"><img src="./images/pawinhand-logo.png" alt="logo"></a>
+                </h1>
+                <a href="#">
+                    <p>PAWINHAND</p>
+                </a>
+            </div>
+            <div class="hamburger">
+                <div class="bar bar1"></div>
+                <div class="bar bar2"></div>
+                <div class="bar bar3"></div>
+            </div>
+            <nav>
+                <ul class="flex">
+                    <li class="main-menu" id="intro"><a href="#">포인핸드소개</a>
+                    </li>
+                    <li class="main-menu" id=""><a href="#">유기동물통계</a>
+                    </li>
+                    <li class="main-menu"><a href="#">포인핸드활동</a>
+                    </li>
+                    <li class="main-menu"><a href="#">후원금</a>
+                    </li>
+                    <li class="main-menu"><a href="#">입양하기</a>
+                    </li>
+                </ul>
+            </nav>
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </header>
+        <!-- ------------search------------- -->
+        <div class="searchBar">
+            <select id="">
+                <option value="">전 국</option>
+                <option value="">서울특별시</option>
+                <option value="">부산광역시</option>
+                <option value="">대구광역시</option>
+                <option value="">인천광역시</option>
+                <option value="">광주광역시</option>
+                <option value="">세종특별자치시</option>
+                <option value="">대전광역시</option>
+                <option value="">울산광역시</option>
+                <option value="">경기도</option>
+                <option value="">강원도</option>
+                <option value="">충청북도</option>
+                <option value="">충청남도</option>
+                <option value="">전라북도</option>
+                <option value="">전라남도</option>
+                <option value="">경상북도</option>
+                <option value="">경상남도</option>
+                <option value="">제주특별자치도</option>
+            </select>
+            <select id="">
+                <option value="">모든지역</option>
+                <option value="">모든지역</option>
+            </select>
+            <form action="/action_page.php">
+                <label for="bdaymonth"></label>
+                <input type="month" id="bdaymonth" name="bdaymonth">
+            </form>
+            <form action="/action_page.php">
+                <label for="bdaymonth"></label>
+                <input type="month" id="bdaymonth" name="bdaymonth">
+            </form>
+            <button>검색하기</button>
+        </div>
+        <!-- --------------sect1------------ -->
+        <section class="sect1">
+            <div class="inner">
+                <div class="col1">
+                    <h1>유기동물 통계</h1>
+                    <div class="flex">
+                        <p>ABANDONED ANIMALS STATISTICS</p><span></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- --------------sect2------------ -->
+        <section class="sect2">
+            <div class="inner">
+                <div class="sect2-title">
+                    <h2>전국 모든지역 유기동물 현황</h2>
+                    <p>2022년 06월 01일 ~ 2024년 07월 17일</p>
+                </div>
+                <div class="sect2-contents">
+                    <article class="art1">
+                        <div id="donutchart" style="width: 900px; height: 500px;"></div>
+                    </article>
+                    <article class="art2">
+                        <div id="barchart_values" style="width: 900px; height: 300px;"></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- --------------sect3------------ -->
+        <section class="sect3">
+            <div class="inner">
+                <div class="sect3-title">
+                    <h2>지자체 유기동물 통계순위</h2>
+                    <p>2022년 06월  01일 ~ 2024년 07월 17일</p>
+                </div>
+                <div class="sect3-contents">
+                    <article class="art1">
+                        <div id="donutchart" style="width: 900px; height: 500px;"></div>
+                    </article>
+                    <article class="art2">
+                        <div id="barchart_values" style="width: 900px; height: 300px;"></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- --------------sect4------------ -->
+        <section class="sect4">
+            <div class="sect4-title">
+                <h1>지역 내 보호소 리스트</h1>
+            </div>
+            <div class="sect4-list">
+                <ul>
+                    <li>
+                        <p>
+                            별빛유기동물지킴이</p><span>전라북도 완주군 용진읍 순지2길 187-6</span><b>000-0000-0000</b>
+                    </li>
+                    <li>
+                        <p>우리동물병원</p><span>인천광역시 서구 서곶로 349 (연희동) 우리동물병원</span><b>000-0000-0000</b>
+                    </li>
+                    <li>
+                        <p>산청동물보호센터</p><span>경상남도 산청군 산청읍 친환경로 2783-25 (산청읍)</span><b>000-0000-0000</b>
+                    </li>
+                    <li>
+                        <p>나주유기동물보호센터</p><span>전라남도 나주시 산포면 내기3길 71-43 [*미고시]</span><b>000-0000-0000</b>
+                    </li>
+                    <li>
+                        <p>팜그린동물약품병원</p><span>전라북도 진안군 진안읍 진무로 887</span><b>000-0000-0000</b>
+                    </li>
+                    <li>
+                        <p>경산시유기동물보호소</p><span>경상북도 경산시 용성면 사양지길 95 (용성면)</span><b>000-0000-0000</b>
+                    </li>
+                    <li>
+                        <p>태민동물병원</p><span>경상남도 합천군 합천읍 옥산로 16 (합천읍, 까치빌라) 태민동물병원</span><b>000-0000-0000</b>
+                    </li>
+                    <li>
+                        <p>보령길고양이보호협회</p><span>충청남도 보령시 남대천로 91 (대천동) 상가동 201호</span><b>000-0000-0000</b>
+                    </li>
+                    <li>
+                        <p>성주유기동물보호센터</p><span>경상북도 성주군 선남면 선노로 522 (선남면)</span><b>000-0000-0000</b>
+                    </li>
+                    <li>
+                        <p>상주시 동물보호센터</p><span>경상북도 상주시 청리면 남상주로 1205-59</span><b>000-0000-0000</b>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <!-- ----------footer------------------- -->
+    <footer>
+        <div class="footer-contents">
+            <div class="footer-menu">
+                <ul>
+                    <li><a href="#">포인핸드</a></li>
+                    <li><a href="#">유기동물통계</a></li>
+                    <li><a href="#">포인핸드활동</a></li>
+                    <li><a href="#">후원금</a></li>
+                    <li><a href="#">입양</a></li>
+                </ul>
+            </div>
+            <div class="sns-mail">
+                <div class="sns">
+                    <ul>
+                        <li><a href="#"><img src="./images/sns.png" alt=""></a></li>
+                        <li><a href="#"><img src="./images/sns2.png" alt=""></a></li>
+                        <li><a href="#"><img src="./images/sns3.png" alt=""></a></li>
+                    </ul>
+                </div>
+                <div class="mail">
+                    <ul>
+                        <li><a href="#">
+                                <p>02-6956-6242</p>
+                            </a></li>
+                        <li><a href="#">
+                                <p>pawinhands@naver.com</p>
+                            </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="copy flex align-c">
+            <div class="copy-box">
+                <ul class="flex">
+                    <li>
+                        <p>주식회사 포인핸드</p>
+                    </li>
+                    <li>
+                        <p>대표자 : 이환희</p>
+                    </li>
+                </ul>
+                <ul class="flex">
+                    <li>
+                        <p>사업자번호 : 322-87-00895</p>
+                    </li>
+                    <li>
+                        <p>사업장 주소 : 서울특별시 마포구 대흥로 67 (정신빌딩) 401호</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load("current", { packages: ["corechart"] });
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Task', 'Hours per Day'],
+                ['Work', 11],
+                ['Eat', 2],
+                ['Commute', 2],
+                ['Watch TV', 2],
+                ['Sleep', 7]
+            ]);
+
+            var options = {
+                title: '',
+                pieHole: 0.6,
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+            chart.draw(data, options);
+        }
+
+    </script>
+    <script>
+        google.charts.load("current", { packages: ["corechart"] });
+        google.charts.setOnLoadCallback(drawChart1);
+        function getValueAt(column, dataTable, row) {
+            return dataTable.getFormattedValue(row, column);
+
+        }
+        function drawChart1() {
+            var data = google.visualization.arrayToDataTable([
+                ["Element", "Density", { role: "style" }],
+                ["Copper", 8.94, "#FF9D9D"],
+                ["Silver", 10.49, "#DA6060"],
+                ["Gold", 19.30, " #33B7DA"],
+                ["Platinum", 21.45, "color:#67D499"]
+            ]);
+
+            var view = new google.visualization.DataView(data);
+            view.setColumns([0, 1,
+                {
+                    calc: "stringify",
+                    sourceColumn: 1,
+                    type: "string",
+                    role: "annotation"
+                },
+                2]);
+
+            var options = {
+                title: "",
+                width: 600,
+                height: 400,
+                bar: { groupWidth: "95%" },
+                legend: { position: "none" },
+            };
+            var chart = new google.visualization.BarChart(document.getElementById("barchart_values"));
+            chart.draw(view, options);
+        }
+    </script>
+</body>
+
+</html>

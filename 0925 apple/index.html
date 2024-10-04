@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- <div class="intro"><video src="./images/intro.mp4"autoplay></video></div> -->
+    <header>
+        <a href="#">
+            <h1><img src="./images/logo.png" alt=""></h1>
+            <p>Apple</p>
+        </a>
+    </header>
+    <div class="list">
+        <figure><video preload="auto" src="./images/pro.webm" loop autoplay></video></figure>
+        <ul>
+            <li data-bg='./images/pro.webm'>
+                <div class="tx">
+                    <h2>Ipad &nbsp; Pro</h2>
+                    <h1>최첨단 기술이 구현하는
+                        궁극의 iPad 경험.</h1>
+                    <p>완전히 새로워진 프로 디자인. 엄청난 수준의 휴대성.
+                        역대 가장 얇은 Apple 제품.</p>
+                    <button><a href="./pro.html">More</a></button>
+                </div>
+                <div class="line"></div>
+            </li>
+            <li data-bg='./images/air.webm'>
+                <div class="tx">
+                    <h2>Ipad &nbsp;Air</h2>
+                    <h1>얇고 가벼운 디자인.<br />
+                        결코 가볍지 않은 성능.</h1>
+                    <p>새롭게 디자인된 iPad Air. 휴대하기 좋은 두 가지 사이즈. M2 칩. 가로형 전면 카메라. 새롭고 아름다운 컬러.</p>
+                    <button><a href="./air.html">More</a></button>
+                </div>
+                <div class="line"></div>
+            </li>
+            <li data-bg='./images/ultra.mp4'>
+                <div class="tx">
+                    <h2>Watch Ultra</h2>
+                    <h1>블랙으로 계속되는 전력 질주.</h1>
+                    <p>터치, 그리기, 타이핑 모두가
+                        되는 놀라운 하나의 기기.</p>
+                    <button><a href="./ultra.html">More</a></button>
+                </div>
+                <div class="line"></div>
+            </li>
+            <li data-bg='./images/wat10.mp4'>
+                <div class="tx">
+                    <h2>Watch Series</h2>
+                    <h1>얇아진 두께. <br />더 커진 존재감.</h1>
+                    <p>매력적인 새 블랙 티타늄 케이스를 입은 궁극의 스포츠 및 모험용 시계, Apple Watch Ultra 2.</p>
+                    <button><a href="">More</a></button>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- ------------- -->
+    <div class="frame">
+        <div class="scene">
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // list.forEach((li) => {
+        //     li.addEventListener('mouseenter', function () {
+        //         // this.classList.add('on')
+        //         let bg = li.querySelector('video').dataset.bg
+        //         section.style.backgroundImages = `url(${bg})`
+        //     })
+        // })
+
+        const section = document.querySelector('.list')
+        const list = document.querySelectorAll('.list ul li')
+        const frame = document.querySelector('.frame')
+        const scene = document.querySelector('.scene')
+
+
+        document.querySelectorAll('.list li').forEach(function (item) {
+            const h1 = item.querySelector('h1')
+            splitText(h1)
+            item.addEventListener('mouseenter', function () {
+                let img = this.dataset.bg
+                document.querySelector('figure video').setAttribute('src', img)
+
+                moveUp(h1)
+            })
+            item.addEventListener('mouseleave', function () {
+
+                resetText(h1)
+            })
+
+        })
+
+        document.querySelectorAll('button a').forEach((a) => {
+            a.addEventListener('click', function (e) {
+                e.preventDefault()
+                let href = this.getAttribute('href')
+                frame.style.top = 0
+                //fetch api 자료 불러오기
+                fetch(href)
+                    .then(res => res.text())
+                    .then(data => { scene.innerHTML = data },
+
+                        setTimeout(() => {
+
+                            ultraHTML();
+                            function ultraHTML() {
+                                var swiper = new Swiper(".mySwiper", {
+                                    slidesPerView: 3,
+                                    spaceBetween: 30,
+                                    pagination: {
+                                        el: ".swiper-pagination",
+                                        clickable: true,
+                                    },
+                                    navigation: {
+                                        nextEl: ".swiper-button-next",
+                                        prevEl: ".swiper-button-prev",
+                                    },
+                                });
+
+                                let prevScrollTop = 0;
+                                const elems = document.querySelector('.art2');
+                                let title = document.querySelector('.scroll-title');
+                                let elemsTop = elems.offsetTop - 600;
+
+                                window.addEventListener('scroll', function () {
+                                    let currentScrollTop = window.pageYOffset;
+
+                                    if (currentScrollTop > elemsTop) {
+                                        title.style.transform = 'translate(-50%, -450px)'
+                                    } else {
+                                        title.style.transform = 'translate(-50%, 100px)'
+                                    }
+                                });
+                            }
+
+                            airHTML();
+                            function airHTML() {
+                                $('.tab-menu li').click(function () {
+                                    $('.tab-menu li').removeClass('on')
+                                    $(this).addClass('on')
+                                    let idx = $(this).index()
+                                    $('.tabs li').fadeOut()
+                                    $('.tabs li').eq(idx).fadeIn()
+                                })
+
+                                let prevScrollTop = 0;
+                                const elems = document.querySelectorAll('.intro');
+                                window.addEventListener('scroll', function () {
+                                    let currentScrollTop = window.pageYOffset;
+
+                                    elems.forEach(function (intro) {
+                                        const stickyTitle = intro.querySelector('figure');
+                                        const introTop = intro.offsetTop;
+                                        const introHeight = intro.offsetHeight;
+                                        const threshold = introTop + introHeight / 20; // 섹션 중간에 도달할 때 투명도 변경
+
+                                        if (stickyTitle) {
+                                            if (currentScrollTop > threshold) {
+                                                stickyTitle.style.opacity = 0;
+                                            } else {
+                                                stickyTitle.style.opacity = 1;
+                                            }
+                                        }
+                                    });
+                                });
+
+                                const articleElems = document.querySelectorAll('article');
+                                window.addEventListener('scroll', function () {
+                                    let currentScrollTop = window.pageYOffset;
+
+                                    articleElems.forEach(function (article) {
+                                        const stickyTitle = article.querySelector('.tx');
+                                        const articleTop = article.offsetTop;
+                                        const articleHeight = article.offsetHeight;
+                                        const startFade = articleTop + articleHeight / 4; // 시작점 (섹션의 상단 1/3 지점)
+                                        const endFade = articleTop + articleHeight / 3.8; // 끝점 (섹션의 하단 1/3 지점)
+
+                                        if (stickyTitle) {
+                                            // 스크롤이 시작점보다 크고 끝점보다 작으면 투명도 점진적 증가
+                                            if (currentScrollTop > startFade && currentScrollTop < endFade) {
+                                                let opacity = (currentScrollTop - startFade) / (endFade - startFade); // 투명도 비율 계산
+                                                stickyTitle.style.opacity = opacity;
+                                            } else if (currentScrollTop >= endFade) {
+                                                // 끝점 이후에는 투명도 1로 고정
+                                                stickyTitle.style.opacity = 1;
+                                            } else {
+                                                // 시작점 이전에는 투명도 0으로 고정
+                                                stickyTitle.style.opacity = 0;
+                                            }
+                                        }
+                                    });
+                                });
+                            };
+
+                            proHTML();
+                            function proHTML() {
+                                $('.art4 .col2 video').mouseenter(function () {
+                                    $(this).addClass('on')
+                                })
+                                $('.art4 .col2 video').mouseleave(function () {
+                                    $(this).removeClass('on')
+                                })
+
+                                $('.ttab-menu li').click(function () {
+                                    $('.ttab-menu li').removeClass('on')
+                                    $(this).addClass('on')
+                                    let idx = $(this).index()
+                                    $('.ttabs li').fadeOut()
+                                    $('.ttabs li').eq(idx).fadeIn()
+                                })
+                            }
+
+                        }, 100)
+                    )
+                document.body.style.overflowY = 'auto'
+
+            })
+        })
+
+        window.addEventListener('scroll', function () {
+            if (window.scrollY === 0) {
+                frame.style.top = '100%'
+                document.body.style.overflowY = 'hidden'
+            }
+        })
+
+        //h1 글자나누기
+        function splitText(el) {
+            const txt = el.innerText
+            let tags = ''
+            txt.split('').forEach((letter) => {
+                tags += `<span>${letter}</span>`
+            })
+            el.innerHTML = tags
+        }
+
+        function moveUp(el) {
+            const spans = el.querySelectorAll('span')
+            spans.forEach((span, i) => {
+                span.style.transitionDelay = `${i * .03}s`;
+                span.style.transform = 'translateY(0)'
+                span.style.opacity = '1'
+            })
+        }
+        function resetText(el) {
+            const spans = el.querySelectorAll('span')
+            spans.forEach((span) => {
+                span.style.transform = 'translateY(100%)'
+                span.style.opacity = '0'
+            })
+        }
+    </script>
+</body>
+
+</html>

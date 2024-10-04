@@ -1,0 +1,344 @@
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+figure.video {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+figure.video video {
+    width: 100%;
+    min-width: 1680px;
+}
+
+header {
+    position: fixed;
+    height: 100%;
+    width: 800px;
+    left: -600px;
+    top: 0;
+    background-image: linear-gradient(to right top, #fcfaee, #CEBEE1, #FFACB7);
+    transform: skewX(-40deg);
+}
+
+header h1 {
+    position: relative;
+    left: 306px;
+    top: -11px;
+    width: 215px;
+    transform: skewX(40deg);
+}
+
+/* 부모 header를 skew 해서 nav를 왼쪽에서 오른쪽으로 위치하기 위해 */
+nav {
+    position: absolute;
+    right: 0;
+    top: 150px;
+    width: 200px;
+    
+}
+
+/* a는 inline요소에서 width:100% 아니다, hover 시에 전체 영역에 배경색이 적용이 안되기 때문에 */
+nav a {
+    display: block;
+    font-size: 18px;
+}
+
+/* 부모 a의 영역이 hover skew 되어 있어 좋은데 글자까지 기울어서 b태그를 사용. inline 요소는 transform 적용이 안됨 */
+nav b {
+    display: block;
+    font-weight: normal;
+    transform: skewX(40deg);
+}
+
+li.main-menu {
+    position: relative;
+}
+
+/*메인 메뉴에 있는 a 값만[서브메뉴의 a는 제외]  */
+li.main-menu>a {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #000;
+}
+
+li.main-menu:hover>a {
+    background: #fcfaee;
+    padding: 10px;
+    font-weight: bold;
+    color: hotpink;
+}
+
+ul.sub-menu {
+    position: absolute;
+    width: 200px;
+    background: rgba(255, 255, 255, .5);
+    left: 200px;
+    top: 0;
+    display: none;
+}
+
+li.main-menu:hover ul.sub-menu {
+    display: block;
+}
+
+ul.sub-menu li a {
+    padding: 5px 10px 10px 20px;
+}
+
+ul.sub-menu li:hover a {
+    background: #fcfaee;
+    padding: 5px;
+}
+
+
+
+.btn i {
+    position: absolute;
+    animation: btn-ani 1.5s linear infinite;
+}
+
+.btn i:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.btn i:nth-child(2) {
+    animation-delay: .5s;
+}
+
+.btn i:nth-child(3) {
+    animation-delay: 1s;
+}
+
+@keyframes btn-ani {
+    from {
+        opacity: 0;
+        left: 0;
+        transform: scale(.8);
+    }
+
+    to {
+        opacity: 1;
+        left: 150px;
+        transform: scale(1);
+    }
+}
+
+
+
+@keyframes bounce-top {
+    0% {
+        transform: translateY(-45px);
+        animation-timing-function: ease-in;
+        opacity: 1
+    }
+
+    24% {
+        opacity: 1
+    }
+
+    40% {
+        transform: translateY(-24px);
+        animation-timing-function: ease-in
+    }
+
+    65% {
+        transform: translateY(-12px);
+        animation-timing-function: ease-in
+    }
+
+    82% {
+        transform: translateY(-6px);
+        animation-timing-function: ease-in
+    }
+
+    93% {
+        transform: translateY(-4px);
+        animation-timing-function: ease-in
+    }
+
+    25%,
+    55%,
+    75%,
+    87% {
+        transform: translateY(0);
+        animation-timing-function: ease-out
+    }
+
+    100% {
+        transform: translateY(0);
+        animation-timing-function: ease-out;
+        opacity: 1
+    }
+}
+
+aside {
+    position: fixed;
+    right: -800px;
+    bottom: 0;
+    width: 800px;
+    height: 100%;
+    background-image: linear-gradient(to right top, #FFACB7, #8B4F1D, #fcfaee);
+    transform: skew(-40deg);
+    transition: .35s;
+    cursor: pointer;
+}
+
+.brand {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 100%;
+    /* background-color: rgba(0, 0, 0, 1); */
+    background-image: radial-gradient(circle, #f092ab, #faa5a7, #febaa9, #ffcfb3, #ffe3c4);
+    transition: .35s;
+
+}
+
+
+
+aside:hover {
+    right: -600px;
+}
+
+aside:hover .brand {
+    left: 5%;
+}
+
+aside:hover .brand ul li {
+    transform: translateX(0px);
+}
+
+aside:hover .brand ul li:nth-child(1) {
+    transition-delay: 0s;
+}
+
+aside:hover .brand ul li:nth-child(2) {
+    transition-delay: .1s;
+}
+
+aside:hover .brand ul li:nth-child(3) {
+    transition-delay: .2s;
+}
+
+aside:hover .brand ul li:nth-child(4) {
+    transition-delay: .3s;
+}
+
+aside:hover .brand ul li:nth-child(5) {
+    transition-delay: .4s;
+}
+
+.brand ul {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+
+}
+
+figure.banner {
+/* 
+    overflow: hidden; */
+}s
+
+.brand ul{border: 1px solid red;
+height: 500px;
+width: 400px;
+}
+
+.brand ul li {
+    position: absolute;
+    transition: .3s;
+    transform: translateX(600px);
+}
+
+.brand ul li:nth-child(1) {
+    top: -400px;
+    right: -100px;  
+}
+
+.brand ul li:nth-child(2) {
+    top: -250px;
+    right: -280px;
+}
+
+.brand ul li:nth-child(3) {
+    top: -250px;
+    right: -100px;
+}
+
+.brand ul li:nth-child(4) {
+    top: -100px;
+    right: -280px;
+}
+
+.brand ul li:nth-child(5) {
+    top: -100px;
+    right: -100px;
+}
+
+.brand ul li img {
+    vertical-align: top;
+    height: 70px;
+    transform: skewX(40deg) scale(1.5);
+}
+
+.brand ul li:nth-child(1) img:hover{
+    content: url('./matcha.webp');
+    transform: skewX(40deg);
+}
+.brand ul li:nth-child(2) img:hover{
+    content: url('./cookies-and-cream.webp');
+    transform: skewX(40deg);
+}
+.brand ul li:nth-child(3) img:hover{
+    content: url('./strawberry\ \(2\).webp');
+    transform: skewX(40deg);
+}
+.brand ul li:nth-child(4) img:hover{
+    content: url('./dark-chocolate.webp');
+    transform: skewX(40deg);
+}
+.brand ul li:nth-child(5) img:hover{
+    content: url('./cantaloupe.webp');
+    transform: skewX(40deg);
+}
+
+.brand h3 {
+    color: #fff;
+    transform: skewX(40deg);
+    padding: 10px;
+}
+
+.item {
+    position: absolute;
+    left: -25%;
+    bottom: 10%;
+    width: 380px;
+    animation: bounce-top 1.5s infinite;
+}
+
+.item img {
+    transform: skewX(40deg);
+}
+
+.btn {
+    position: absolute;
+    bottom: 10px;
+    left: -30px;
+    font-size: 80px;
+    color: #fff;
+    width: 200px;
+    height: 100px;
+    transform: skewX(40deg);
+    transition: .35s;
+}
+
+aside:hover .item {
+    left: 100%;
+}
