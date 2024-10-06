@@ -137,6 +137,7 @@ button {
             &:hover .tx h1 {
                 display: block;
             }
+
             &:hover .tx h2 {
                 transform: translateY(-10px);
             }
@@ -151,7 +152,7 @@ button {
                     margin-bottom: 20px;
                     font-weight: 300;
                     transform: translateY(40px);
-transition: .4s;
+                    transition: .4s;
                 }
 
                 h1 {
