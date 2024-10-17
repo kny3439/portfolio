@@ -1,0 +1,335 @@
+@charset "UTF-8";
+@import url(../reset.css);
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+header a {
+  display: flex;
+}
+header a h1 {
+  width: 20px;
+  height: 25px;
+  margin: 0 15px 0 50px;
+}
+header a h1 img {
+  width: 100%;
+}
+
+figure {
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+}
+figure video {
+  width: 100%;
+  min-height: 100%;
+}
+
+article {
+  width: 100%;
+  height: 100%;
+}
+article.art1 {
+  width: 100%;
+  background-color: black;
+  color: #fff;
+}
+article.art1 .contents {
+  width: 34%;
+  height: 400px;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+article.art1 .contents h1 {
+  font-size: 4rem;
+  margin-bottom: 50px;
+}
+article.art1 .contents p {
+  color: #ccc;
+}
+article.art1 figure {
+  width: 100%;
+  min-height: 130vh;
+  background-color: #000;
+  position: relative;
+}
+article.art1 figure video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 99;
+}
+article.art1 figure .mm {
+  position: absolute;
+  top: 36%;
+  right: 710px;
+  color: #fff;
+}
+article.art1 figure .mm h2 {
+  font-weight: 300;
+  font-size: 2.9rem;
+}
+article.art1 figure .mm p {
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+article.art2 {
+  width: 100%;
+  position: relative;
+  background-color: #000;
+}
+article.art2 .col1 {
+  width: 100%;
+  display: flex;
+  color: #fff;
+}
+article.art2 .col1 .con {
+  width: 45%;
+  margin: auto;
+  text-align: center;
+}
+article.art2 .col1 .con h1 {
+  font-size: 3rem;
+  margin-bottom: 10%;
+}
+article.art2 .col1 .con p {
+  color: #ccc;
+  line-height: 2rem;
+}
+article.art2 .col1 video {
+  width: 30%;
+  margin: auto;
+}
+article.art2 .col2 {
+  width: 100%;
+  height: 450px;
+  color: #fff;
+  display: flex;
+  margin-top: 8%;
+}
+article.art2 .col2 .con {
+  width: 40%;
+  margin-left: 10%;
+  text-align: center;
+}
+article.art2 .col2 .con h1 {
+  font-size: 3rem;
+  margin-bottom: 10%;
+}
+article.art2 .col2 .con p {
+  color: #ccc;
+  line-height: 2rem;
+}
+article.art2 .col2 video {
+  width: 50%;
+  height: 100%;
+}
+article.art3 {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  color: #fff;
+  margin-top: 10%;
+}
+article.art3 h1 {
+  font-size: 4rem;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 5%;
+  transition: 0.3s;
+  opacity: 1;
+}
+article.art3 figure {
+  width: 100%;
+}
+article.art3 figure video {
+  width: 100%;
+  height: 100%;
+}
+article.art3 p {
+  width: 40%;
+  margin: auto;
+  text-align: center;
+  color: #ccc;
+  line-height: 2rem;
+}
+article.art4 {
+  margin-top: 10%;
+  width: 100%;
+  height: 100vh;
+  background-image: url(./images/art4.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  color: #fff;
+}
+article.art4 .col1 {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+article.art4 .col1 p {
+  min-width: 400px;
+  font-size: 4rem;
+  margin-left: -13%;
+}
+article.art4 .col2 {
+  width: 960px;
+  height: 750px;
+  position: relative;
+  flex-shrink: 0;
+}
+article.art4 .col2:hover::after {
+  content: "촬영부터 편집, 공유까지 기기 하나로 뚝딱. LiDAR 스캐너, 스튜디오급 마이크, 4개의 스피커를 모두 갖춘 프로급 카메라 시스템과 함께라면 가능하죠. 4K ProRes 동영상을 촬영하고, 새로운 가로형 전면 카메라로 영상 통화를 즐겨보세요. 문서를 스캔하면 AI가 스캔본의 품질을 극적으로 향상시켜 주기까지 한답니다.";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  margin: auto;
+  font-size: 1.3rem;
+  font-weight: 200;
+  text-align: center;
+}
+article.art4 .col2 video {
+  position: absolute;
+  right: 25px;
+  top: 20px;
+  width: 100%;
+  height: 100%;
+}
+article.art4 .col2 video.on {
+  opacity: 0.6;
+}
+article.art4-1 {
+  display: flex;
+  width: 70%;
+  margin: auto;
+  justify-content: center;
+}
+article.art4-1 ul {
+  width: 35%;
+}
+article.art4-1 ul li {
+  width: 300px;
+  padding: 30px;
+}
+article.art5 {
+  margin-top: 10%;
+  width: 100%;
+  height: 100vh;
+}
+article.art5 figure {
+  display: flex;
+  width: 70%;
+  margin: auto;
+}
+article.art5 figure img {
+  width: 100%;
+}
+article.art5 .ttabs {
+  width: 1245px;
+  height: 73%;
+  margin: auto;
+  position: relative;
+}
+article.art5 .ttabs li {
+  display: flex;
+  position: absolute;
+}
+article.art5 .ttab-menu {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  margin: auto;
+  color: #b4b4b4;
+}
+article.art5 .ttab-menu li {
+  padding: 30px;
+  cursor: pointer;
+}
+article.art5 .ttab-menu li.on {
+  color: #fff;
+}
+
+footer {
+  width: 100%;
+  height: 65vh;
+  position: relative;
+}
+footer .footer {
+  width: 60%;
+  height: 100%;
+  margin: auto;
+}
+footer .footer .title {
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+footer .footer .title li {
+  padding: 30px;
+}
+footer .footer .title li h1 {
+  width: 30px;
+}
+footer .footer .title li h1 img {
+  width: 100%;
+}
+footer .footer .info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #ccc;
+  padding: 20px;
+}
+footer .footer .info li {
+  padding: 5px;
+}
+footer .footer .info li a {
+  display: inline-block;
+  transition: 0.4s;
+}
+footer .footer .info li a:hover {
+  border-bottom: 1px solid #ccc;
+}
+footer .footer .info li:first-child {
+  color: #fff;
+}
+footer .footer .copy {
+  width: 60%;
+  border-top: 1px solid #ffffff;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  gap: 20px;
+  height: 80px;
+  padding: 20px;
+}
+footer .footer .copy > p {
+  font-size: 0.8rem;
+}
+footer .footer .copy ul {
+  display: flex;
+  gap: 10px;
+}
+footer .footer .copy ul li {
+  font-size: 0.7rem;
+}

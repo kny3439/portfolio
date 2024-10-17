@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+
+body {
+    background-image: url(./images/bg\ \(2\).jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+section, .art3{gap: 15px;
+}
+h2 {
+    font-family: "Black Han Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4.5vw;
+}
+
+hgroup {
+    text-align: center;
+}
+
+hgroup p {
+    font-size: 2vw;
+}
+
+figure {
+    width: 400px;
+    height: 382px
+}
+
+figure img {
+    width: 100%;
+}
+
+.item figure {
+    width: 100%;
+    height: 50%;
+}
+
+h1 img {
+    width: 100%;
+}
+
+
+
+button {
+    display: inline-block;    
+    color: #fff;
+    font-weight: bold;
+    margin: 30px 0px;
+}
+
+em {
+    display: block;
+}
+
+article {
+background-color: rgba(0, 0, 0, 0.3);
+    text-align: center;
+    overflow: hidden;
+    padding: 10px;
+}
+
+article figure {
+    width: 100%;
+}
+
+article figure img {
+    width: 100%;
+}
+
+section {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.item:nth-child(1) {
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    background-image: url(./images/미디어룸.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    position: relative;
+}
+
+.item button {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.item:nth-child(2) {
+    background-image: url(./images/조약돌.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 49%;
+    position: relative;
+}
+
+.item a img {
+    width: 30%;
+    position: absolute;
+    right: 30px;
+    top: 140px;
+}
+article{border: 1px solid #ff0;}
+.item{border: 1px solid #fff;
+}
+
+/* 모바일 */
+@media screen and (max-width:576px) {
+    body {
+        padding: .75rem;
+    }
+
+    hgroup p {
+        font-size: 4vw;
+    }
+
+    h2 {
+        font-size: 6vw;
+    }
+
+    .art1 {
+        width: 100%;
+    }
+
+    .art2 {
+        width: 100%;
+    }
+    article img{padding: 40px;}
+    .art3 {
+        height: 200px;
+        width: 100%;
+    }
+
+    .art3 .item {
+        width:48%;
+        height: 100%;
+    }
+    button{font-size: 1.5rem;}
+
+}
+
+/* 테블릿 */
+@media screen and (min-width:577px) {
+    body {
+        padding: .75rem;
+    }
+
+    /* 
+    html{
+    font-size:16px //1rem
+    }
+    p{
+    font-size:16px;
+    }
+
+    */
+    h1 img {
+        width: auto;
+    }
+
+    .art1 {
+        width:calc(50% - 20px) ;
+    }
+
+    .art2 {
+        width: 50%;
+    }
+
+    .art3 {
+        height: 400px;
+        width: 100%;
+    }
+    button{font-size: 1.5rem;}
+    .item:nth-child(1) {
+     
+        background-position: left center;
+    }
+    .item:nth-child(2){
+     
+        background-position: top center;
+    }
+}
+
+/* pc */
+@media screen and (min-width:980px) {
+    .wrap {
+        min-width: 1200px;
+        margin: auto;
+    }
+
+    h1 img {
+        width: auto;
+    }
+
+    .art1 {
+        width: 30%;
+    }
+
+    .art2 {
+        width: 37%;
+    }
+
+    .art3 {
+        width: 30%;
+     
+    }
+    button{font-size: 1.2rem;}
+}

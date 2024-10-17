@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .walking {
+            width: 300px;
+            height: 378px;
+            border: 1px solid #000;
+            background-image: url(./images/ㅗㅇㅇㅎ.jpg);
+            background-position: 0 0;
+            animation: walking-ani 1s steps(10) infinite;
+        }
+
+        @keyframes walking-ani {
+            from {
+                background-position: 0 0;
+            }
+
+            to {
+                background-position: -3000px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="walking"></div>
+</body>
+
+</html>

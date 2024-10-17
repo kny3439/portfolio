@@ -1,0 +1,504 @@
+@font-face {
+    font-family: 'Ramche';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/Ramche.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.bottombg {
+    background-image: url(/images/mario-bg.jpg);
+    background-size: 80%;
+    background-repeat: repeat-x;
+    background-position: center bottom;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: -2;
+}
+
+.topbarbg {
+    background-image: url(/images/headerbg.png);
+    background-size: 130px;
+    background-repeat: repeat-x;
+    background-position: center top;
+    height: 10%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 10;
+}
+
+.topbg {
+    background-image: url(/images/topbg.jpg);
+    background-position: top;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -3;
+}
+
+.barbg {
+    background-image: url(/images/bar\ bg.png);
+    background-position: center bottom;
+    z-index: 10;
+    width: 100%;
+    height: 20%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-size: 80%;
+    background-repeat: repeat-x;
+}
+
+header h1 {
+    background-image: url(/images/header-h1-bg.webp);
+    background-size: 90%;
+    height: 350px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+header img {
+    position: absolute;
+    top: 260px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+.cloud {
+    z-index: -1;
+    position: fixed;
+}
+
+.cloud1 {
+    position: fixed;
+    top: 18%;
+    left: 55%;
+    animation: 1.8s icon-Ani 1.5s infinite linear alternate;
+}
+
+.cloud2 {
+    position: fixed;
+    top: 30%;
+    left: 20%;
+    animation: 1.2s icon-Ani 1.5s infinite linear alternate;
+}
+
+.cloud3 {
+    position: fixed;
+    top: 50%;
+    right: -5%;
+    animation: 1.5s icon-Ani 1.5s infinite linear alternate;
+}
+
+article ul li {}
+
+figcaption {
+    padding: 18px 5px;
+    position: absolute;
+    bottom: 0;
+    height: 230px;
+    overflow: hidden;
+}
+
+figcaption span {
+    font-family: 'Ramche';
+    font-weight: bold;
+    font-size: 1.5rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+figure {
+    text-align: center;
+}
+
+
+
+article ul li:nth-child(1) figcaption {
+    background-image: url(/images/mariobg.gif);
+}
+
+article ul li:nth-child(2) figcaption {
+    background-image: url(/images/luigisbg.gif);
+}
+
+article ul li:nth-child(3) figcaption {
+    background-image: url(/images/peachbg.gif);
+}
+
+article ul li:nth-child(4) figcaption {
+    background-image: url(/images/kinopiobg.gif);
+}
+
+article ul li:nth-child(5) figcaption {
+    background-image: url(/images/koopabg.gif);
+}
+
+article ul li:nth-child(6) figcaption {
+    background-image: url(/images/yoshibg.gif);
+}
+
+article ul li:nth-child(7) figcaption {
+    background-image: url(/images/daisybg.gif);
+}
+
+article ul li:nth-child(8) figcaption {
+    background-image: url(/images/kongbg.gif);
+}
+
+article ul li:nth-child(9) figcaption {
+    background-image: url(/images/boobg.gif);
+}
+
+article ul li:nth-child(10) figcaption {
+    background-image: url(/images/wariobg.gif);
+}
+
+article ul li {
+    float: left;
+    color: #fff;
+    height: 600px;
+    position: relative;
+}
+
+article ul li:nth-child(1) img:hover{
+    content: url('../images/articleimg-mario.png');
+
+}
+article ul li:nth-child(2) img:hover{
+    content: url('../images/articleimg.luisi.png');
+
+}
+article ul li:nth-child(3) img:hover{
+    content: url('../images/articleimg-daisy.png');
+
+}
+article ul li:nth-child(4) img:hover{
+    content: url('../images/articleimg-pinokio.png');
+
+}
+article ul li:nth-child(5) img:hover{
+    content: url('../images/articleimg-koopa.png');
+
+}
+article ul li:nth-child(6) img:hover{
+    content: url('../images/articleimg-yoshi.png');
+
+}
+article ul li:nth-child(7) img:hover{
+    content: url('../images/articleimg-realdaisy.png');
+
+}
+article ul li:nth-child(8) img:hover{
+    content: url('../images/articleimg-kong.png');
+
+}
+article ul li:nth-child(9) img:hover{
+    content: url('../images/articleimg-boo.png');
+
+}
+article ul li:nth-child(10) img:hover{
+    content: url('../images/articleimg-wario.png');
+
+}
+
+article img {
+    height: 300px;
+    margin-top: 20%;
+}
+
+
+li.menu {
+    position: relative;
+
+}
+
+.menu>a {
+    padding: 10px;
+}
+
+.nav-bg {
+    position: absolute;
+    left: 0%;
+    top: -940%;
+    width: 100%;
+}
+
+nav ul li {
+    width: 33%;
+    height: 30px;
+    float: left;
+    text-align: center;
+    margin: 20px 0;
+}
+
+nav ul li:hover {
+    font-weight: bold;
+}
+
+nav ul li:hover .nav-bg {
+    display: block;
+}
+
+.nav-bg {
+    display: none;
+    position: absolute;
+    animation: bounce-top 1.5s infinite;
+}
+
+@keyframes bounce-top {
+    0% {
+        transform: translateY(-35px);
+        animation-timing-function: ease-in;
+        opacity: 1
+    }
+
+    24% {
+        opacity: 1
+    }
+
+    40% {
+        transform: translateY(-24px);
+        animation-timing-function: ease-in
+    }
+
+    65% {
+        transform: translateY(-12px);
+        animation-timing-function: ease-in
+    }
+
+    82% {
+        transform: translateY(-6px);
+        animation-timing-function: ease-in
+    }
+
+    93% {
+        transform: translateY(-4px);
+        animation-timing-function: ease-in
+    }
+
+    25%,
+    55%,
+    75%,
+    87% {
+        transform: translateY(0);
+        animation-timing-function: ease-out
+    }
+
+    100% {
+        transform: translateY(0);
+        animation-timing-function: ease-out;
+        opacity: 1
+    }
+}
+
+nav ul li a {
+    display: block;
+}
+
+nav {
+    font-family: 'Ramche';
+    font-size: 1.5rem;
+    z-index: 90;
+}
+
+article {
+    background-color: rgba(64, 71, 99, 0.5);
+    backdrop-filter: blur(3px);
+}
+
+article::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+footer p {
+    padding: 30px;
+}
+
+@keyframes icon-Ani {
+    0% {
+        transform: translateY(0);
+
+    }
+
+    100% {
+        transform: translateY(30%);
+
+    }
+}
+
+
+
+/* mobile */
+@media(max-width: 600px) {
+    article ul li {
+        width: 50%;
+
+    }
+
+    nav {
+        position: absolute;
+        width: 100%;
+    }
+
+    h1 {
+        background: none;
+        width: 100%;
+        height: 67px;
+        text-align: center;
+    }
+
+    main {
+        margin-top: 250px;
+    }
+
+    nav ul {
+        margin-top: 40%;
+    }
+
+    .intro h2 {
+        width: 100%;
+        margin-top: 180px;
+    }
+
+    .intro h2 img {
+        width:
+            100%;
+        padding: 50px;
+    }
+}
+
+/* tablet */
+@media(min-width: 601px) {
+
+    header {
+        width: 28%;
+        position: fixed;
+    }
+
+    main {
+        width: 72%;
+        float: right;
+    }
+
+    nav {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    nav ul {
+        margin-top: 30%;
+    }
+
+    article ul li {
+        width: 33.333%;
+        height: 600px;
+
+    }
+
+    footer {
+        width: 100%;
+        height: 300px;
+        float: right;
+        max-width: 1018px;
+    }
+
+    .intro h2 {
+        width: 100%;
+        margin-top: 180px;
+    }
+
+    .intro h2 img {
+        width:
+            100%;
+        padding: 80px;
+    }
+
+}
+
+
+/* pc */
+@media(min-width: 1300px) {
+    header {
+        width: 100%;
+        float: none;
+        position: static;
+    }
+
+    .logo-wrap {
+        position: fixed;
+        top: 10%;
+        left: 0%;
+        width: 100%;
+    }
+
+    h1 {
+        position: fixed;
+        top: 50%;
+        margin-top: 10%;
+        width: 28%;
+        float: left;
+    }
+
+    nav {
+        float: right;
+        width: 72%;
+        position: fixed;
+        margin-left: 523px;
+
+    }
+
+    nav ul {
+        margin-top: 5%;
+    }
+
+    nav ul li {
+        width: 33.333%;
+    }
+
+    h1 img {
+        width: 70%;
+    }
+
+    main {
+        width: 72%;
+        float: right;
+    }
+
+
+
+    article ul li {
+        width: 20%;
+        height: 600px;
+
+    }
+
+    .intro h2 {
+        width: 80%;
+        margin: 50px auto;
+    }
+
+    .intro h2 img {
+        width:
+            100%;
+        padding: 100px;
+    }
+    .video{width: 100%;}
+
+}

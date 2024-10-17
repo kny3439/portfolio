@@ -1,0 +1,326 @@
+body {
+    background-color: #000;
+}
+
+
+header {
+    height: 102px;
+    /* background-image: url(./bg_header_wrap.gif); */
+
+    width: 100%;
+    margin: auto;
+    background-color: #000;
+}
+
+.flex {
+    display: flex;
+}
+
+.container {
+    background-color: #000000;
+    width: 1200px;
+    margin: auto;
+    border-bottom: 3px solid #dfdfdf;
+}
+
+header .container {
+    height: 100px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav {
+    align-self: flex-end;
+}
+
+nav ul {
+    gap: 124px;
+}
+
+nav li:hover a {
+    background-position-y: -70px;
+    transition: 0.3s;
+}
+
+nav ul li a {
+    background-image: url(./네비.jpg);
+    /* border: 1px solid #dd0404; */
+    display: block;
+    color: transparent;
+    height: 60px;
+}
+
+nav ul li:nth-child(1) a {
+    width: 82px;
+}
+
+nav ul li:nth-child(2) a {
+    width: 104px;
+    background-position-x: -92px;
+}
+
+nav ul li:nth-child(3) a {
+    width: 58px;
+    background-position-x: -205px;
+}
+
+nav ul li:nth-child(4) a {
+    width: 80px;
+    background-position-x: -270px;
+}
+
+main {
+    width: 712px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+aside {
+    width: 470px;
+}
+
+main>div {
+    height: 206px;
+    width: 226px;
+    margin-bottom: 14px;
+    cursor: pointer;
+}
+
+.wrap {
+    position: relative;
+    top: 30px;
+    width: 1200px;
+}
+
+main>div.top:hover {
+    background-position-y: -206px;
+    transition: 0.35s;
+}
+
+main>div.right:hover {
+    background-position-x: -226px;
+    transition: 0.35s;
+}
+
+
+.wrap {
+    position: relative;
+    top: 30px;
+}
+
+
+
+div .notice {
+    background-color: #fff;
+}
+
+div.goods {
+    background-image: url(./disney.jpg);
+}
+
+div.pay {
+    background-image: url(./MARVE2.jpg);
+}
+
+div.game {
+    background-image: url(./disney+.jpg);
+}
+
+div.event {
+    background-image: url(./disneyland.jpg);
+}
+
+div.notice {
+    background-image: url(./mem.jpg);
+}
+
+div.ip {
+    background-image: url(./STARWARS.jpg);
+}
+
+div.refund {
+    background-image: url(./NATIONAL.jpg);
+}
+
+div.tax {
+    background-image: url(./20TH.jpg);
+}
+
+div.cs {
+    background-image: url(./1200.jpg);
+}
+
+div.remote {
+    background-image: url(./pixer.jpg);
+}
+
+main>div.wid2 {
+    width: 469px;
+}
+
+.input {
+    width: 470px;
+    height: 99px;
+}
+
+.btn input {
+    height: 99px;
+    width: 119px;
+    margin: 0 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 10px 18px;
+    width: 340px;
+    height: 50%;
+}
+
+#firstchk {
+    margin-left: 3px;
+}
+
+.gnb span.smallfont {
+    font-size: 12px;
+}
+
+.input {
+    margin: 10px;
+}
+
+.check,
+.info {
+    margin: 5px;
+    font-size: 13px;
+    color: #fff;
+}
+
+.address {
+    width: 470px;
+    padding: 10px 0 12px 20px;
+    background-color: #dcdcdc;
+    margin: 10px;
+    font-size: 16px;
+}
+
+.address span {
+    margin-right: 20px;
+
+}
+
+.address img {
+    margin-right: 10px;
+
+}
+
+.check li {
+    margin-right: 8px;
+}
+
+
+.info li:nth-child(1),
+.info li:nth-child(2) {
+    background: url(./bg_bar.gif) no-repeat right 3px;
+    padding: 0 6px;
+}
+
+.info li:nth-child(3) {
+    padding: 0 6px;
+}
+
+.viewport {
+    height: 652px;
+    width: 470px;
+    background-color: #fff;
+    position: relative;
+    margin: 10px;
+}
+
+.viewport ul li a {
+    background-image: url(./btn_rolling_arrow.gif);
+
+    height: 60px;
+    display: block;
+}
+
+
+.viewport ul li:nth-child(1) a {
+    width: 60px;
+}
+
+.viewport ul li:nth-child(2) a {
+    width: 60px;
+    background-position-x: 59px;
+}
+
+ul.arrow {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.viewport ul li {
+    color: transparent;
+    /* border: 1px solid #ff0000;
+} */
+}
+
+.viewport li.rig:hover .viewport {
+    background-position-x: -470px;
+    transition: 0.35s;
+}
+
+.viewport {
+    background-image: url(./inside.jpg);
+
+}
+
+footer {
+    width: 1200px;
+    margin: auto;
+    border: 5px solid #ca1515;
+}
+
+.foot{
+    width: 100%;
+}
+footer .logo img {
+    align-items: center;
+    border: 3px solid #2dff03;
+    width: 190px;
+    padding: 20px;
+}
+
+.copyright {
+    width: 80%;
+}
+
+footer ul {
+    justify-content: start;
+    align-items: center;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    font-size: 13px;  text-align: left;
+
+}
+
+footer .copyright li {
+    border: 1px solid #ffffff;
+    padding: 10px;
+}
+
+/* .copyright li:nth-child(1),
+.copyright li:nth-child(2),
+.copyright li:nth-child(3) {
+    background: url(./bg_bar.gif) no-repeat right 3px;
+    padding: 0 6px;
+} */
+
+footer .copyright p {
+    margin: auto;
+    text-align: left;
+    font-size: 10px;
+    padding: 20px;
+    color: #fff;
+    border-top: 0.5px solid #fff
+}

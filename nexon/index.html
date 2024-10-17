@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <header>
+        <h1><img src="./images/nexonlogo.png" alt=""></h1>
+        <nav>
+            <ul>
+                <li class="on"><a href="#sect1">COMPANY</a></li>
+                <li><a href="#sect2">ENJOYABLE</a></li>
+                <li><a href="#sect3">Crazy Arcade </a></li>
+                <li><a href="#sect4">Maple Story</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </header>
+    <section id="sect1">
+        <figure>
+            <video src="http://kny4720.dothome.co.kr/nexon/title-video.mp4" autoplay loop></video>
+        </figure>
+        <div class="desc">
+            <h2 class="box" data-text="COMPANY">COMPANY</h2>
+            <!-- <div class="transY">
+                <h3>COMPANY</h3>
+            </div> -->
+            <p>넥슨은 창의적 DNA와 강력한 개발력을 바탕으로<br />
+                언제나 최초를 실현하며<br />
+                즐겁고 혁신적인 콘텐츠를 전 세계에 선보이고 있습니다.</p>
+        </div>
+    </section>
+    <section id="sect2">
+        <figure>
+            <video src="http://kny4720.dothome.co.kr/nexon/sect2-v.mp4" autoplay loop></video>
+        </figure>
+        <div class="desc">
+            <h2 class="box" data-text="ENJOYABLE">ENJOYABLE</h2>
+            <!-- <div class="transY">
+                <h3>ENJOYABLE</h3>
+            </div> -->
+            <p>게임의 재미를 한층 더 높이는 기술 혁신과<br />
+                경계를 뛰어넘는 IP 확장을 통해<br />
+                세상에 즐거움을 더하고 있습니다.</p>
+        </div>
+    </section>
+    <section id="sect3">
+        <figure>
+            <img src="./images/circle.png" alt="">
+            <img src="./images/cha1.png" alt="">
+            <img src="./images/cha2.png" alt="">
+            <img src="./images/pattern1.png" alt="">
+            <img src="./images/pattern2.png" alt="">
+            <img src="./images/pattern3.png" alt="">
+            <img src="./images/pattern4.png" alt="">
+            <img src="./images/pattern5.png" alt="">
+            <img src="./images/crazyTITLE (1).png" alt="">
+        </figure>
+        <div class="desc">
+            <h2><img src="./images/crazyarcadeLOGO.webp" alt=""></h2>
+            <p><span style="color: #68EFD7; font-weight: bold;">
+                    물풍선을 이용하여 상대를 물방울에 가두어
+                    터뜨리면 이기는 방식의 게임
+                </span>으로 누구나 부담 없이
+                손쉽게 즐길 수 있습니다.<br />
+                여러 명이 한 맵에서 서로가 적이 되어 게임을 할 수도 있고,<br />
+                팀을 나누어 게임을 할 수도 있습니다.</p>
+            <div class="btn">
+
+            </div>
+            <ul class="flex">
+                <li><img src="./images/crazy1 (1).gif" alt=""></li>
+                <li><img src="./images/crazy1 (2).gif" alt=""></li>
+                <li><img src="./images/crazy1 (3).gif" alt=""></li>
+                <li><img src="./images/crazy1 (4).gif" alt=""></li>
+                <li><img src="./images/crazy1 (5).gif" alt=""></li>
+            </ul>
+        </div>
+    </section>
+    <section id="sect4">
+        <div class="desc">
+            <h2><img src="./images/mapleREALLOGO.webp" alt=""></h2>
+            <p><span style="color: #6860b1; font-weight: bold;">
+                    지금껏 볼 수 없었던 세계.<br />
+                    메이플스토리에서는 상상 속에서만 그려왔던
+                    멋진 세계를 여행하실 수 있습니다.
+                </span>
+                끊임없는 즐거움, 스스로 만들어 나가는 이야기, 상상속의 세계.
+                이 모든 것을 경험할 준비가 되었다면,
+                메이플스토리 빅토리아 아일랜드로 향하는 배에 오르면 됩니다.</p>
+            <!-- <ul class="flex">
+                    <li><img src="images/mushroom2.png" alt=""></li>
+                    <li><img src="./images/pig.png" alt=""></li>
+                    <li><img src="./images/green.png" alt=""></li>
+                    <li><img src="./images/pngwing.com (9).png" alt=""></li>
+                    <li><img src="./images/mushroom3.png" alt=""></li>
+                </ul> -->
+            <div class="mushroom">
+                <img src="./images/mushroom.gif" alt="">
+            </div>
+        </div>
+        <figure>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide slide1"></div>
+                    <div class="swiper-slide slide2"></div>
+                    <div class="swiper-slide slide3"></div>
+                    <div class="swiper-slide slide4"></div>
+                    <div class="swiper-slide slide5"></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+
+        </figure>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./index.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: "auto",
+            centeredSlides: true,
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+</body>
+
+</html>

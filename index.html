@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
+    <script src="./modernizr.custom.97074.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        ul.menu li {
+            flex: 1;
+            width: 100%;
+            text-align: center;
+        }
+
+        ul.menu li a {
+            display: inline-block;
+            padding: 20px;
+        }
+
+        ul.menu li a.on {
+            background-color: black;
+            color: #fff;
+        }
+
+
+        nav {
+            max-width: 1400px;
+            margin: auto;
+            height: 100px;
+        }
+
+        nav ul {
+            display: flex;
+            height: 100%;
+            align-items: center;
+        }
+
+        /* force scrollbar */
+        html {
+            overflow-y: scroll;
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+
+        /* ---- isotope ---- */
+
+        .grid {
+            max-width: 1400px;
+            margin: auto;
+            background: #DDD;
+        }
+
+        /* clear fix */
+        .grid:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        /* ---- .grid-item ---- */
+
+        .grid-item {
+            width: calc(33.333% - 12px);
+            float: left;
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .summary {
+            position: absolute;
+            z-index: 999;
+            width: 100%;
+            text-align: center;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            top: 0;
+            left: 0;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            visibility: hidden;
+            color: #fff;
+        }
+
+        .summary h4 {
+            font-weight: 200;
+            font-size: 2vw;
+        }
+
+        .summary span {
+            font-weight: 200;
+            font-size: 1.3vw;
+        }
+
+        .grid-item:hover .summary {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .grid-item img {
+            width: 100%;
+            display: block;
+            max-width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul class="menu">
+            <li><a href="#" data-filter="*" class="on">All</a></li>
+            <li><a href="#" data-filter=".publish">CodWorks</a></li>
+            <li><a href="#" data-filter=".project">Project</a></li>
+            <li><a href="#" data-filter=".design">Graphic Design</a></li>
+        </ul>
+    </nav>
+
+    <div class="grid">
+        <div class="grid-item publish">
+            <a href='./0816 gentlemonster/gentlemonster/index.html' target="_blank">
+                <img src="./images/gentlemonster.jpg" alt="">
+                <div class="summary">
+                    <h4>Project</h4>
+                    <span class="skill">Tab활용</span>
+                    <span class="date">24.08.16</span>
+                </div>
+            </a>
+        </div>
+        <div class="grid-item publish">
+            <a href="./0703 chanel/index.html"  target="_blank">
+                <img src="./images/Chanel.jpg" alt="">
+                <div class="summary">
+                    <h4>Coding Works</h4>
+                    <span class="skill">Tab활용</span>
+                    <span class="date">24.08.16</span>
+                </div>
+            </a>
+        </div>
+        <div class="grid-item publish">
+            <a href="/0730 hanwha/index.html"  target="_blank">
+                <img src="./images/spacehub.png" alt="">
+                <div class="summary">
+                    <h4>Project</h4>
+                    <span class="skill">Tab활용</span>
+                    <span class="date">24.08.16~24.08.</span>
+                </div>
+            </a>
+        </div>
+        <div class="grid-item project">
+            <a href="/0812 pawinhands/pawinhands/index.html"  target="_blank">
+                <img src="./images/pawinhand.jpg" alt="">
+                <div class="summary">
+                    <h4>Project</h4>
+                    <span class="skill">Tab활용</span>
+                    <span class="date">24.08.16 ~ 24.09.16</span>
+                </div>
+            </a>
+        </div>
+        <div class="grid-item publish">
+            <a href="./0903 genesis/genesis/index.html"  target="_blank">
+                <img src="./images/genesis.jpg" alt="">
+                <div class="summary">
+                    <h4>Project</h4>
+                    <span class="skill">Tab활용</span>
+                    <span class="date">24.08.16</span>
+                </div>
+            </a>
+        </div>
+        <div class="grid-item publish">
+            <a href="/0709 jaws/0709/index.html"  target="_blank">
+                <img src="./images/jaws.jpg" alt="">
+                <div class="summary">
+                    <h4>Coding Works</h4>
+                    <span class="skill">Clone Coding</span>
+                    <span class="date">24.08.16</span>
+                </div>
+            </a>
+        </div>
+        <div class="grid-item publish">
+            <a href="/0923 vancleef/vancleef/index.html"  target="_blank">
+                <img src="./images/vancleef.jpg" alt="">
+                <div class="summary">
+                    <h4>Project</h4>
+                    <span class="skill">Slide활용</span>
+                    <span class="date">24.08.16</span>
+                </div>
+            </a>
+        </div>
+        <div class="grid-item publish">
+            <a href="/0704 disney/0704/index.html"  target="_blank">
+                <img src="./images/disney.jpg" alt="">
+                <div class="summary">
+                    <h4>Coding Works</h4>
+                    <span class="skill">Transform활용</span>
+                    <span class="date">24.08.16</span>
+                </div>
+            </a>
+        </div>
+        <div class="grid-item publish">
+            <a href="/0708 sanrio/0708 sanrio/index.html"  target="_blank">
+                <img src="./images/snario.jpg" alt="">
+                <div class="summary">
+                    <h4>Coding Works</h4>
+                    <span class="skill">Tab활용</span>
+                    <span class="date">24.08.16</span>
+                </div>
+            </a>
+        </div>
+        <div class="grid-item publish">
+            <a href="/0925 apple/index.html"  target="_blank">
+                <img src="./images/apple.jpg" alt="">
+                <div class="summary">
+                    <h4>Coding Works</h4>
+                    <span class="skill">Tab활용</span>
+                    <span class="date">24.08.16</span>
+                </div>
+            </a>
+        </div>
+        <div class="grid-item publish">
+            <a href="/0827 polo/index.html"  target="_blank">
+                <img src="./images/polo.jpg" alt="">
+                <div class="summary">
+                    <h4>Coding Works</h4>
+                    <span class="skill">Tab활용</span>
+                    <span class="date">24.08.16</span>
+                </div>
+            </a>
+        </div>
+        <div class="grid-item publish">
+            <a href="/0719 banyantree/index.html"  target="_blank">
+                <img src="./images/banyan.jpg" alt="">
+                <div class="summary">
+                    <h4>Coding Works</h4>
+                    <span class="skill">Tab활용</span>
+                    <span class="date">24.08.16</span>
+                </div>
+            </a>
+        </div>
+        <div class="grid-item publish">
+            <a href="/0910 mugobox/뮤고박스/index.html" target="_blank">
+                <img src="./images/mugo.jpg" alt="">
+                <div class="summary">
+                    <h4>Coding Works</h4>
+                    <span class="skill">Clone Coding</span>
+                    <span class="date">24.08.16</span>
+                </div>
+            </a>
+        </div>
+        <div class="grid-item publish" style="background-color: #fff;">
+            <a href="/0802 YG/index.html" target="_blank">
+                <img src="./images/YG.svg" alt="">
+                <div class="summary">
+                    <h4>Coding Works</h4>
+                    <span class="skill">Grid 활용</span>
+                    <span class="date">24.08.02</span>
+                </div>
+            </a>
+        </div>
+        <div class="grid-item publish">
+            <a href="/0919 lotte/롯데칠성/index.html" target="_blank">
+                <img src="./images/lotte.jpg" alt="">
+                <div class="summary">
+                    <h4>Coding Works</h4>
+                    <span class="skill">Clone Coding</span>
+                    <span class="date">24.08.16</span>
+                </div>
+            </a>
+        </div>
+        <div class="grid-item publish">
+            <a href="/0712 hagendazs/index.html" target="">
+                <img src="./images/hagendaz.jpg" alt="">
+                <div class="summary">
+                    <h4>Coding Works</h4>
+                    <span class="skill">Tab활용</span>
+                    <span class="date">24.08.16</span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+    <script src="../jquery.hoverdir.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script>
+        // external js: isotope.pkgd.js, imagesloaded.pkgd.js
+
+        // init Isotope
+        var $grid = $('.grid').isotope({
+            itemSelector: '.grid-item',
+            percentPosition: true,
+            masonry: {
+                columnWidth: '.grid-item',
+                gutter: 18
+            }
+        });
+        // layout Isotope after each image loads
+        $grid.imagesLoaded().progress(function () {
+            $grid.isotope('layout');
+
+        });
+
+        $('.menu li a').on('click', function (e) {
+            e.preventDefault()
+            $('.menu li a').removeClass('on')
+            $(this).addClass('on')
+            var filterValue = $(this).attr('data-filter');
+            $grid.isotope({ filter: filterValue });
+        });
+
+        $('.grid-item').each(function () {
+            $(this).hoverdir();
+        });
+
+        Fancybox.bind("[data-fancybox]", {
+        })
+    </script>
+
+
+</body>
+
+</html>
+<!-- https://tympanus.net/codrops/2012/04/09/direction-aware-hover-effect-with-css3-and-jquery/ -->
+<!-- https://fancyapps.com/fancybox/ -->

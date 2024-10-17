@@ -1,0 +1,418 @@
+@import url(./reset.css);
+header {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  background-color: #fff;
+  min-width: 1200px;
+  transition: 0.35s;
+}
+header.on {
+  top: -100px;
+}
+header nav {
+  width: 710px;
+  font-weight: bold;
+}
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+}
+header .info ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 230px;
+  color: #888;
+  font-size: 15px;
+}
+header .info ul li.sch {
+  background-image: url(./images/header_sch.png);
+  height: 18px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  z-index: 99;
+  color: transparent;
+}
+header .info ul li.chill {
+  background-image: url(./images/logo_chill_mall.png);
+  height: 30px;
+  width: 50px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  z-index: 99;
+  color: transparent;
+}
+
+section#sect1 {
+  height: 100vh;
+}
+section#sect1 .swiper {
+  height: 100%;
+}
+section#sect1 .swiper .swiper-wrapper .swiper-slide {
+  position: relative;
+}
+section#sect1 .swiper .swiper-wrapper .swiper-slide p {
+  color: #fff;
+  font-size: 50px;
+  position: absolute;
+  z-index: 999;
+  text-align: center;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+section#sect1 .swiper .swiper-wrapper .swiper-slide.slide1 {
+  background-image: url(./images/202408280352452020.png);
+}
+section#sect1 .swiper .swiper-wrapper .swiper-slide.slide2 {
+  background-image: url(./images/202408291128216430.png);
+}
+section#sect1 .swiper .swiper-wrapper .swiper-slide.slide3 {
+  background-image: url(./images/202408280608145780.png);
+}
+section#sect1 .swiper .swiper-wrapper .swiper-slide.slide4 {
+  background-image: url(./images/202408290410578540.png);
+}
+section#sect1 .swiper .swiper-wrapper .swiper-slide.slide5 {
+  background-image: url(./images/202010280628151570.jpg);
+}
+section#sect1 .swiper .swiper-wrapper .swiper-slide.slide6 {
+  background-image: url(./images/202010280624033660.jpg);
+}
+section#sect1 .swiper .swiper-wrapper .swiper-slide.slide7 {
+  background-image: url(./images/202010280638337510.jpg);
+}
+section#sect1 .slide-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+}
+section#sect1 .slide-menu .paging-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+section#sect1 .slide-menu .paging-menu li {
+  width: 30px;
+  height: 30px;
+  color: transparent;
+  cursor: pointer;
+  gap: 24px;
+  background-image: url(./images/mainRoll_indi.png);
+}
+section#sect1 .slide-menu .paging-menu li.on {
+  background-image: url(./images/mainRoll_indi_on.png);
+}
+section#sect1 .slide-menu a.pause {
+  display: inline-block;
+  width: 9px;
+  height: 11px;
+  margin-left: 20px;
+  background-image: url(./images/btn_pause.png);
+  color: transparent;
+}
+section#sect1 .slide-menu a.pause.active {
+  background-image: url(./images/btn_play.png);
+  background-size: cover;
+  width: 9px;
+  height: 11px;
+}
+section#sect1 a.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(50%);
+  z-index: 99;
+}
+section#sect1 a.prev {
+  left: 10px;
+}
+section#sect1 a.next {
+  right: 10px;
+}
+section#sect2 {
+  width: 1024px;
+  margin: auto;
+  position: relative;
+}
+section#sect2 .sect2-sti {
+  position: sticky;
+  transition: 0.4s;
+  top: 10%;
+}
+section#sect2 .sect2-sti h1 {
+  font-size: 13rem;
+  text-align: center;
+  color: #919191;
+}
+section#sect2 .sect2-sti p {
+  text-align: center;
+  color: #919191;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin: 30px 0 120px 0;
+}
+section#sect2 .mainCon {
+  display: flex;
+  gap: 40px;
+  position: relative;
+  z-index: 99;
+}
+section#sect2 .mainCon ul li {
+  margin-bottom: 40px;
+  position: relative;
+}
+section#sect2 .mainCon ul li .tx {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  z-index: 99;
+  color: #fff;
+}
+section#sect2 .mainCon ul li .tx p {
+  font-size: 1.3rem;
+}
+section#sect2 .mainCon ul li .tx h3 span {
+  font-size: 7rem;
+}
+section#sect2 .mainCon ul:nth-child(2) {
+  margin-top: 100px;
+}
+section#sect2 .news {
+  height: 80px;
+  width: 1024px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section#sect2 .news .up {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+section#sect2 .news .up li {
+  height: 10px;
+  margin: 10px;
+}
+section#sect2 .news .news-li {
+  width: 680px;
+  height: 60px;
+  overflow: hidden;
+}
+section#sect2 .news .news-li li {
+  height: 60px;
+  line-height: 60px;
+}
+section#sect2 .news button {
+  border-style: none;
+  padding: 10px 35px;
+  border-radius: 30px;
+  background-color: #333;
+  color: #fff;
+  font-weight: 500;
+  font-size: 17px;
+}
+section#sect3 {
+  height: 150vh;
+  width: 100%;
+  background-color: rgba(39, 145, 115, 0.9);
+  display: flex;
+  position: relative;
+}
+section#sect3 .container {
+  width: 1024px;
+  margin: auto;
+  position: relative;
+}
+section#sect3 .container .con-tx {
+  text-align: center;
+  position: sticky;
+  top: 10%;
+}
+section#sect3 .container .con-tx h1 {
+  font-size: 15rem;
+  color: #fff;
+}
+section#sect3 .container .con-tx p {
+  color: #fff;
+  font-weight: 300;
+  font-size: 1.5rem;
+  margin-bottom: 100px;
+}
+section#sect3 .container .tab-box {
+  width: 100%;
+  height: 470px;
+  background-color: #fff;
+  position: relative;
+  z-index: 99;
+}
+section#sect3 .container .tab-box .product {
+  height: 470px;
+  width: 100%;
+  position: absolute;
+  opacity: 0;
+}
+section#sect3 .container .tab-box .product.on {
+  opacity: 1;
+  z-index: 99;
+}
+section#sect3 .container .tab-box .product.on .contents h3 {
+  opacity: 1;
+  transform: translateY(-50px);
+}
+section#sect3 .container .tab-box .product.on .contents h2 {
+  opacity: 1;
+  transform: translateY(-50px);
+}
+section#sect3 .container .tab-box .product.on .contents p {
+  opacity: 1;
+  transform: translateY(-50px);
+}
+section#sect3 .container .tab-box .product.on .contents button {
+  opacity: 1;
+  transform: translateY(-50px);
+}
+section#sect3 .container .tab-box .product.on .item .img1 {
+  opacity: 1;
+  transform: translateY(-50px);
+}
+section#sect3 .container .tab-box .product.on .item .img2 {
+  opacity: 1;
+  transform: translateY(-50px);
+}
+section#sect3 .container .tab-box .product .contents {
+  width: 1000px;
+  height: 470px;
+  padding-left: 50px;
+  position: relative;
+}
+section#sect3 .container .tab-box .product .contents h3 {
+  position: absolute;
+  top: 95px;
+  opacity: 0.1;
+  font-size: 50px;
+  font-weight: 100;
+  transition: 0.5s;
+}
+section#sect3 .container .tab-box .product .contents h2 {
+  position: absolute;
+  top: 145px;
+  opacity: 0.1;
+  font-size: 90px;
+  font-weight: 100;
+  transition: 0.6s;
+}
+section#sect3 .container .tab-box .product .contents h2.h2 {
+  position: absolute;
+  top: 210px;
+}
+section#sect3 .container .tab-box .product .contents p {
+  position: absolute;
+  top: 279px;
+  font-weight: 300;
+  opacity: 0.1;
+  font-size: 18px;
+  margin: 20px 0;
+  transition: 0.75s;
+}
+section#sect3 .container .tab-box .product .contents p.tx {
+  position: absolute;
+  top: 310px;
+}
+section#sect3 .container .tab-box .product .contents .sect3-btn {
+  position: absolute;
+  top: 380px;
+  display: flex;
+}
+section#sect3 .container .tab-box .product .contents .sect3-btn button {
+  border-style: none;
+  padding: 15px 35px;
+  margin-right: 10px;
+  background-color: #149f5c;
+  color: #fff;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  transition: 0.9s;
+}
+section#sect3 .container .tab-box .product .item {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+section#sect3 .container .tab-box .product .item.bottom img {
+  position: absolute;
+  top: -486px;
+}
+section#sect3 .container .tab-box .product .item.bottom img.water {
+  position: absolute;
+  top: -570px;
+}
+section#sect3 .container .tab-box .product .item img {
+  position: absolute;
+  width: 550px;
+  top: -517px;
+  right: -137px;
+}
+section#sect3 .container .tab-box .product .item img.img1 {
+  transition: 1.8s;
+  opacity: 0;
+}
+section#sect3 .container .tab-box .product .item img.img2 {
+  transition: 2.6s;
+  opacity: 0;
+}
+section#sect3 .container .nav-line {
+  width: 1920px;
+  height: 1px;
+  background-color: #ffffff;
+  position: relative;
+  left: -440px;
+  top: 30px;
+}
+section#sect3 .container .nav-line .dot {
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: -5px;
+  z-index: 999;
+}
+section#sect3 .container .item_nav {
+  width: 100%;
+  display: flex;
+  height: 126px;
+  justify-content: space-between;
+  margin-top: 50px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 100;
+  position: relative;
+  z-index: 999;
+}
+section#sect3 .container .item_nav li a {
+  transition: 0.3s;
+}
+section#sect3 .container .item_nav li a.on {
+  font-weight: 500;
+  position: relative;
+}

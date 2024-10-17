@@ -1,0 +1,533 @@
+@import url(./font/font.css);
+@import url(./reset.css);
+@keyframes jello-horizontal {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes rotateBanner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.flex {
+  display: flex;
+}
+
+h1,
+p,
+span,
+a,
+figcaption,
+button,
+b {
+  font-family: Binggrae;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  height: 95px;
+  background-color: #fff;
+  padding: 40px;
+  z-index: 999;
+}
+header::after {
+  content: "";
+  height: 16px;
+  width: 100%;
+  background-image: url(./images/menu-bg-pattern.png);
+  bottom: -8px;
+  left: 0;
+  display: block;
+  position: absolute;
+}
+header .inner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  max-width: 1780px;
+  min-width: 1290px;
+  margin: auto;
+  height: 100%;
+  align-items: center;
+}
+header .inner h1 {
+  position: absolute;
+  left: 0;
+}
+header .inner h1 img {
+  width: 54px;
+}
+header .inner nav {
+  width: 840px;
+  height: 95px;
+  display: flex;
+  align-items: center;
+}
+header .inner nav ul#menu {
+  width: 100%;
+  display: flex;
+  gap: 60px;
+  position: absolute;
+  font-weight: bold;
+  font-size: 14px;
+}
+header .inner nav ul#menu .main_menu {
+  position: relative;
+}
+header .inner nav ul#menu .main_menu > a {
+  height: 21px;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+}
+header .inner nav ul#menu .main_menu:hover::after {
+  content: "\e910";
+  font-family: "jt-font";
+  font-size: 9px;
+  font-weight: normal;
+  text-align: center;
+  color: #ed4043;
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -20px;
+  opacity: 1;
+  transition: 0.5s;
+}
+header .inner nav ul#menu .main_menu:hover .menu_inner > span {
+  transition: 0.4s;
+  transform: translateY(-21px);
+  color: #ed4043;
+}
+header .inner nav ul#menu .main_menu a {
+  display: block;
+  text-align: center;
+}
+header .inner nav ul#menu .main_menu a span {
+  display: block;
+}
+header .inner nav ul#menu .main_menu .sub_menu {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 4px;
+  border: 1px solid #000;
+  background-color: #fff;
+  border: 2px solid #b9b9b9;
+  display: none;
+}
+header .inner nav ul#menu .main_menu .sub_menu li a span {
+  white-space: nowrap;
+  padding: 20px 80px 20px 20px;
+  border-bottom: 1px solid #aeaeae;
+  text-align: left;
+  font-size: 14px;
+}
+header .inner ul.gnb {
+  width: 198px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  right: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+}
+header .inner ul.gnb li a::before {
+  font-family: "jt-font";
+}
+header .inner ul.gnb li a.login::before {
+  content: "\e91b";
+  color: #ed4043;
+}
+header .inner ul.gnb li a.sign::before {
+  content: "\e91c";
+  color: #ed4043;
+}
+header .inner ul.gnb li a:hover {
+  color: #ed4043;
+  transition: 0.4s;
+}
+
+section {
+  background-color: #dfdfdf;
+  position: relative;
+}
+section > p {
+  transform: rotate(-90deg);
+  z-index: 99;
+  position: absolute;
+  color: #fff;
+  top: 50%;
+  left: -130px;
+}
+section > h1 {
+  color: #fff;
+  font-size: 2.1rem;
+  z-index: 99;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-weight: bold;
+}
+section > h1 span {
+  font-size: 2.6rem;
+}
+section > figure.quick {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  z-index: 999;
+  width: 116px;
+  height: 116px;
+  cursor: pointer;
+}
+section > figure.quick figcaption {
+  width: 77px;
+  height: 77px;
+  background-color: #ed4043;
+  border-radius: 50%;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 0.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section > figure.quick .rotate {
+  animation: rotateBanner 20s linear infinite;
+  animation-play-state: paused;
+}
+section > figure.quick:hover figcaption {
+  background-color: #e31c1f;
+}
+section > figure.quick:hover .rotate {
+  animation: rotateBanner 20s linear infinite;
+}
+section#sect1 {
+  min-width: 1200px;
+  height: 100vh;
+  position: relative;
+}
+section#sect1 article {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+}
+section#sect1 article.on {
+  display: flex;
+  z-index: 99;
+}
+section#sect1 article.on .desc .desc_inner {
+  opacity: 1;
+}
+section#sect1 article.on figcaption {
+  opacity: 1;
+  transform: translate(-50%);
+}
+section#sect1 article .desc {
+  width: 50%;
+  height: 100%;
+  background: #ed4043;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+section#sect1 article .desc .desc_inner {
+  opacity: 0;
+  transition: 0.5s;
+}
+section#sect1 article .desc .desc_inner h3 {
+  font-size: 1.7rem;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+section#sect1 article .desc .desc_inner h3 span {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-right: 10px;
+}
+section#sect1 article .desc .desc_inner p {
+  line-height: 30px;
+}
+section#sect1 article .desc .desc_inner .btn {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 50px;
+}
+section#sect1 article .desc .desc_inner .btn button {
+  color: #ed4043;
+  border-style: none;
+  z-index: 99;
+  position: relative;
+  line-height: 0px;
+  margin-top: 20%;
+  font-weight: bold;
+  cursor: pointer;
+}
+section#sect1 article .desc .desc_inner .btn button::before {
+  content: "\e910";
+  font-family: "jt-font";
+  font-size: 80px;
+  font-weight: normal;
+  text-align: center;
+  color: #ffffff;
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: -50%;
+  transform: translate(-50%);
+  z-index: -1;
+  transition: 0.5s;
+}
+section#sect1 article .desc .desc_inner .btn button:hover {
+  animation: jello-horizontal 1.5s;
+}
+section#sect1 article .desc .desc_inner .btn b {
+  color: #ed4043;
+  position: absolute;
+  z-index: 99;
+  top: 25%;
+  left: 50%;
+  white-space: nowrap;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  font-size: 14px;
+  animation: jello-horizontal;
+}
+section#sect1 article .character {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+section#sect1 article .character figure img {
+  position: relative;
+  z-index: 1;
+  margin-top: 50px;
+}
+section#sect1 article .character figure figcaption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  font-size: 180px;
+  opacity: 0.3;
+  z-index: 0;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  transition: 0.5s;
+}
+section#sect1 article .character.mugo {
+  background-color: #ffcc00;
+}
+section#sect1 article .character.mugo img {
+  animation: dance 3.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+  transform-origin: center bottom;
+}
+@keyframes dance {
+  0% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(-3deg);
+  }
+}
+section#sect1 article .character.chichi {
+  background-color: #0ad17c;
+}
+section#sect1 article .character.chichi img {
+  animation: dance_skew 1.8s ease-out infinite;
+  transform-origin: center bottom;
+}
+@keyframes dance_skew {
+  0% {
+    transform: skewX(0deg);
+  }
+  50% {
+    transform: skewX(3deg);
+  }
+  100% {
+    transform: skewX(-3deg);
+  }
+  100% {
+    transform: none;
+  }
+}
+section#sect1 article .character.windy {
+  background-color: #0bcacb;
+}
+section#sect1 article .character.windy img {
+  animation: jump 1.8s ease-out infinite;
+  transform-origin: center bottom;
+}
+@keyframes jump {
+  0% {
+    transform: translate(0, -8%);
+  }
+  50% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, -8%);
+  }
+}
+section#sect1 article .character.cago {
+  background-color: #ffae08;
+}
+section#sect1 article .character.cago img {
+  animation: dance_jump 1.8s ease-out infinite;
+  transform-origin: center bottom;
+}
+@keyframes dance_jump {
+  0% {
+    transform: none;
+  }
+  15% {
+    transform: rotate(-3deg);
+  }
+  30% {
+    transform: rotate(3deg);
+  }
+  45% {
+    transform: rotate(-3deg);
+  }
+  60% {
+    transform: translate3d(0, -5%, 0);
+  }
+  75% {
+    transform: translate3d(0, 1%, 0);
+  }
+  85% {
+    transform: translate3d(0, -3%, 0);
+  }
+  100% {
+    transform: none;
+  }
+}
+section#sect1 article .character.ari {
+  background-color: #fbd04d;
+}
+section#sect1 article .character.ari img {
+  animation: dance 1.8s ease-out infinite;
+  transform-origin: center bottom;
+}
+section#sect1 article .character.rok {
+  background-color: #404475;
+}
+section#sect1 article .character.rok img {
+  animation: wobble 3.5s ease-out infinite;
+}
+@keyframes wobble {
+  0% {
+    transform: none;
+  }
+  15% {
+    transform: translate3d(-3%, 0, 0) rotate(-1deg);
+  }
+  30% {
+    transform: translate3d(3%, 0, 0) rotate(2deg);
+  }
+  45% {
+    transform: translate3d(-3%, 0, 0) rotate(-2deg);
+  }
+  60% {
+    transform: translate3d(2%, 0, 0) rotate(1deg);
+  }
+  75% {
+    transform: translate3d(-1%, 0, 0) rotate(-1deg);
+  }
+  100% {
+    transform: none;
+  }
+}
+section .friend {
+  justify-content: center;
+  gap: 60px;
+  width: 100%;
+  position: absolute;
+  z-index: 99;
+  top: calc(100vh - 25%);
+}
+section .friend li a {
+  display: block;
+  width: 103px;
+  position: relative;
+}
+section .friend li a.on span::after {
+  display: block;
+}
+section .friend li a span {
+  width: 103px;
+  display: block;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+section .friend li a span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+  border: 5px solid #ffffff;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  border-radius: 50%;
+}
+section .friend li a span img {
+  transition: 0.35s;
+}
+section .friend li a h4 {
+  text-align: center;
+  color: #fff;
+  font-size: 13px;
+  margin-top: 10px;
+}
+section .friend li a:hover img {
+  transform: scale(1.1);
+}

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Demo styles -->
+    <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="flex">
+        <h1><a href="#art1"><img src="./images/logo.png" alt=""></a>
+        </h1>
+        <ul class="flex">
+            <li><a href="#art1">알함브라 주얼리
+                </a></li>
+            <li><a href="#art5">알함브라 워치</a></li>
+            <li><a href="#art9">뻬를리</a></li>
+        </ul>
+    </header>
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="container">
+                    <div class="hslide-wrap">
+                        <article id="art1">
+                            <div class="video">
+                                <video src="./images/video1.mp4" loop autoplay muted></video>
+                            </div>
+                            <div class="sect1-con">
+                                <div class="sect1-tx">
+                                    <p class="title">주얼리</p>
+                                    <h1>알함브라</h1>
+                                    <p>행운을 상징하는 알함브라(Alhambra) 모티브는
+                                        반클리프 아펠(Van Cleef & Arpels)이 소중히 여겨
+                                        삶에 관한 긍정적인 비전을 구현하고 있습니다.
+                                        알함브라(Alhambra) 컬렉션은<br /> 1968년 탄생의 순간부터 소재의 조합,
+                                        다채로운 기능적인 측면, 모티브 사이즈의 다양한 적용 등을 도입하여
+                                        지속적인 진화를 거듭하고 있습니다.</p>
+                                </div>
+                                <ul class="item-menu sect1-li flex">
+                                    <li><a href="#art2"><img src="./images/sect1(1).jpg" alt=""></a></li>
+                                    <li><a href="#art3"><img src="./images/sect1(2).jpg" alt=""></a></li>
+                                    <li><a href="#art4"><img src="./images/sect1(3).jpg" alt=""></a></li>
+                                </ul>
+    
+                            </div>
+                        </article>
+                        <article id="art2">
+                            <div class="col1">
+                            </div>
+                            <div class="col2">
+                                <div>
+                                    <div class="col2-tx">
+                                        <h2>블루 아게이트는 불투명을 지닌 저마다 다른 자연스러운 변화로<br />
+                                            작품들에 자신만의 고유함과 매혹을 불어넣습니다</h2>
+                                        <p>메종은 자신에게 소중한 전통인 변형 가능한 주얼리의 역사를<br />
+                                            충실히 이어가기 위해 빈티지 알함브라 리버서블 링을 선보였습니다.</p>
+                                    </div>
+                                    <ul class="item-menu col2-li flex">
+                                        <li><a href="#art2"><img src="./images/sect1(1).jpg" alt=""></a></li>
+                                        <li><a href="#art3"><img src="./images/sect1(2).jpg" alt=""></a></li>
+                                        <li><a href="#art4"><img src="./images/sect1(3).jpg" alt=""></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                        <article id="art3">
+                            <div class="art3-wrap">
+                                <div class="contents">
+                                    <h2>햇살처럼 파고든 결의 패턴은
+                                        골드 소재의 표면에 섬세한 텍스처를 부여합니다</h2>
+                                    <p>알함브라 컬렉션은 반클리프 아펠이 축적해 온 주얼리 노하우와 전문성을 오롯이 보여주고 있습니다.
+                                        특히 엄선된 스톤과 소재와 컬러로 구현하는 풍성한 팔레트는 빛나는 명성으로 인정받고 있습니다.</p>
+                                </div>
+                                <ul class="item-menu col2-li flex">
+                                    <li><a href="#art2"><img src="./images/sect1(1).jpg" alt=""></a></li>
+                                    <li><a href="#art3"><img src="./images/sect1(2).jpg" alt=""></a></li>
+                                    <li><a href="#art4"><img src="./images/sect1(3).jpg" alt=""></a></li>
+                                </ul>
+                            </div>
+                        </article>
+                        <article id="art4">
+                            <div class="col1">
+                                <a href="#art1" class="re"><img src="./images/next.png" alt=""></a>
+                            </div>
+                            <div class="col2">
+                                <div>
+                                    <p>반클리프 아펠이 추구하는 스타일에서 발견되는
+                                        비즈의 전형적인 윤곽선은<br /> 모티브마다 경계를 이룹니다</p>
+                                    <figure>
+                                        <img src="./images/sect1-con.jpg" alt="">
+                                    </figure>
+                                    <ul class="item-menu col2-li flex">
+                                        <li><a href="#art2"><img src="./images/sect1(1).jpg" alt=""></a></li>
+                                        <li><a href="#art3"><img src="./images/sect1(2).jpg" alt=""></a></li>
+                                        <li><a href="#art4"><img src="./images/sect1(3).jpg" alt=""></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="container">
+                    <div class="hslide-wrap">
+                        <article id="art5">
+                            <div class="video">
+                                <video src="./images/video2.mp4" loop autoplay muted></video>
+                            </div>
+                            <div class="sect1-con">
+                                <div class="sect1-tx">
+                                    <p class='title'>워치</p>
+                                    <h1>알함브라</h1>
+                                    <p>행운을 상징하는 알함브라(Alhambra) 모티브는
+                                        반클리프 아펠(Van Cleef & Arpels)이 소중히 여겨
+                                        삶에 관한 긍정적인 비전을 구현하고 있습니다.
+                                        알함브라(Alhambra) 컬렉션은<br /> 1968년 탄생의 순간부터 소재의 조합,
+                                        다채로운 기능적인 측면, 모티브 사이즈의 다양한 적용 등을 도입하여
+                                        지속적인 진화를 거듭하고 있습니다.</p>
+                                </div>
+                                <ul class="item-menu sect1-li flex">
+                                    <li><a href="#art6"><img src="./images/sect2 (1).jpg" alt=""></a></li>
+                                    <li><a href="#art7"><img src="./images/sect2(2).jpg" alt=""></a></li>
+                                    <li><a href="#art8"><img src="./images/sect2 (3).jpg" alt=""></a></li>
+                                </ul>
+    
+                        </article>
+                        <article id="art6">
+                            <div class="col1">
+                                <div>
+                                    <div class="col2-tx">
+                                        <h2>실루엣을 우아하게 장식하는 이 작품들은 함께 서로 어우러져<br />
+                                            개인마다의 고유한 스타일을 탄생시키게 합니다</h2>
+                                        <p>고귀한 자태의 주얼리 케이스에 세팅된 자태처럼, 이 작품의 모티브는 주얼리 장인이<br />
+                                            심혈을 기울여 제작한 비즈 세팅으로 둘러싸여 있습니다.</p>
+                                    </div>
+                                    <ul class="item-menu col2-li flex">
+                                        <li><a href="#art6"><img src="./images/sect2 (1).jpg" alt=""></a></li>
+                                        <li><a href="#art7"><img src="./images/sect2(2).jpg" alt=""></a></li>
+                                        <li><a href="#art8"><img src="./images/sect2 (3).jpg" alt=""></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col2">
+                            </div>
+                        </article>
+                        <article id="art7">
+                            <div class="art3-wrap">
+                                <div class="contents">
+                                    <h2>다이얼의 가장자리는 우아한 비즈로 장식되어<br />
+                                        기요셰 골드가 펼쳐내는 광채를 더욱더 눈부시게 강조합니다</h2>
+                                    <p>골드 비즈들의 라인을 따라 내부에서 이어지다 꺾이는 실루엣은 라운드 처리되어 고도의 기술로 구현됩니다.<br />
+                                        최종 폴리싱 단계를 거치며 워치 작품의 존재감은 더욱더 뚜렷해집니다.</p>
+                                </div>
+                                <ul class="item-menu col2-li flex">
+                                    <li><a href="#art6"><img src="./images/sect2 (1).jpg" alt=""></a></li>
+                                    <li><a href="#art7"><img src="./images/sect2(2).jpg" alt=""></a></li>
+                                    <li><a href="#art8"><img src="./images/sect2 (3).jpg" alt=""></a></li>
+                                </ul>
+                            </div>
+                        </article>
+                        <article id="art8">
+                            <div class="col1">
+                                <div>
+                                    <p>장식용 스톤이나 다이아몬드와 함께 어우러진 기요셰 모티브는
+                                        눈부시게 빛나는 빛을 품었다가 태양처럼
+                                        다시 세상에 펼쳐내며 시선을 사로잡습니다</p>
+                                    <figure>
+                                        <img src="./images/sect2-con.jpg" alt="">
+                                    </figure>
+                                    <ul class="item-menu col2-li flex">
+                                        <li><a href="#art6"><img src="./images/sect2 (1).jpg" alt=""></a></li>
+                                        <li><a href="#art7"><img src="./images/sect2(2).jpg" alt=""></a></li>
+                                        <li><a href="#art8"><img src="./images/sect2 (3).jpg" alt=""></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col2">
+                                <a href="#art5" class="re"><img src="./images/next.png" alt=""></a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="container">
+                    <div class="hslide-wrap">
+                        <article id="art9">
+                            <div class="video">
+                                <video src="./images/video3.mp4" loop autoplay muted></video>
+                            </div>
+                            <div class="sect1-con">
+                                <div class="sect1-tx">
+                                    <p class="title">주얼리</p>
+                                    <h1>뻬를리</h1>
+                                    <p>섬세한 골드 비즈로 그 어느 때보다 독특한 매력을 선보이는 유쾌하고 <br />
+                                        기분 좋은 뻬를리 주얼리 컬렉션은 링과 네크리스, 브레이슬릿, 이어링 등<br />
+                                        대담한 작품들을 다양하게 믹스 매치해 새로운 스타일을 선사합니다.</p>
+                                </div>
+                                <ul class="item-menu sect1-li flex">
+                                    <li><a href="#art10"><img src="./images/sect3 (1).jpg" alt=""></a></li>
+                                    <li><a href="#art11"><img src="./images/sect3(2).jpg" alt=""></a></li>
+                                    <li><a href="#art12"><img src="./images/sect3 (3).jpg" alt=""></a></li>
+                                </ul>
+    
+                        </article>
+                        <article id="art10">
+                            <div class="col1">
+                            </div>
+                            <div class="col2">
+                                <div>
+                                    <div class="col2-tx">
+                                        <h2>다이아몬드와 골드 비즈가 화려한 디자인을 완성합니다</h2>
+                                        <p>5개 라인으로 이루어진 뻬를리 링의 골드 비즈가 손가락 주위에서 화려하게 춤을 추며<br />
+                                            부드러운 감각을 선사하며 눈부시게 빛나는 뻬를리 작품은 즐겁고 대담한 분위기를 연출합니다</p>
+                                    </div>
+                                    <ul class="item-menu col2-li flex">
+                                        <li><a href="#art10"><img src="./images/sect3 (1).jpg" alt=""></a></li>
+                                        <li><a href="#art11"><img src="./images/sect3(2).jpg" alt=""></a></li>
+                                        <li><a href="#art12"><img src="./images/sect3 (3).jpg" alt=""></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                        <article id="art11">
+                            <div class="art3-wrap">
+                                <div class="contents">
+                                    <h2>로즈 골드가 손의 움직임에 따라 부드러운 빛을 더합니다.</h2>
+                                    <p>브레이슬릿, 링, 이어링에는 화사한 광채를 품은 옐로우, 로즈, 화이트 골드와 반짝이는 다이아몬드가 장식되어 있습니다. <br />
+                                        엄격하게 선별하여 세심하게 세팅된 젬스톤은 피부에 강렬한 빛의 향연을 선사합니다.</p>
+                                </div>
+                                <ul class="item-menu col2-li flex">
+                                    <li><a href="#art10"><img src="./images/sect3 (1).jpg" alt=""></a></li>
+                                    <li><a href="#art11"><img src="./images/sect3(2).jpg" alt=""></a></li>
+                                    <li><a href="#art12"><img src="./images/sect3 (3).jpg" alt=""></a></li>
+                                </ul>
+                            </div>
+                        </article>
+                        <article id="art12">
+                            <div class="col1">
+                                <a href="#art9" class="re"><img src="./images/next.png" alt=""></a>
+                            </div>
+                            <div class="col2">
+                                <div>
+                                    <p>뻬를리 브레이슬릿과 링이 섬세한 조화를 이룹니다.</p>
+                                    <figure>
+                                        <img src="./images/sect3-con.jpg" alt="">
+                                    </figure>
+                                    <ul class="item-menu col2-li flex">
+                                        <li><a href="#art10"><img src="./images/sect3 (1).jpg" alt=""></a></li>
+                                        <li><a href="#art11"><img src="./images/sect3(2).jpg" alt=""></a></li>
+                                        <li><a href="#art12"><img src="./images/sect3 (3).jpg" alt=""></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            direction: "vertical",
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 30,
+            mousewheel: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+        $('.item-menu li').click(function (e) {
+            e.preventDefault()
+            let idx = $(this).index()
+            $(this).parents('.hslide-wrap').animate({'left':-100*(idx+1)+'%'})
+        })
+    </script>
+</body>
+
+</html>

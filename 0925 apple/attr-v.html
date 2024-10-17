@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .frame {
+            width: 500px;
+        }
+
+        figure img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="frame">
+        <figure><img src="./images/pro.jpg" alt=""></figure>
+        <ul>
+            <li data-bg='images/m4.jpg'>pro</li>
+            <li data-bg='images/pro.jpg'>air</li>
+            <li data-bg='images/pencil.jpg'>ipad</li>
+        </ul>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        // $('li').click(function () {
+        //     const img = $(this).data('bg')
+        //     //get
+        //     $('figure img').attr('src',img)//set
+        // })
+
+        // document.querySelectorAll('li a').forEach(function (a) {
+        //     a.addEventListener('click', function (e) {
+        //         e.preventDefault()
+        //         let img = this.getAttribute('href')
+        //         document.querySelector('figure img').setAttribute('src',img)
+        //     })
+        // })
+
+        document.querySelectorAll('li').forEach(function (a) {
+            a.addEventListener('click', function (e) {
+                e.preventDefault()
+                let img = this.dataset.bg
+                document.querySelector('figure img').setAttribute('src',img)
+            })
+        })
+    </script>
+</body>
+
+</html>

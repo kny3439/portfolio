@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        nav {
+            width: 100%;
+            height: 100px;
+        }
+
+        nav ul {
+            display: flex;
+        }
+
+        /* force scrollbar */
+        html {
+            overflow-y: scroll;
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+
+        /* ---- isotope ---- */
+
+        .grid {
+            max-width: 1400px;
+            margin: auto;
+            background: #DDD;
+        }
+
+        /* clear fix */
+        .grid:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        /* ---- .grid-item ---- */
+
+        .grid-item {
+            width: calc(33.333% - 12px);
+            float: left;
+            margin-bottom: 20px;
+        }
+
+        .grid-item img {
+            width: 100%;
+            display: block;
+            max-width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+        </ul>
+    </nav>
+
+    <div class="grid">
+        <div class="grid-item">
+            <img src="./images/gentlemonster.jpg" alt="">
+        </div>
+        <div class="grid-item">
+            <img src="./images/spacehub.png" alt="">
+        </div>
+        <div class="grid-item">
+            <img src="./images/pawinhand.jpg" alt="">
+        </div>
+        <div class="grid-item">
+            <img src="./images/polo.jpg" alt="">
+        </div>
+        <div class="grid-item">
+            <img src="./images/genesis.jpg" alt="">
+        </div>
+        <div class="grid-item">
+            <img src="./images/vancleef.jpg" alt="">
+        </div>
+        <div class="grid-item">
+            <img src="./images/disney.jpg" alt="">
+        </div>
+        <div class="grid-item">
+            <img src="./images/snario.jpg" alt="">
+        </div>
+        <div class="grid-item">
+            <img src="./images/apple.jpg" alt="">
+        </div>
+        <div class="grid-item">
+            <img src="./images/banyan.jpg" alt="">
+        </div>
+        <div class="grid-item">
+            <img src="./images/mugo.jpg" alt="">
+        </div>
+        <div class="grid-item">
+            <img src="./images/lotte.jpg" alt="">
+        </div>
+        <div class="grid-item">
+            <img src="./images/Chanel.jpg" alt="">
+        </div>
+        <div class="grid-item">
+            <img src="./images/jaws.jpg" alt="">
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+    <script>
+        var grid = document.querySelector('.grid');
+
+        var iso = new Isotope(grid, {
+            itemSelector: '.grid-item',
+
+            masonry: {
+                columnWidth: '.grid-item',
+                gutter: 18
+            }
+        });
+
+        imagesLoaded(grid).on('progress', function () {
+            // layout Isotope after each image loads
+            iso.layout();
+        });
+
+    </script>
+</body>
+
+</html>
