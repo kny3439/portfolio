@@ -1,0 +1,2813 @@
+@import url(./reset.css);
+
+.flex {
+    display: flex;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: auto;
+    width: 100%;
+    padding: 0 80px;
+    background: #fff;
+    z-index: 20;
+    transition: .4s ease;
+
+    &.on {
+        top: -180px;
+    }
+
+    .top {
+        width: 100%;
+
+        .login {
+            border: 1px solid #000;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 20px 0;
+
+            li {
+                border: 1px solid #000;
+                margin-right: 15px;
+
+                a {
+                    display: block;
+                    text-align: center;
+                    padding: 0 20px;
+
+                    &.weding {
+                        background-color: #41b4b7;
+                        height: 36px;
+                        padding: 10px 15px;
+                        font-size: 15px;
+                        font-weight: 500;
+                        color: #fff;
+                        line-height: 1;
+                        text-align: center;
+                        border-radius: 15px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 5px;
+
+                    }
+
+                    &.acemall {
+                        height: 36px;
+                        padding: 10px 15px;
+                        font-size: 15px;
+                        font-weight: 500;
+                        color: #fff;
+                        text-align: center;
+                        border-radius: 15px;
+                        background: #9badb6;
+                    }
+                }
+            }
+        }
+
+        h1 {
+            margin-top: -15px;
+            min-width: 182px;
+        }
+
+        nav {
+            width: 100%;
+            justify-content: space-between;
+            font-size: 16px;
+            font-weight: 700;
+            color: #666;
+            letter-spacing: -0.025em;
+            line-height: 1;
+            padding-bottom: 50px;
+            border: 1px solid #000;
+
+            .left-menu {
+
+                width: 100%;
+
+                .product-menu {
+                    >ul {
+                        width: 500px;
+
+                        &:hover>li {
+                            padding-right: 65px;
+                        }
+
+
+                        &:hover span {
+                            display: block;
+                        }
+
+                        &:hover p {
+                            display: none;
+                        }
+
+                        >li {
+                            position: relative;
+                            width: 100%;
+                            transition: .6s;
+                            border: 1px solid #000;
+
+                            &:hover {
+                                color: #0890c0;
+                            }
+
+                            >a {
+                                display: block;
+                                white-space: nowrap;
+
+                                &.on {
+                                    color: #41b4b7;
+                                }
+
+                                span {
+                                    display: none;
+                                }
+                            }
+
+                            .sub-menu {
+                                position: absolute;
+                                width: 100%;
+                                height: 200px;
+                                padding-top: 20px;
+                                display: none;
+                                background-color: #fff;
+                                border-bottom: 3px solid #a9a9a9;
+                                transition: .5s;
+
+                                li {
+                                    padding: 5px 0;
+                                    width: 100%;
+
+                                    a {
+                                        display: inline-block;
+                                        font-size: 15px;
+                                        font-weight: 400;
+                                        color: #666;
+                                        line-height: 25px;
+                                        white-space: nowrap;
+                                        z-index: 1;
+                                        width: 100%;
+                                        position: relative;
+
+                                        &:hover>span {
+                                            width: 100%;
+                                        }
+
+                                        span {
+                                            position: absolute;
+                                            width: 0px;
+                                            height: 4px;
+                                            background-color: #41b3b745;
+                                            bottom: 5px;
+                                            left: 0;
+                                            transition: .4s;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+
+
+            .info-menu {
+                white-space: nowrap;
+
+                >ul {
+                    &:hover>li {
+                        padding-left: 55px;
+                    }
+
+                    li {
+                        padding-right: 40px;
+                        transition: .4s;
+
+                        &:hover {
+                            color: #0890c0;
+                        }
+
+                        a {
+                            display: inline-block;
+                        }
+
+                        .sub-menu {
+                            position: absolute;
+                            padding-top: 20px;
+                            display: none;
+                            width: 100%;
+
+                            li {
+                                padding: 5px 0;
+
+
+                                a {
+                                    display: inline-block;
+                                    font-size: 15px;
+                                    font-weight: 400;
+                                    color: #666;
+                                    line-height: 25px;
+                                    white-space: nowrap;
+                                    z-index: 1;
+                                    position: relative;
+
+                                    &:hover>span {
+                                        width: 100%;
+                                    }
+
+                                    >span {
+                                        position: absolute;
+                                        width: 0px;
+                                        height: 4px;
+                                        background-color: #41b3b745;
+                                        bottom: 5px;
+                                        left: 0;
+                                        transition: .4s;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .search-menu {
+                min-width: 85px;
+
+                ul {
+
+                    li {
+                        &:nth-child(2) a {
+                            padding-right: 0;
+                        }
+
+                        a {
+                            display: block;
+                            padding-right: 40px;
+
+
+                            span {
+                                display: none;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+
+.wrap .title {
+    .swiper {
+        overflow: visible;
+    }
+}
+
+a.prev {
+    position: absolute;
+    top: 40%;
+    left: -70px;
+    width: 70px;
+    height: 150px;
+    outline: none;
+    z-index: 999;
+    display: block;
+
+    &:hover p {
+        opacity: 1;
+    }
+
+    svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50px;
+        height: 150px;
+
+        path {
+            stroke: #c9c9c9;
+            stroke-width: 4;
+            fill: transparent;
+            transition: .7s;
+            stroke-linecap: round;
+        }
+    }
+
+    p {
+        position: absolute;
+        top: 50%;
+        left: auto;
+        right: -10px;
+        width: auto;
+        transform: translateY(-50%) rotate(-90deg);
+        font-size: 15px;
+        font-weight: 400;
+        color: #333;
+        line-height: 1;
+        letter-spacing: 1px;
+        opacity: 0;
+    }
+}
+
+a.next {
+    position: absolute;
+    top: 40%;
+    right: -70px;
+    width: 70px;
+    height: 150px;
+    outline: none;
+    z-index: 99;
+    display: block;
+
+    &:hover p {
+        opacity: 1;
+    }
+
+    svg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50px;
+        height: 150px;
+
+        path {
+            stroke: #c9c9c9;
+            stroke-width: 4;
+            fill: transparent;
+            transition: 1s;
+            stroke-linecap: round;
+        }
+    }
+
+    p {
+        position: absolute;
+        top: 50%;
+        left: -10px;
+        width: auto;
+        transform: translateY(-50%) rotate(90deg);
+        font-family: "Metropolis";
+        font-size: 15px;
+        font-weight: 400;
+        color: #333;
+        line-height: 1;
+        letter-spacing: 1px;
+        opacity: 0;
+        transition: .4s;
+    }
+}
+
+#sect2 {
+    width: 100%;
+    background: #f4f7fa;
+}
+
+/* ------------------mobile---------------- */
+@media(max-width: 900px) {
+    header {
+        padding: 0 20px;
+        border: 1px solid #000;
+
+        .login {
+            display: none;
+        }
+
+        nav {
+            width: 100%;
+            height: 85px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 30px;
+
+            .bed {
+                width: 25px;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .left-menu {
+                justify-content: center;
+
+                .product-menu {
+                    display: none;
+                }
+
+                h1 {
+                    margin: 0;
+                    display: flex;
+                    justify-content: center;
+
+                    img {
+                        width: 91px;
+                        height: 24px;
+                    }
+                }
+            }
+
+            .info-menu {
+                display: none;
+            }
+
+            .right-menu {
+                width: 23px;
+
+                .search-menu {
+                    li {
+                        width: 21px;
+                        min-width: none;
+
+                        &:nth-child(1) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+
+        }
+    }
+
+    .wrap {
+        position: relative;
+        top: 100px;
+        width: 100%;
+        height: 100%;
+
+        .title {
+            width: calc(100% - 40px);
+            margin: 0 auto;
+            height: 700px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+
+
+            .swiper {
+                width: 100%;
+                height: 700px;
+                border: 5px solid #37ff00;
+                overflow: visible;
+
+                .swiper-slide {
+                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-size: cover;
+                    background-position: center;
+                    min-width: 100%;
+                    height: 100%;
+                    overflow: hidden;
+
+                    &.swi1 {
+                        background-image: url(./images/s-swi1.jpg);
+                    }
+
+                    &.swi2 {
+                        video {
+                            min-height: 700px;
+                        }
+                    }
+
+                    &.swi3 {
+                        background-image: url(./images/s-swi3.jpg);
+                    }
+
+                    &.swi4 {
+                        background-image: url(./images/s-swi4.jpg);
+                    }
+
+                    &.swi5 {
+                        background-image: url(./images/s-swi5.jpg);
+                    }
+                }
+
+                a.prev {
+                    position: absolute;
+                    top: 40%;
+                    left: -30px;
+                    width: 70px;
+                    height: 150px;
+                    outline: none;
+                    z-index: 99;
+
+                    &:hover p {
+                        opacity: 1;
+                    }
+
+                    svg {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 50px;
+                        height: 150px;
+
+                        path {
+                            stroke: #c9c9c9;
+                            stroke-width: 4;
+                            fill: transparent;
+                            transition: .7s;
+                            stroke-linecap: round;
+                        }
+                    }
+
+                    p {
+                        position: absolute;
+                        top: 50%;
+                        left: auto;
+                        right: -10px;
+                        width: auto;
+                        transform: translateY(-50%) rotate(-90deg);
+                        font-size: 15px;
+                        font-weight: 400;
+                        color: #333;
+                        line-height: 1;
+                        letter-spacing: 1px;
+                        opacity: 0;
+                    }
+                }
+
+
+                a.next {
+                    position: absolute;
+                    top: 40%;
+                    right: -30px;
+                    width: 70px;
+                    height: 150px;
+                    outline: none;
+                    z-index: 99;
+
+                    &:hover p {
+                        opacity: 1;
+                    }
+
+                    svg {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        width: 50px;
+                        height: 150px;
+
+                        path {
+                            stroke: #c9c9c9;
+                            stroke-width: 4;
+                            fill: transparent;
+                            transition: 1s;
+                            stroke-linecap: round;
+                        }
+                    }
+
+                    p {
+                        position: absolute;
+                        top: 50%;
+                        left: -10px;
+                        width: auto;
+                        transform: translateY(-50%) rotate(90deg);
+                        font-family: "Metropolis";
+                        font-size: 15px;
+                        font-weight: 400;
+                        color: #333;
+                        line-height: 1;
+                        letter-spacing: 1px;
+                        opacity: 0;
+                        transition: .4s;
+                    }
+                }
+
+            }
+        }
+
+        section {
+            &#sect1 {
+                width: 100%;
+                height: 100vh;
+
+                button {
+                    border-style: none;
+                    background-color: transparent;
+                    position: absolute;
+                    top: 50px;
+                    right: 240px;
+
+                    a {
+                        display: block;
+                        font-size: 16px;
+                        letter-spacing: 1px;
+                        padding: 0 50px;
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            width: 20px;
+                            height: 1px;
+                            bottom: 3px;
+                            left: 65%;
+                            background-color: #333;
+                            transition: .35s;
+                        }
+
+                    }
+
+                    &:hover a::after {
+                        width: 50px;
+                    }
+
+
+                }
+
+                h2 {
+                    width: 100%;
+                    text-align: center;
+                    font-size: 40px;
+                    color: #333;
+                    letter-spacing: 8px;
+                    opacity: 1;
+                    transform: translateY(100px);
+                    transition: 1s;
+                    border: 1px solid #000;
+                    position: relative;
+                    font-weight: 300;
+                    margin-bottom: 50px;
+                }
+
+                .sect1-container {
+                    width: 100%;
+                    height: 780px;
+                    margin: 0 auto;
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    top: 75px;
+                    overflow: hidden;
+                    justify-content: space-between;
+
+                    .sect1-menu {
+                        display: none;
+                    }
+
+                    .sect1-video {
+                        display: none;
+                    }
+
+                    .sect1-video-swi {
+                        position: relative;
+                        display: block;
+                        width: 100%;
+                        height: 800px;
+                        overflow: hidden;
+
+                        .swiper2 {
+                            width: 100%;
+                            height: 100%;
+
+                            .swiper-slide {
+                                font-size: 18px;
+                                background: #fff;
+                                display: flex;
+                                justify-content: center;
+                                position: relative;
+                                width: 100%;
+                                height: 100%;
+
+                                video {
+                                    display: block;
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                    position: absolute;
+                                    top: 0;
+                                }
+
+                                .summary {
+                                    position: absolute;
+                                    bottom: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 520px;
+                                    color: #fff;
+                                    background-image: linear-gradient(to bottom, rgba(16, 16, 16, 0), rgb(11, 11, 11));
+                                    z-index: 9999;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: end;
+                                    padding: 50px;
+
+                                    h3 {
+                                        font-size: 1.5rem;
+                                    }
+
+                                    h4 {
+                                        font-size: 2.5rem;
+                                        font-weight: 500;
+                                    }
+
+                                    p {
+                                        font-size: 20px;
+                                        line-height: 30px;
+                                        margin-top: 24px;
+                                    }
+                                }
+
+                            }
+
+                        }
+
+
+
+
+                    }
+
+                    .sect1-contents {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+/* ------------------tablet ----------------*/
+@media(min-width: 901px) {
+    header {
+
+        nav {
+
+            .bed {
+                display: none;
+            }
+
+            &:hover {
+                h1 {
+                    opacity: 0;
+
+                }
+            }
+
+            .info-menu {
+                display: none;
+            }
+
+            h1 {
+                transition: .4s;
+            }
+
+            .left-menu {
+                flex-direction: row-reverse;
+                justify-content: left;
+
+                .product-menu {
+
+                    ul {
+                        width: 100%;
+
+                        &:hover span {
+                            display: block;
+                        }
+
+                        &:hover p {
+                            display: none;
+                        }
+
+                        li {
+                            padding-right: 40px;
+
+                            &:hover {
+                                color: #0890c0;
+                            }
+
+
+                            a {
+                                display: block;
+
+
+                                &.on {
+                                    color: #0890c0;
+                                }
+
+                                span {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+
+
+    }
+
+    .wrap {
+        position: relative;
+        top: 155px;
+        width: 100%;
+        height: 100%;
+
+        .title {
+            width: 100%;
+            margin: 0 auto;
+            height: 780px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+
+            .swiper {
+                width: calc(100% - 160px);
+                height: 700px;
+                overflow: visible;
+
+                .swiper-slide {
+                    text-align: center;
+                    font-size: 50px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-size: cover;
+                    background-position: center;
+                    min-width: 100%;
+                    height: 100%;
+                    overflow: hidden;
+
+                    &.swi1 {
+                        background-image: url(./images/swi1.jpg);
+                    }
+
+                    &.swi2 {
+                        video {
+                            width: 100%;
+                        }
+                    }
+
+                    &.swi3 {
+                        background-image: url(./images/swi3.jpg);
+                    }
+
+                    &.swi4 {
+                        background-image: url(./images/swi4.jpg);
+                    }
+
+                    &.swi5 {
+                        background-image: url(./images/swi5.jpg);
+                    }
+                }
+
+
+            }
+        }
+
+        section {
+            &#sect1 {
+                width: 100%;
+                height: 100vh;
+
+                button {
+                    border-style: none;
+                    background-color: transparent;
+                    position: absolute;
+                    top: 50px;
+                    right: 240px;
+
+                    a {
+                        display: block;
+                        font-size: 16px;
+                        letter-spacing: 1px;
+                        padding: 0 50px;
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            width: 20px;
+                            height: 1px;
+                            bottom: 3px;
+                            left: 65%;
+                            background-color: #333;
+                            transition: .35s;
+                        }
+
+                    }
+
+                    &:hover a::after {
+                        width: 50px;
+                    }
+
+
+                }
+
+                h2 {
+                    width: 100%;
+                    text-align: center;
+                    font-size: 40px;
+                    color: #333;
+                    letter-spacing: 8px;
+                    opacity: 1;
+                    transform: translateY(100px);
+                    transition: 1s;
+                    border: 1px solid #000;
+                    position: relative;
+                    font-weight: 300;
+                    margin-bottom: 50px;
+                }
+
+                .sect1-container {
+                    width: 710px;
+                    height: 780px;
+                    margin: 0 auto;
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    top: 75px;
+                    overflow: hidden;
+                    justify-content: space-between;
+
+                    .sect1-menu {
+                        display: none;
+                    }
+
+                    .sect1-video {
+                        display: none;
+                    }
+
+                    .sect1-video-swi {
+                        position: relative;
+                        display: block;
+                        width: 710px;
+                        height: 800px;
+                        overflow: hidden;
+
+                        .swiper2 {
+                            width: 100%;
+                            height: 100%;
+
+                            .swiper-slide {
+                                font-size: 18px;
+                                background: #fff;
+                                display: flex;
+                                justify-content: center;
+                                position: relative;
+                                width: 100%;
+                                height: 100%;
+
+                                video {
+                                    display: block;
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                    position: absolute;
+                                    top: 0;
+                                }
+
+                                .summary {
+                                    position: absolute;
+                                    bottom: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 520px;
+                                    color: #fff;
+                                    background-image: linear-gradient(to bottom, rgba(16, 16, 16, 0), rgb(11, 11, 11));
+                                    z-index: 9999;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: end;
+                                    padding: 50px;
+
+                                    h3 {
+                                        font-size: 1.5rem;
+                                    }
+
+                                    h4 {
+                                        font-size: 2.5rem;
+                                        font-weight: 500;
+                                    }
+
+                                    p {
+                                        font-size: 20px;
+                                        line-height: 30px;
+                                        margin-top: 24px;
+                                    }
+                                }
+
+                            }
+
+                            .swiper-pagination-bullet-active {
+                                background-color: #eee;
+                            }
+
+                            .mainCon .section.two .roll_div_m .swiper-pagination-bullet {
+                                background: #fff;
+                                margin: 0 10px;
+                                opacity: 0.3;
+
+                            }
+                        }
+
+                    }
+
+                    .sect1-contents {
+                        display: none;
+                    }
+                }
+            }
+
+            &#sect2 {
+                height: 100%;
+
+                .pc-tab {
+                    display: none;
+                }
+
+                button {
+                    border-style: none;
+                    background-color: transparent;
+                    position: absolute;
+                    top: 50px;
+                    right: 240px;
+
+                    a {
+                        display: block;
+                        font-size: 16px;
+                        letter-spacing: 1px;
+                        padding: 0 50px;
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            width: 20px;
+                            height: 1px;
+                            bottom: 3px;
+                            left: 65%;
+                            background-color: #333;
+                            transition: .35s;
+                        }
+
+                    }
+
+                    &:hover a::after {
+                        width: 50px;
+                    }
+
+
+                }
+
+                h2 {
+                    width: 100%;
+                    text-align: center;
+                    font-size: 50px;
+                    color: #333;
+                    letter-spacing: 8px;
+                    opacity: 1;
+                    transform: translateY(100px);
+                    transition: 1s;
+                    border: 1px solid #000;
+                    position: relative;
+                    font-weight: 400;
+                }
+
+                .tablet-tab {
+                    width: 100%;
+                    margin-top: 120px;
+                    overflow: hidden;
+
+                    .tablet-tab-menu {
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+
+                        ul {
+                            align-items: center;
+
+                            .line {
+                                width: 2px;
+                                height: 20px;
+                                background-color: #cbcbcb;
+                            }
+
+                            li {
+                                a {
+                                    font-size: 22px;
+                                    color: #888;
+                                    display: inline-block;
+                                    padding: 30px;
+
+                                    &.on {
+                                        font-weight: bold;
+                                        color: #0890c0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .tablet-tabs {
+                        width: 90%;
+                        margin: auto;
+                        height: 800px;
+                        position: relative;
+                        border: 5px solid #000;
+
+
+                        .tab2 {
+                            left: 0px;
+                            height: 680px;
+                            position: absolute;
+                            display: none;
+
+                            &#tablet-new-product {
+                                width: 100%;
+
+
+                                .mySwiper5 {
+                                    width: 100%;
+                                    height: 100%;
+                                    overflow: visible;
+                                    position: relative;
+                                    border: 2px solid #ff0000;
+
+
+                                    .swiper-slide {
+                                        width: 800px;
+                                        min-height: 580px;
+                                        max-height: 580px;
+                                        background-position: center;
+                                        background-size: cover;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        position: relative;
+                                        background-repeat: no-repeat;
+                                        filter: brightness(.5);
+
+                                        &.on {
+                                            filter: brightness(1);
+                                        }
+
+                                        &.on .summary h3 {
+                                            opacity: 1;
+                                            transform: translateY(0px);
+                                        }
+
+                                        &.on .summary p {
+                                            opacity: 1;
+                                            transform: translateY(0px);
+                                        }
+
+                                        &.on .summary ul.word {
+                                            opacity: 1;
+                                            transform: translateY(0px);
+                                        }
+
+                                        &.on .summary .view {
+                                            opacity: 1;
+                                            transform: translateY(0px);
+                                        }
+
+                                        &::after {
+                                            content: "";
+                                            display: block;
+                                            position: absolute;
+                                            top: 0;
+                                            left: 0;
+                                            width: 100%;
+                                            height: 100%;
+                                            background: url(./images/dimd2_main.png);
+                                            z-index: 9;
+                                        }
+
+
+                                        &.sect2-swi1 {
+                                            background-image: url(./images/sect2-swi1.jpg);
+                                        }
+
+                                        &.sect2-swi2 {
+                                            background-image: url(./images/sect2-swi2.jpg);
+                                        }
+
+                                        &.sect2-swi3 {
+                                            background-image: url(./images/sect2-swi3.jpg);
+                                        }
+
+                                        .summary {
+                                            position: absolute;
+                                            width: 500px;
+                                            top: 10%;
+                                            left: 10%;
+                                            color: #fff;
+                                            z-index: 100;
+
+                                            ul.word {
+                                                transform: translateY(100px);
+                                                opacity: 0;
+                                                transition: 1s;
+
+                                                li {
+                                                    padding: 5px 10px;
+                                                    border: 1px solid #ffffff;
+                                                    margin-right: 10px;
+                                                    border-radius: 30px;
+                                                }
+                                            }
+
+                                            h3 {
+                                                margin-top: 30px;
+                                                font-size: 30px;
+                                                font-weight: bold;
+                                                transform: translateY(100px);
+                                                opacity: 0;
+                                                transition: 1.3s;
+                                            }
+
+                                            p {
+                                                margin-top: 30px;
+                                                font-size: 18px;
+                                                line-height: 30px;
+                                                transform: translateY(100px);
+                                                opacity: 0;
+                                                transition: 1.6s;
+                                            }
+
+                                            .view {
+                                                display: inline-block;
+                                                transform: translateY(100px);
+                                                opacity: 0;
+                                                transition: 2s;
+
+                                                &:hover a::after {
+                                                    top: 0;
+                                                }
+
+                                                a {
+                                                    border-style: none;
+                                                    border: 1px solid #ffffff;
+                                                    background-color: transparent;
+                                                    padding: 10px 35px;
+                                                    color: #fff;
+                                                    display: inline-block;
+                                                    margin-top: 60px;
+                                                    position: relative;
+                                                    overflow: hidden;
+
+                                                    &:hover &::after {
+                                                        top: 0;
+                                                    }
+
+                                                    &::after {
+                                                        content: '';
+                                                        background-color: #0890c0;
+                                                        width: 100%;
+                                                        height: 100%;
+                                                        position: absolute;
+                                                        top: 45px;
+                                                        left: 0;
+                                                        z-index: -1;
+                                                        transition: .4s;
+                                                    }
+                                                }
+                                            }
+
+                                        }
+
+                                        .swiper-scrollbar {
+                                            position: absolute;
+                                            width: 1200px;
+                                            bottom: -100px;
+                                        }
+                                    }
+
+                                    .swiper-scrollbar {
+                                        width: 100%;
+                                        height: 4px;
+                                        left: 50%;
+                                        bottom: 0;
+                                        transform: translateX(-50%);
+                                        background-color: #eee;
+                                        position: absolute;
+
+                                        .swiper-scrollbar-drag {
+                                            background-color: #0890c0;
+                                        }
+                                    }
+
+                                    a.prev {
+                                        position: absolute;
+                                        top: 40%;
+                                        left: -75px;
+                                        width: 70px;
+                                        height: 150px;
+                                        outline: none;
+                                        z-index: 999;
+                                        display: block;
+
+                                        &:hover p {
+                                            opacity: 1;
+                                        }
+
+                                        svg {
+                                            position: absolute;
+                                            top: 0;
+                                            left: 0;
+                                            width: 50px;
+                                            height: 150px;
+
+                                            path {
+                                                stroke: #c9c9c9;
+                                                stroke-width: 4;
+                                                fill: transparent;
+                                                transition: .7s;
+                                                stroke-linecap: round;
+                                            }
+                                        }
+
+                                        p {
+                                            position: absolute;
+                                            top: 50%;
+                                            left: auto;
+                                            right: -10px;
+                                            width: auto;
+                                            transform: translateY(-50%) rotate(-90deg);
+                                            font-size: 15px;
+                                            font-weight: 400;
+                                            color: #333;
+                                            line-height: 1;
+                                            letter-spacing: 1px;
+                                            opacity: 0;
+                                        }
+                                    }
+
+                                    a.next {
+                                        position: absolute;
+                                        top: 40%;
+                                        right: -75px;
+                                        width: 70px;
+                                        height: 150px;
+                                        outline: none;
+                                        z-index: 99;
+                                        display: block;
+
+                                        &:hover p {
+                                            opacity: 1;
+                                        }
+
+                                        svg {
+                                            position: absolute;
+                                            top: 0;
+                                            right: 0;
+                                            width: 50px;
+                                            height: 150px;
+
+                                            path {
+                                                stroke: #c9c9c9;
+                                                stroke-width: 4;
+                                                fill: transparent;
+                                                transition: 1s;
+                                                stroke-linecap: round;
+                                            }
+                                        }
+
+                                        p {
+                                            position: absolute;
+                                            top: 50%;
+                                            left: -10px;
+                                            width: auto;
+                                            transform: translateY(-50%) rotate(90deg);
+                                            font-family: "Metropolis";
+                                            font-size: 15px;
+                                            font-weight: 400;
+                                            color: #333;
+                                            line-height: 1;
+                                            letter-spacing: 1px;
+                                            opacity: 0;
+                                            transition: .4s;
+                                        }
+                                    }
+
+                                }
+                            }
+
+
+                            &#tablet-recommend-product {
+                                width: 100%;
+
+
+                                .mySwiper6 {
+                                    width: 100%;
+                                    height: 100%;
+                                    overflow: visible;
+                                    position: relative;
+                                    border: 2px solid #ff0000;
+
+
+                                    .swiper-slide {
+                                        min-height: 580px;
+                                        max-height: 580px;
+                                        background-position: center;
+                                        background-size: cover;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        position: relative;
+                                        background-repeat: no-repeat;
+                                        filter: brightness(.5);
+
+                                        &.on {
+                                            filter: brightness(1);
+                                        }
+
+                                        &.on .summary h3 {
+                                            opacity: 1;
+                                            transform: translateY(0px);
+                                        }
+
+                                        &.on .summary p {
+                                            opacity: 1;
+                                            transform: translateY(0px);
+                                        }
+
+                                        &.on .summary ul.word {
+                                            opacity: 1;
+                                            transform: translateY(0px);
+                                        }
+
+                                        &.on .summary .view {
+                                            opacity: 1;
+                                            transform: translateY(0px);
+                                        }
+
+                                        &::after {
+                                            content: "";
+                                            display: block;
+                                            position: absolute;
+                                            top: 0;
+                                            left: 0;
+                                            width: 100%;
+                                            height: 100%;
+                                            background: url(./images/dimd2_main.png);
+                                            z-index: 9;
+                                        }
+
+
+                                        &.sect2-swi1 {
+                                            background-image: url(./images/sect2-tab2-swi1.jpg);
+                                        }
+
+                                        &.sect2-swi2 {
+                                            background-image: url(./images/sect2-tab2-swi2.jpg);
+                                        }
+
+                                        &.sect2-swi3 {
+                                            background-image: url(./images/sect2-tab2-swi3.jpg);
+                                        }
+
+
+                                        .summary {
+                                            position: absolute;
+                                            width: 500px;
+                                            top: 10%;
+                                            left: 10%;
+                                            color: #fff;
+                                            z-index: 100;
+
+                                            ul.word {
+                                                transform: translateY(100px);
+                                                opacity: 0;
+                                                transition: 1s;
+
+                                                li {
+                                                    padding: 5px 10px;
+                                                    border: 1px solid #ffffff;
+                                                    margin-right: 10px;
+                                                    border-radius: 30px;
+                                                }
+                                            }
+
+                                            h3 {
+                                                margin-top: 30px;
+                                                font-size: 30px;
+                                                font-weight: bold;
+                                                transform: translateY(100px);
+                                                opacity: 0;
+                                                transition: 1.3s;
+                                            }
+
+                                            p {
+                                                margin-top: 30px;
+                                                font-size: 18px;
+                                                line-height: 30px;
+                                                transform: translateY(100px);
+                                                opacity: 0;
+                                                transition: 1.6s;
+                                            }
+
+                                            .view {
+                                                display: inline-block;
+                                                transform: translateY(100px);
+                                                opacity: 0;
+                                                transition: 2s;
+
+                                                &:hover a::after {
+                                                    top: 0;
+                                                }
+
+                                                a {
+                                                    border-style: none;
+                                                    border: 1px solid #ffffff;
+                                                    background-color: transparent;
+                                                    padding: 10px 35px;
+                                                    color: #fff;
+                                                    display: inline-block;
+                                                    margin-top: 60px;
+                                                    position: relative;
+                                                    overflow: hidden;
+
+                                                    &:hover &::after {
+                                                        top: 0;
+                                                    }
+
+                                                    &::after {
+                                                        content: '';
+                                                        background-color: #0890c0;
+                                                        width: 100%;
+                                                        height: 100%;
+                                                        position: absolute;
+                                                        top: 45px;
+                                                        left: 0;
+                                                        z-index: -1;
+                                                        transition: .4s;
+                                                    }
+                                                }
+                                            }
+
+                                        }
+
+                                        .swiper-scrollbar {
+                                            position: absolute;
+                                            width: 1200px;
+                                            bottom: -100px;
+                                        }
+                                    }
+
+                                    .swiper-scrollbar {
+                                        width: 100%;
+                                        height: 4px;
+                                        left: 50%;
+                                        bottom: 0;
+                                        transform: translateX(-50%);
+                                        background-color: #eee;
+                                        position: absolute;
+
+                                        .swiper-scrollbar-drag {
+                                            background-color: #0890c0;
+                                        }
+                                    }
+
+                                    a.prev {
+                                        position: absolute;
+                                        top: 40%;
+                                        left: -75px;
+                                        width: 70px;
+                                        height: 150px;
+                                        outline: none;
+                                        z-index: 999;
+                                        display: block;
+
+                                        &:hover p {
+                                            opacity: 1;
+                                        }
+
+                                        svg {
+                                            position: absolute;
+                                            top: 0;
+                                            left: 0;
+                                            width: 50px;
+                                            height: 150px;
+
+                                            path {
+                                                stroke: #c9c9c9;
+                                                stroke-width: 4;
+                                                fill: transparent;
+                                                transition: .7s;
+                                                stroke-linecap: round;
+                                            }
+                                        }
+
+                                        p {
+                                            position: absolute;
+                                            top: 50%;
+                                            left: auto;
+                                            right: -10px;
+                                            width: auto;
+                                            transform: translateY(-50%) rotate(-90deg);
+                                            font-size: 15px;
+                                            font-weight: 400;
+                                            color: #333;
+                                            line-height: 1;
+                                            letter-spacing: 1px;
+                                            opacity: 0;
+                                        }
+                                    }
+
+                                    a.next {
+                                        position: absolute;
+                                        top: 40%;
+                                        right: -75px;
+                                        width: 70px;
+                                        height: 150px;
+                                        outline: none;
+                                        z-index: 99;
+                                        display: block;
+
+                                        &:hover p {
+                                            opacity: 1;
+                                        }
+
+                                        svg {
+                                            position: absolute;
+                                            top: 0;
+                                            right: 0;
+                                            width: 50px;
+                                            height: 150px;
+
+                                            path {
+                                                stroke: #c9c9c9;
+                                                stroke-width: 4;
+                                                fill: transparent;
+                                                transition: 1s;
+                                                stroke-linecap: round;
+                                            }
+                                        }
+
+                                        p {
+                                            position: absolute;
+                                            top: 50%;
+                                            left: -10px;
+                                            width: auto;
+                                            transform: translateY(-50%) rotate(90deg);
+                                            font-family: "Metropolis";
+                                            font-size: 15px;
+                                            font-weight: 400;
+                                            color: #333;
+                                            line-height: 1;
+                                            letter-spacing: 1px;
+                                            opacity: 0;
+                                            transition: .4s;
+                                        }
+                                    }
+
+                                }
+                            }
+
+
+                        }
+
+
+
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+/* --------------pc----------------- */
+@media(min-width: 1400px) {
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: auto;
+        width: 100%;
+        height: 155px;
+        padding: 0 80px;
+        background: #fff;
+        z-index: 20;
+        transition: .4s ease;
+
+        .top {
+            width: 100%;
+
+            .login {
+                align-items: center;
+                justify-content: flex-end;
+                padding: 20px 0;
+
+                li {
+                    margin-right: 15px;
+
+                    a {
+                        display: block;
+                        text-align: center;
+                        padding: 0 20px;
+
+                        &.weding {
+                            background-color: #41b4b7;
+                            height: 36px;
+                            padding: 10px 15px;
+                            font-size: 15px;
+                            font-weight: 500;
+                            color: #fff;
+                            line-height: 1;
+                            text-align: center;
+                            border-radius: 15px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 5px;
+
+                        }
+
+                        &.acemall {
+                            height: 36px;
+                            padding: 10px 15px;
+                            font-size: 15px;
+                            font-weight: 500;
+                            color: #fff;
+                            text-align: center;
+                            border-radius: 15px;
+                            background: #9badb6;
+                        }
+                    }
+                }
+            }
+
+
+            nav {
+                width: 100%;
+                justify-content: space-between;
+                font-size: 16px;
+                font-weight: 700;
+                color: #666;
+                letter-spacing: -0.025em;
+                line-height: 1;
+
+                .left-menu {
+                    flex-direction: row;
+                    justify-content: space-between;
+
+
+                    h1 {
+                        display: block;
+                        margin-top: -15px;
+                        min-width: 182px;
+                        width: 33%;
+                    }
+
+                    .product-menu {
+                        >ul {
+                            width: 100%;
+
+                            &:hover span {
+                                display: block;
+                            }
+
+                            &:hover p {
+                                display: none;
+                            }
+
+                            >li {
+                                padding-right: 50px;
+
+                                &:hover {
+                                    color: #0890c0;
+                                }
+
+
+                                a {
+                                    display: block;
+
+
+                                    &.on {
+                                        color: #0890c0;
+                                    }
+
+                                    >span {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+
+                .info-menu {
+                    white-space: nowrap;
+                    display: block;
+
+                    >ul {
+                        &:hover>li {
+                            padding-left: 55px;
+                        }
+
+                        >li {
+                            padding-right: 40px;
+                            transition: .4s;
+
+                            >a {
+                                display: inline-block;
+
+                            }
+
+                            .sub-menu {
+                                position: absolute;
+                                padding-top: 20px;
+                                width: 100%;
+
+                                li {
+                                    padding: 5px 0;
+
+                                    a {
+                                        display: inline-block;
+                                        font-size: 15px;
+                                        font-weight: 400;
+                                        color: #666;
+                                        line-height: 25px;
+                                        white-space: nowrap;
+                                        z-index: 1;
+                                        position: relative;
+
+                                        &:hover>span {
+                                            width: 100%;
+                                        }
+
+                                        >span {
+                                            position: absolute;
+                                            width: 0px;
+                                            height: 4px;
+                                            background-color: #41b3b745;
+                                            bottom: 5px;
+                                            left: 0;
+                                            transition: .4s;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .search-menu {
+                    min-width: 85px;
+
+                    ul {
+
+                        li {
+                            &:nth-child(2) a {
+                                padding-right: 0;
+                            }
+
+                            a {
+                                display: block;
+                                padding-right: 40px;
+
+
+                                span {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
+
+    .wrap {
+        position: relative;
+        top: 155px;
+        width: 100%;
+        height: 100%;
+
+        .title {
+            width: 100%;
+            margin: 0 auto;
+            height: 780px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            border: 1px solid #f00;
+
+            .swiper {
+                width: calc(100% - 160px);
+                height: 700px;
+                overflow: visible;
+
+                .swiper-slide {
+                    text-align: center;
+                    font-size: 50px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-size: cover;
+                    background-position: center;
+                    min-width: 100%;
+                    height: 100%;
+                    overflow: hidden;
+
+
+                    &.swi1 {
+                        background-image: url(./images/swi1.jpg);
+                    }
+
+                    &.swi2 {
+                        video {
+                            width: 100%;
+                        }
+                    }
+
+                    &.swi3 {
+                        background-image: url(./images/swi3.jpg);
+                    }
+
+                    &.swi4 {
+                        background-image: url(./images/swi4.jpg);
+                    }
+
+                    &.swi5 {
+                        background-image: url(./images/swi5.jpg);
+                    }
+                }
+
+
+            }
+        }
+
+        section {
+            &#sect1 {
+                width: 100%;
+                height: 120vh;
+
+                button {
+                    border-style: none;
+                    background-color: transparent;
+                    position: absolute;
+                    top: 50px;
+                    right: 240px;
+
+                    a {
+                        display: block;
+                        font-size: 16px;
+                        letter-spacing: 1px;
+                        padding: 0 50px;
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            width: 20px;
+                            height: 1px;
+                            bottom: 3px;
+                            left: 65%;
+                            background-color: #333;
+                            transition: .35s;
+                        }
+
+                    }
+
+                    &:hover a::after {
+                        width: 50px;
+                    }
+
+
+                }
+
+                h2 {
+                    width: 100%;
+                    text-align: center;
+                    font-size: 50px;
+                    color: #333;
+                    letter-spacing: 8px;
+                    opacity: 1;
+                    transform: translateY(100px);
+                    transition: 1s;
+                    border: 1px solid #000;
+                    position: relative;
+                    font-weight: 400;
+                }
+
+                .sect1-container {
+                    width: calc(100% - 160px);
+                    height: calc(100vh - 75px);
+                    margin: 0 auto;
+                    border: 1px solid #ff0000;
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    top: 75px;
+                    justify-content: space-between;
+
+                    .sect1-menu {
+                        position: absolute;
+                        top: 50%;
+                        transform: translate(0, -50%);
+                        left: 80px;
+                        width: 300px;
+                        height: 180px;
+                        opacity: 1;
+                        transition: 1s;
+                        transition-delay: 0.2s;
+                        display: block;
+
+                        ul {
+                            li {
+                                a {
+                                    display: block;
+                                    position: relative;
+                                    width: 100%;
+                                    height: 17px;
+                                    margin-bottom: 27px;
+                                    font-size: 16px;
+                                    color: #999;
+                                    letter-spacing: 1px;
+                                    transition: .5s;
+                                    transition-property: font-size;
+                                    cursor: pointer;
+
+                                    &.on {
+                                        font-size: 22px;
+                                        color: #0890c0;
+                                        font-weight: bold;
+                                    }
+
+
+                                }
+                            }
+                        }
+                    }
+
+                    .sect1-video {
+                        width: 664px;
+                        height: 800px;
+                        overflow: hidden;
+                        position: absolute;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        left: 50%;
+                        display: block;
+
+                        ul {
+                            display: flex;
+                            width: 400%;
+                            position: relative;
+
+                            li {
+                                min-width: 664px;
+                                height: 800px;
+                                overflow: hidden;
+
+                                video {
+                                    min-height: 100%;
+                                    transform: translateX(-30%);
+                                }
+                            }
+                        }
+                    }
+
+                    .sect1-video-swi {
+                        display: none;
+
+                        .swiper2 {
+                            width: 100%;
+                            height: 100%;
+                        }
+
+                        .swiper-slide {
+                            text-align: center;
+                            font-size: 18px;
+                            background: #fff;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+
+                        .swiper-slide img {
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+
+                    .sect1-contents {
+                        width: 385px;
+                        height: 350px;
+                        overflow: hidden;
+                        position: absolute;
+                        top: 50%;
+                        right: 80px;
+                        transform: translateY(-50%);
+                        display: block;
+
+                        ul {
+                            width: 100%;
+                            height: 100%;
+
+
+                            .txt {
+                                margin-bottom: 50px;
+                                position: absolute;
+
+
+                                &.on h3 {
+                                    transform: translateY(0);
+                                    opacity: 1;
+                                }
+
+                                &.on p {
+                                    transform: translateY(0);
+                                    opacity: 1;
+                                }
+
+                                h3 {
+                                    font-size: 40px;
+                                    font-weight: 500;
+                                    color: #333;
+                                    line-height: 54px;
+                                    letter-spacing: -3px;
+                                    transform: translateY(100px);
+                                    transition: .5s;
+                                    opacity: 0;
+
+                                }
+
+                                p {
+                                    font-size: 20px;
+                                    line-height: 30px;
+                                    margin-top: 24px;
+                                    font-weight: 300;
+                                    transform: translateY(100px);
+                                    transition: .8s;
+                                    opacity: 0;
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+
+            &#sect2 {
+                height: 100%;
+
+                .tablet-tab {
+                    display: none;
+                }
+
+                button {
+                    border-style: none;
+                    background-color: transparent;
+                    position: absolute;
+                    top: 50px;
+                    right: 240px;
+
+                    a {
+                        display: block;
+                        font-size: 16px;
+                        letter-spacing: 1px;
+                        padding: 0 50px;
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            width: 20px;
+                            height: 1px;
+                            bottom: 3px;
+                            left: 65%;
+                            background-color: #333;
+                            transition: .35s;
+                        }
+
+                    }
+
+                    &:hover a::after {
+                        width: 50px;
+                    }
+
+
+                }
+
+                h2 {
+                    width: 100%;
+                    text-align: center;
+                    font-size: 50px;
+                    color: #333;
+                    letter-spacing: 8px;
+                    opacity: 1;
+                    transform: translateY(100px);
+                    transition: 1s;
+                    border: 1px solid #000;
+                    position: relative;
+                    font-weight: 400;
+                }
+
+                .pc-tab {
+                    display: block;
+                    width: 100%;
+                    margin-top: 120px;
+
+                    .tab-menu {
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+
+                        ul {
+                            align-items: center;
+
+                            .line {
+                                width: 2px;
+                                height: 20px;
+                                background-color: #cbcbcb;
+                            }
+
+                            li {
+                                a {
+                                    font-size: 22px;
+                                    color: #888;
+                                    display: inline-block;
+                                    padding: 30px;
+
+                                    &.on {
+                                        font-weight: bold;
+                                        color: #0890c0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .tabs {
+                        width: 100%;
+                        height: 800px;
+                        position: relative;
+                        border: 2px solid #ff0000;
+
+                        .tab {
+                            left: 0px;
+                            height: 100%;
+                            position: absolute;
+
+                            &#new-product {
+                                min-width: 1250px;
+                                width: 100%;
+                                overflow: hidden;
+
+                                .swiper3 {
+                                    width: 100%;
+                                    height: 100%;
+                                    overflow: visible;
+                                    position: relative;
+
+
+                                    .swiper-slide {
+                                        min-width: 1250px;
+                                        width: 1250px;
+                                        min-height: 600px;
+                                        max-height: 700px;
+                                        background-position: center;
+                                        background-size: cover;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        position: relative;
+                                        background-repeat: no-repeat;
+                                        filter: brightness(.5);
+
+                                        &.on {
+                                            filter: brightness(1);
+                                        }
+
+                                        &.on .summary h3 {
+                                            opacity: 1;
+                                            transform: translateY(0px);
+                                        }
+
+                                        &.on .summary p {
+                                            opacity: 1;
+                                            transform: translateY(0px);
+                                        }
+
+                                        &.on .summary ul.word {
+                                            opacity: 1;
+                                            transform: translateY(0px);
+                                        }
+
+                                        &.on .summary .view {
+                                            opacity: 1;
+                                            transform: translateY(0px);
+                                        }
+
+                                        &::after {
+                                            content: "";
+                                            display: block;
+                                            position: absolute;
+                                            top: 0;
+                                            left: 0;
+                                            width: 100%;
+                                            height: 100%;
+                                            background: url(./images/dimd2_main.png);
+                                            z-index: 9;
+                                        }
+
+
+                                        &.sect2-swi1 {
+                                            background-image: url(./images/sect2-swi1.jpg);
+                                        }
+
+                                        &.sect2-swi2 {
+                                            background-image: url(./images/sect2-swi2.jpg);
+                                        }
+
+                                        &.sect2-swi3 {
+                                            background-image: url(./images/sect2-swi3.jpg);
+                                        }
+
+                                        .summary {
+                                            position: absolute;
+                                            width: 500px;
+                                            top: 10%;
+                                            left: 10%;
+                                            color: #fff;
+                                            z-index: 100;
+
+                                            ul.word {
+                                                transform: translateY(100px);
+                                                opacity: 0;
+                                                transition: 1s;
+
+                                                li {
+                                                    padding: 5px 10px;
+                                                    border: 1px solid #ffffff;
+                                                    margin-right: 10px;
+                                                    border-radius: 30px;
+                                                }
+                                            }
+
+                                            h3 {
+                                                margin-top: 30px;
+                                                font-size: 30px;
+                                                font-weight: bold;
+                                                transform: translateY(100px);
+                                                opacity: 0;
+                                                transition: 1.3s;
+                                            }
+
+                                            p {
+                                                margin-top: 30px;
+                                                font-size: 18px;
+                                                line-height: 30px;
+                                                transform: translateY(100px);
+                                                opacity: 0;
+                                                transition: 1.6s;
+                                            }
+
+                                            .view {
+                                                display: inline-block;
+                                                transform: translateY(100px);
+                                                opacity: 0;
+                                                transition: 2s;
+
+                                                &:hover a::after {
+                                                    top: 0;
+                                                }
+
+                                                a {
+                                                    border-style: none;
+                                                    border: 1px solid #ffffff;
+                                                    background-color: transparent;
+                                                    padding: 10px 35px;
+                                                    color: #fff;
+                                                    display: inline-block;
+                                                    margin-top: 60px;
+                                                    position: relative;
+                                                    overflow: hidden;
+
+                                                    &:hover &::after {
+                                                        top: 0;
+                                                    }
+
+                                                    &::after {
+                                                        content: '';
+                                                        background-color: #0890c0;
+                                                        width: 100%;
+                                                        height: 100%;
+                                                        position: absolute;
+                                                        top: 45px;
+                                                        left: 0;
+                                                        z-index: -1;
+                                                        transition: .4s;
+                                                    }
+                                                }
+                                            }
+
+                                        }
+
+                                        .swiper-scrollbar {
+                                            position: absolute;
+                                            width: 1200px;
+                                            bottom: -100px;
+                                        }
+                                    }
+
+                                    .swiper-scrollbar {
+                                        width: 1280px;
+                                        height: 5px;
+                                        left: 50%;
+                                        transform: translateX(-50%);
+                                        background-color: #eee;
+
+                                        .swiper-scrollbar-drag {
+                                            background-color: #0890c0;
+                                        }
+                                    }
+
+                                    a.prev {
+                                        position: absolute;
+                                        top: 40%;
+                                        left: 30px;
+                                        width: 70px;
+                                        height: 150px;
+                                        outline: none;
+                                        z-index: 999;
+                                        display: block;
+
+                                        &:hover p {
+                                            opacity: 1;
+                                        }
+
+                                        svg {
+                                            position: absolute;
+                                            top: 0;
+                                            left: 0;
+                                            width: 50px;
+                                            height: 150px;
+
+                                            path {
+                                                stroke: #c9c9c9;
+                                                stroke-width: 4;
+                                                fill: transparent;
+                                                transition: .7s;
+                                                stroke-linecap: round;
+                                            }
+                                        }
+
+                                        p {
+                                            position: absolute;
+                                            top: 50%;
+                                            left: auto;
+                                            right: -10px;
+                                            width: auto;
+                                            transform: translateY(-50%) rotate(-90deg);
+                                            font-size: 15px;
+                                            font-weight: 400;
+                                            color: #333;
+                                            line-height: 1;
+                                            letter-spacing: 1px;
+                                            opacity: 0;
+                                        }
+                                    }
+
+                                    a.next {
+                                        position: absolute;
+                                        top: 40%;
+                                        right: 30px;
+                                        width: 70px;
+                                        height: 150px;
+                                        outline: none;
+                                        z-index: 99;
+                                        display: block;
+
+                                        &:hover p {
+                                            opacity: 1;
+                                        }
+
+                                        svg {
+                                            position: absolute;
+                                            top: 0;
+                                            right: 0;
+                                            width: 50px;
+                                            height: 150px;
+
+                                            path {
+                                                stroke: #c9c9c9;
+                                                stroke-width: 4;
+                                                fill: transparent;
+                                                transition: 1s;
+                                                stroke-linecap: round;
+                                            }
+                                        }
+
+                                        p {
+                                            position: absolute;
+                                            top: 50%;
+                                            left: -10px;
+                                            width: auto;
+                                            transform: translateY(-50%) rotate(90deg);
+                                            font-family: "Metropolis";
+                                            font-size: 15px;
+                                            font-weight: 400;
+                                            color: #333;
+                                            line-height: 1;
+                                            letter-spacing: 1px;
+                                            opacity: 0;
+                                            transition: .4s;
+                                        }
+                                    }
+
+                                }
+                            }
+
+                            &#recommend-product {
+                                min-width: 1250px;
+                                width: 100%;
+                                overflow: hidden;
+
+                                .swiper4 {
+                                    width: 100%;
+                                    height: 100%;
+                                    overflow: visible;
+                                    position: relative;
+
+
+                                    .swiper-slide {
+                                        min-width: 1250px;
+                                        width: 1250px;
+                                        min-height: 600px;
+                                        max-height: 700px;
+                                        background-position: center;
+                                        background-size: cover;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        position: relative;
+                                        background-repeat: no-repeat;
+                                        filter: brightness(.5);
+
+                                        &.on {
+                                            filter: brightness(1);
+                                        }
+
+                                        &.on .summary h3 {
+                                            opacity: 1;
+                                            transform: translateY(0px);
+                                        }
+
+                                        &.on .summary p {
+                                            opacity: 1;
+                                            transform: translateY(0px);
+                                        }
+
+                                        &.on .summary ul.word {
+                                            opacity: 1;
+                                            transform: translateY(0px);
+                                        }
+
+                                        &.on .summary .view {
+                                            opacity: 1;
+                                            transform: translateY(0px);
+                                        }
+
+                                        &::after {
+                                            content: "";
+                                            display: block;
+                                            position: absolute;
+                                            top: 0;
+                                            left: 0;
+                                            width: 100%;
+                                            height: 100%;
+                                            background: url(./images/dimd2_main.png);
+                                            z-index: 9;
+                                        }
+
+
+                                        &.sect2-swi1 {
+                                            background-image: url(./images/sect2-tab2-swi1.jpg);
+                                        }
+
+                                        &.sect2-swi2 {
+                                            background-image: url(./images/sect2-tab2-swi2.jpg);
+                                        }
+
+                                        &.sect2-swi3 {
+                                            background-image: url(./images/sect2-tab2-swi3.jpg);
+                                        }
+
+                                        .summary {
+                                            position: absolute;
+                                            width: 500px;
+                                            top: 10%;
+                                            left: 10%;
+                                            color: #fff;
+                                            z-index: 100;
+
+                                            ul.word {
+                                                transform: translateY(100px);
+                                                opacity: 0;
+                                                transition: 1s;
+
+                                                li {
+                                                    padding: 5px 10px;
+                                                    border: 1px solid #ffffff;
+                                                    margin-right: 10px;
+                                                    border-radius: 30px;
+                                                }
+                                            }
+
+                                            h3 {
+                                                margin-top: 30px;
+                                                font-size: 30px;
+                                                font-weight: bold;
+                                                transform: translateY(100px);
+                                                opacity: 0;
+                                                transition: 1.3s;
+                                            }
+
+                                            p {
+                                                margin-top: 30px;
+                                                font-size: 18px;
+                                                line-height: 30px;
+                                                transform: translateY(100px);
+                                                opacity: 0;
+                                                transition: 1.6s;
+                                            }
+
+                                            .view {
+                                                display: inline-block;
+                                                transform: translateY(100px);
+                                                opacity: 0;
+                                                transition: 2s;
+
+                                                &:hover a::after {
+                                                    top: 0;
+                                                }
+
+                                                a {
+                                                    border-style: none;
+                                                    border: 1px solid #ffffff;
+                                                    background-color: transparent;
+                                                    padding: 10px 35px;
+                                                    color: #fff;
+                                                    display: inline-block;
+                                                    margin-top: 60px;
+                                                    position: relative;
+                                                    overflow: hidden;
+
+                                                    &:hover &::after {
+                                                        top: 0;
+                                                    }
+
+                                                    &::after {
+                                                        content: '';
+                                                        background-color: #0890c0;
+                                                        width: 100%;
+                                                        height: 100%;
+                                                        position: absolute;
+                                                        top: 45px;
+                                                        left: 0;
+                                                        z-index: -1;
+                                                        transition: .4s;
+                                                    }
+                                                }
+                                            }
+
+                                        }
+
+                                        .swiper-scrollbar {
+                                            position: absolute;
+                                            width: 1200px;
+                                            bottom: -100px;
+                                        }
+                                    }
+
+                                    .swiper-scrollbar {
+                                        width: 1280px;
+                                        height: 5px;
+                                        left: 50%;
+                                        transform: translateX(-50%);
+                                        background-color: #eee;
+
+                                        .swiper-scrollbar-drag {
+                                            background-color: #0890c0;
+                                        }
+                                    }
+
+                                    a.prev {
+                                        position: absolute;
+                                        top: 40%;
+                                        left: 30px;
+                                        width: 70px;
+                                        height: 150px;
+                                        outline: none;
+                                        z-index: 999;
+                                        display: block;
+
+                                        &:hover p {
+                                            opacity: 1;
+                                        }
+
+                                        svg {
+                                            position: absolute;
+                                            top: 0;
+                                            left: 0;
+                                            width: 50px;
+                                            height: 150px;
+
+                                            path {
+                                                stroke: #c9c9c9;
+                                                stroke-width: 4;
+                                                fill: transparent;
+                                                transition: .7s;
+                                                stroke-linecap: round;
+                                            }
+                                        }
+
+                                        p {
+                                            position: absolute;
+                                            top: 50%;
+                                            left: auto;
+                                            right: -10px;
+                                            width: auto;
+                                            transform: translateY(-50%) rotate(-90deg);
+                                            font-size: 15px;
+                                            font-weight: 400;
+                                            color: #333;
+                                            line-height: 1;
+                                            letter-spacing: 1px;
+                                            opacity: 0;
+                                        }
+                                    }
+
+                                    a.next {
+                                        position: absolute;
+                                        top: 40%;
+                                        right: 30px;
+                                        width: 70px;
+                                        height: 150px;
+                                        outline: none;
+                                        z-index: 99;
+                                        display: block;
+
+                                        &:hover p {
+                                            opacity: 1;
+                                        }
+
+                                        svg {
+                                            position: absolute;
+                                            top: 0;
+                                            right: 0;
+                                            width: 50px;
+                                            height: 150px;
+
+                                            path {
+                                                stroke: #c9c9c9;
+                                                stroke-width: 4;
+                                                fill: transparent;
+                                                transition: 1s;
+                                                stroke-linecap: round;
+                                            }
+                                        }
+
+                                        p {
+                                            position: absolute;
+                                            top: 50%;
+                                            left: -10px;
+                                            width: auto;
+                                            transform: translateY(-50%) rotate(90deg);
+                                            font-family: "Metropolis";
+                                            font-size: 15px;
+                                            font-weight: 400;
+                                            color: #333;
+                                            line-height: 1;
+                                            letter-spacing: 1px;
+                                            opacity: 0;
+                                            transition: .4s;
+                                        }
+                                    }
+
+                                }
+                            }
+
+
+                        }
+
+
+
+                    }
+                }
+            }
+        }
+    }
+}

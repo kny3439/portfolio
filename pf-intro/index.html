@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <p class="cursor-img">
+        <!-- <span style="color: #AEE4FF;">console</span>
+        <span style="color: #FFF4A1;">.log</span>
+        <span style="color: #FFD322;">(</span>
+        <span style="color: #EF7652;">‘nayeon’</span>
+        <span style="color: #FFD322;">)</span>
+        <span style="color: #fff;">;</span> -->
+        console.log('nayeon')
+    </p>
+    <div class="stage">
+        <div class="top">
+            <div class="flex">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+            <p>My Interface</p>
+        </div>
+        <div class="contents">
+            <h1 style="color: #ADCA32;">Hello, World!</h1>
+            <h2>
+                <span style="color: #20AFCF;">const </span>&nbsp;
+                <span style="color: #56F4FF;">portFolio</span>&nbsp;
+                <span style="color: #fff;">=</span>&nbsp;
+                <span style="color: #AEE4FF;">document</span>
+                <span style="color: #FFF4A1;">.querySelectorAll</span>
+                <span style="color: #FFD322;">(</span>
+                <span style="color: #EF7652;">'section'</span>
+                <span style="color: #FFD322;">)</span>
+                <span style="color: #fff;">;</span>
+                <div class="cursor"></div>
+            </h2>
+        </div>
+        <div class="bg">
+            <img src="./images/; .png" alt="">
+            <img src="./images/{}.png" alt="">
+        </div>
+        <div class="word-box">
+            <img src="./images/if().png" alt="">
+            <img src="./images/var.png" alt="">
+            <img src="./images/script_.png" alt="">
+            <img src="./images/function.png" alt="">
+            <img src="./images/document.png" alt="">
+        </div>
+        <div class="folder-box">
+            <img src="./images/htmlLOGO.png" alt="">
+            <img src="./images/cssLOGO.png" alt="">
+            <img src="./images/javascriptLOGO.png" alt="">
+            <img src="./images/figmaLOGO.png" alt="">
+            <img src="./images/photoshopLOGO.png" alt="">
+            <img src="./images/illustrateLOGO.png" alt="">
+            <img src="./images/sass.png" alt="">
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+    <script>
+        //이미지 마우스 커서 따라다니기
+
+        const cursor = document.querySelector('.cursor-img')
+        document.addEventListener('mousemove', function () {
+            gsap.to(cursor, {
+                x: event.clientX + 15,
+                y: event.clientY
+            })
+        })
+
+        function titleFunction(arr) {
+
+            gsap.to('h2', {
+
+                duration: arr[0],
+                text: arr[0],
+                repeat: 1,
+                yoyo: true,
+                repeatDelay: 2,
+            })
+
+            gsap.delayedCall(4, titleFunction, [arr])
+        }
+
+        const tl = gsap.timeline()
+        tl.fromTo('h1', { opacity: 0, x: 20, text: "" }, { x: 0, opacity: 1, text: "Hello, World!", duration: 1.5 })
+            .fromTo('span:nth-child(1)',
+                { opacity: 0, x: 20, text: "" },
+                { x: 0, opacity: 1, text: "const", duration: .5 })
+
+            .fromTo('span:nth-child(2)', { opacity: 0, x: 20, text: "" }, { x: 0, opacity: 1, text: "portFolio", duration: .8 })
+
+            .fromTo('span:nth-child(3)', { opacity: 0, x: 20, text: "" }, { x: 0, opacity: 1, text: "=", duration: .6 })
+
+            .fromTo('span:nth-child(4)', { opacity: 0, x: 20, text: "" }, { x: 0, opacity: 1, text: "document", duration: .3 })
+
+            .fromTo('span:nth-child(5)', { opacity: 0, x: 20, text: "" }, { x: 0, opacity: 1, text: ".querySelectorAll", duration: .8 })
+
+            .fromTo('span:nth-child(6)', { opacity: 0, x: 20, text: "" }, { x: 0, opacity: 1, text: "(", duration: .2 })
+
+            .fromTo('span:nth-child(7)', { opacity: 0, x: 20, text: "" }, { x: 0, opacity: 1, text: "'section'", duration: .8 })
+
+            .fromTo('span:nth-child(8)', { opacity: 0, x: 20, text: "" }, { x: 0, opacity: 1, text: ")", duration: .2 })
+
+            .fromTo('span:nth-child(9)', { opacity: 0, x: 20, text: "" }, { x: 0, opacity: 1, text: ";", duration: .2 })
+
+            .from('p', { opacity: 0, y: 100 })
+
+            .from('.folder-box img:nth-child(6)', { opacity: 0, y: -1000, duration: .2 })
+            .from('.folder-box img:nth-child(5)', { opacity: 0, y: -1000, duration: .2 })
+            .from('.folder-box img:nth-child(3)', { opacity: 0, y: -1000, duration: .2 })
+            .from('.folder-box img:nth-child(4)', { opacity: 0, y: -1000, duration: .2 })
+            .from('.folder-box img:nth-child(1)', { opacity: 0, y: -1000, duration: .2 })
+            .from('.folder-box img:nth-child(2)', { opacity: 0, y: -1000, duration: .2 })
+            .from('.folder-box img:nth-child(7)', { opacity: 0, y: -1000, duration: .2 })
+
+            .from('button', { opacity: 0, y: 50 })
+
+
+            //배경색 
+        // const bgColor = gsap.utils.wrap(['darkGray'])
+        // gsap.to('.stage',{
+        //     backgroundColor:bgColor,
+        //     duration:10,
+        //     repeat:-1,
+        //     yoyo:true,//역순으로 변경
+        //     ease:'none',//일정하게 변경
+        //     delay:5
+        // })
+
+        //각각 이미지에 모션 지정하기
+       
+        // gsap.resisterEffect({
+        //     name: 'rotate',
+        //     effect: (target, { duration, ease }) => {
+        //         return gsap.to(target, {
+
+        //             ease: ease,
+        //             duration: duration
+        //         })
+        //     },
+        //     defaults: {
+        //         duration: 20,
+        //         ease: 'linear',
+
+        //     }
+
+        // })
+        // gsap.effects.rotateeffect('img')
+
+
+    </script>
+</body>
+
+</html>

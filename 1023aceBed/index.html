@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <header>
+        <div class="top">
+            <ul class="login flex">
+                <li>
+                    <a href="#">로그인</a>
+                </li>
+                <li>
+                    <a href="#">회원가입</a>
+                </li>
+                <li>
+                    <a href="#" class="weding">
+                        <img src="./images/wedding-icon.png" alt="">
+                        <span>웨딩멤버스</span>
+                    </a>
+                </li>
+                <li><a href="#" class="acemall">에이스 침대몰</a></li>
+            </ul>
+            <nav class="flex">
+                <div class="bed">
+                    <img src="./images/prod-menu.png" alt="">
+                </div>
+                <div class="left-menu flex">
+                    <div class="product-menu">
+                        <ul class="flex">
+                            <li class="main-menu">
+                                <a href="#">
+                                    <p>BED</p> <span>침대</span>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">프레임<span></span></a></li>
+                                    <li><a href="#">매트리스<span></span></a></li>
+                                    <li><a href="#">신제품<span></span></a></li>
+                                    <li><a href="#">제품 매뉴얼<span></span></a></li>
+                                </ul>
+                            </li>
+                            <li class="main-menu">
+                                <a href="#">
+                                    <p>FURNITURE</p> <span>가구</span>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">룸 세트<span></span></a></li>
+                                    <li><a href="#">리빙가구<span></span></a></li>
+                                </ul>
+                            </li>
+                            <li class="main-menu">
+                                <a href="#">
+                                    <p>STRESSLESS</p> <span>스트레스리스</span>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="#">1인용 리클라이너<span></span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">오피스체어<span></span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">소파<span></span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">테이블&악세사리<span></span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="main-menu">
+                                <a href="#">
+                                    <p>SLEEP CARE</p> <span>슬립케어</span>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="#">마이크로케어<span></span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">스마트슬리브<span></span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">마이크로케어 쿨링패드<span></span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">쿨링 바디필로우<span></span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">마이크로가드에코플러스<span></span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <h1><img src="./images/header-logo.png" alt=""></h1>
+                </div>
+                <div class="right-menu flex">
+                    <div class="info-menu">
+                        <ul class="flex">
+                            <li class="main-menu">
+                                <a href="">침대과학</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">프레임<span></span></a></li>
+                                    <li><a href="#">매트리스<span></span></a></li>
+                                    <li><a href="#">특허 및 수상내역<span></span></a></li>
+                                    <li><a href="#">침대공학연구소매뉴얼<span></span></a></li>
+                                </ul>
+                            </li>
+                            <li class="main-menu">
+                                <a href="">에이스 스토리</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">NOW SNS<span></span></a></li>
+                                    <li><a href="#">고객후기<span></span></a></li>
+                                    <li><a href="#">뉴스룸<span></span></a></li>
+                                </ul>
+                            </li>
+                            <li class="main-menu">
+                                <a href="">고객체험</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">매트리스 체험존<span></span></a></li>
+                                    <li><a href="#">이동수면공학 연구소<span></span></a></li>
+                                    <li><a href="#">공장 견학 신청<span></span></a></li>
+                                </ul>
+                            </li>
+                            <li class="main-menu">
+                                <a href="">이벤트</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">이벤트<span></span></a></li>
+                                    <li><a href="#">당첨자 안내<span></span></a></li>
+                                </ul>
+                            </li>
+                            <li class="main-menu">
+                                <a href="">매장안내</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">매장찾기<span></span></a></li>
+                                    <li><a href="#">에이스 스퀘어<span></span></a></li>
+                                    <li><a href="#">에이스 에비뉴<span></span></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="search-menu">
+                        <ul class="flex">
+                            <li><a href="#"><img src="./images/search-btn.png" alt=""></a></li>
+                            <li><a href="#"><img src="./images/ham-btn.png" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="wrap">
+        <div class="title">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide swi1"></div>
+                    <div class="swiper-slide swi2"><video src="./images/title-video.mp4" autoplay loop></video></div>
+                    <div class="swiper-slide swi3"></div>
+                    <div class="swiper-slide swi4"></div>
+                    <div class="swiper-slide swi5"></div>
+                </div>
+                <a href="#" class="prev arrow">
+                    <svg>
+                        <path class="btn_next" d="M 40 10 Q 40 65 40 140">
+                        </path>
+                    </svg>
+                    <p>PREV</p>
+                </a>
+                <a href="#" class="next arrow">
+                    <svg>
+                        <path class="btn_prev" d="M 10 10 Q 10 65 10 140"></path>
+                    </svg>
+                    <p>NEXT</p>
+                </a>
+            </div>
+
+
+        </div>
+        <section id="sect1">
+            <h2>ACE SCIENCE</h2>
+            <div class="sect1-container">
+                <div class="sect1-menu">
+                    <ul>
+                        <li><a href="#" class="on">HYBRID Z SPRING</a></li>
+                        <li><a href="#">5 FREE SYSTEM</a></li>
+                        <li><a href="#">NEW MATERIAL</a></li>
+                        <li><a href="#">ECO & HEALTH</a></li>
+                    </ul>
+                </div>
+                <div class="sect1-video">
+                    <ul>
+                        <li><video src="./images/sect1-video1.mp4" autoplay loop></video></li>
+                        <li><video src="./images/sect1-video2.mp4" autoplay loop></video></li>
+                        <li><video src="./images/sect1-video3.mp4" autoplay loop></video></li>
+                        <li><video src="./images/sect1-video4.mp4" autoplay loop></video></li>
+                    </ul>
+                </div>
+                <div class="sect1-video-swi">
+                    <div class="swiper2 mySwiper2">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <video src="./images/sect1-video1.mp4" autoplay loop>
+                                </video>
+                                <div class="summary">
+                                    <h3>HYBRID Z SPRING</h3>
+                                    <h4>오늘밤 어떤 스프링으로 <br>만든 침대에서 <br>주무시겠습니까?</h4>
+                                    <p>에이스만의 첨단 공학이 적용된 스프링은 <br>인체 곡선과 하중 분포에 따라 위에서 한 번 <br>부드럽게 맞춰주고 밑에서 또 한 번
+                                        <br>단단하게
+                                        받쳐줍니다.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide"><video src="./images/sect1-video2.mp4" autoplay loop></video>
+                                <div class="summary">
+                                    <h3>HYBRID Z SPRING</h3>
+                                    <h4>휴식을 방해하는 <br>모든 것이 사라지는 순간, <br>완벽한 편안함이 <br>시작됩니다</h4>
+                                    <p>꺼짐, 빈틈, 쏠림, 소음, 흔들림으로부터<br> 자유롭게! 어떤 몸 상태에도 적용되는<br> 5 FREE SYSTEM으로 최상의 숙면 조건을
+                                        만듭니다.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide"><video src="./images/sect1-video3.mp4" autoplay loop></video>
+                                <div class="summary">
+                                    <h3>NEW MATERIAL</h3>
+                                    <h4>시원하게, 위생적으로 <br>최고의 잠을 위한 <br>새로운 기술</h4>
+                                    <p>최고 품질을 위해 중요한 소재 하나하나까지<br> 직접 개발, 생산한 신소재만을 사용합니다</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide"><video src="./images/sect1-video4.mp4" autoplay loop></video>
+                                <div class="summary">
+                                    <h3>ECO & HEALTH</h3>
+                                    <h4>피부에 가까운 만큼 <br>더욱 안전하게 <br>당신의 하루가 건강해집니다</h4>
+                                    <p>최고 품질을 위해 중요한 소재 하나하나까지<br> 직접 개발, 생산한 신소재만을 사용합니다</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                <div class="sect1-contents">
+                    <ul>
+                        <li class="txt on">
+                            <h3>오늘밤 어떤 스프링으로 <br>만든 침대에서 <br>주무시겠습니까?</h3>
+                            <p>에이스만의 첨단 공학이 적용된 스프링은 <br>인체 곡선과 하중 분포에 따라 위에서 한 번 <br>부드럽게 맞춰주고 밑에서 또 한 번 <br>단단하게
+                                받쳐줍니다.</p>
+                        </li>
+                        <li class="txt">
+                            <h3>휴식을 방해하는 <br>모든 것이 사라지는 순간, <br>완벽한 편안함이 <br>시작됩니다</h3>
+                            <p>꺼짐, 빈틈, 쏠림, 소음, 흔들림으로부터 자유롭게! 어떤 몸 상태에도 적용되는 5 FREE SYSTEM으로 최상의 숙면 조건을 만듭니다.</p>
+                        </li>
+                        <li class="txt">
+                            <h3>시원하게, 위생적으로 <br>최고의 잠을 위한 <br>새로운 기술</h3>
+                            <p>최고 품질을 위해 중요한 소재 하나하나까지 직접 개발, 생산한 신소재만을 사용합니다</p>
+                        </li>
+                        <li class="txt">
+                            <h3>피부에 가까운 만큼 <br>더욱 안전하게 <br>당신의 하루가 건강해집니다</h3>
+                            <p>최고 품질을 위해 중요한 소재 하나하나까지 직접 개발, 생산한 신소재만을 사용합니다</p>
+                        </li>
+                    </ul>
+                </div>
+                <button><a href="#">more <span></span></a></button>
+            </div>
+        </section>
+        <section id="sect2">
+            <h2>ACE COLLECTION</h2>
+            <button><a href="#">more <span></span></a></button>
+            <div class="pc-tab">
+                <div class="tab-menu">
+                    <ul class="flex">
+                        <li><a href="#new-product" class="on">신제품</a></li>
+                        <div class="line"></div>
+                        <li><a href="#recommend-product">추천제품</a></li>
+                    </ul>
+                </div>
+                <div class="tabs">
+                    <div class="tab" id="new-product">
+                        <div class="swiper swiper3 mySwiper3">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide sect2-swi1 on">
+                                    <div class="summary">
+                                        <ul class="word flex">
+                                            <li>곡선형</li>
+                                            <li>부드러운</li>
+                                            <li>엘레강스</li>
+                                        </ul>
+                                        <h3>
+                                            LUNATO-Ⅳ
+                                        </h3>
+                                        <p>
+                                            우아한 곡선미와 세련된 스타일, 가죽과 패브릭의 완벽한 조화
+
+                                        </p>
+                                        <div class="view"><a href="#">VIEW</a></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide sect2-swi2">
+                                    <div class="summary">
+                                        <ul class="word flex">
+                                            <li>신혼</li>
+                                            <li>쿠션형</li>
+                                            <li>패브릭</li>
+                                        </ul>
+                                        <h3>
+                                            AMANDE
+                                        </h3>
+                                        <p>
+                                            AMANDE, 세미클래식의 우아함을 담다.
+
+                                        </p>
+                                        <div class="view"><a href="#">VIEW</a></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide sect2-swi3">
+                                    <div class="summary">
+                                        <ul class="word flex">
+                                            <li>싱글침대</li>
+                                            <li>자석침대</li>
+                                            <li>아이침대</li>
+                                        </ul>
+                                        <h3>
+                                            BACIO
+                                        </h3>
+                                        <p>
+                                            당신의 감성으로 채워지는 곳, BACIO
+                                        </p>
+                                        <div class="view"><a href="#">VIEW</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="prev arrow">
+                                <svg>
+                                    <path class="btn_next" d="M 40 10 Q 40 65 40 140">
+                                    </path>
+                                </svg>
+                                <p>PREV</p>
+                            </a>
+                            <a href="#" class="next arrow">
+                                <svg>
+                                    <path class="btn_prev" d="M 10 10 Q 10 65 10 140"></path>
+                                </svg>
+                                <p>NEXT</p>
+                            </a>
+                            <div class="swiper-scrollbar"></div>
+                        </div>
+                    </div>
+                    <div class="tab" id="recommend-product">
+                        <div class="swiper swiper4 mySwiper4">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide sect2-swi1 on">
+                                    <div class="summary">
+                                        <ul class="word flex">
+                                            <li>신혼부부</li>
+                                            <li>LED조명</li>
+                                            <li>천연무늬목</li>
+                                        </ul>
+                                        <h3>
+                                            ARNO-Ⅱ
+                                        </h3>
+                                        <p>
+                                            백조의 품 속에서 잠들다, ARNO II
+                                        </p>
+                                        <div class="view"><a href="#">VIEW</a></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide sect2-swi2">
+                                    <div class="summary">
+                                        <ul class="word flex">
+                                            <li>신혼침대</li>
+                                            <li>쿠션형침대</li>
+                                            <li>패브릭침대</li>
+                                        </ul>
+                                        <h3>
+                                            ERBA </h3>
+                                        <p>
+                                            부클레 원단의 밝고 화사한 아이보리 컬러와
+                                            깊이감이 느껴지는 브라운 가죽소재의 조화
+                                        </p>
+                                        <div class="view"><a href="#">VIEW</a></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide sect2-swi3">
+                                    <div class="summary">
+                                        <ul class="word flex">
+                                            <li>CF침대</li>
+                                            <li>LED조명</li>
+                                            <li>기능성</li>
+                                            <li>아트윌컨셉</li>
+                                        </ul>
+                                        <h3>
+                                            LUCE-III
+                                        </h3>
+                                        <p>
+                                            편안한 밤을 위한 모든 것, LUCE-III
+                                        </p>
+                                        <div class="view"><a href="#">VIEW</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="prev arrow">
+                                <svg>
+                                    <path class="btn_next" d="M 40 10 Q 40 65 40 140">
+                                    </path>
+                                </svg>
+                                <p>PREV</p>
+                            </a>
+                            <a href="#" class="next arrow">
+                                <svg>
+                                    <path class="btn_prev" d="M 10 10 Q 10 65 10 140"></path>
+                                </svg>
+                                <p>NEXT</p>
+                            </a>
+                            <div class="swiper-scrollbar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tablet-tab">
+                <div class="tablet-tab-menu">
+                    <ul class="flex">
+                        <li><a href="#tablet-new-product">신제품</a></li>
+                        <li><a href="#tablet-recommend-product">추천제품</a></li>
+                    </ul>
+                </div>
+                <div class="tablet-tabs">
+                    <div class="tab2" id="tablet-new-product">
+                        <div class="swiper mySwiper5">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide sect2-swi1">
+                                    <div class="summary">
+                                        <ul class="word flex">
+                                            <li>신혼부부</li>
+                                            <li>LED조명</li>
+                                            <li>천연무늬목</li>
+                                        </ul>
+                                        <h3>
+                                            ARNO-Ⅱ
+                                        </h3>
+                                        <p>
+                                            백조의 품 속에서 잠들다, ARNO II
+                                        </p>
+                                        <div class="view"><a href="#">VIEW</a></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide sect2-swi2">
+                                    <div class="summary">
+                                        <ul class="word flex">
+                                            <li>신혼부부</li>
+                                            <li>LED조명</li>
+                                            <li>천연무늬목</li>
+                                        </ul>
+                                        <h3>
+                                            ARNO-Ⅱ
+                                        </h3>
+                                        <p>
+                                            백조의 품 속에서 잠들다, ARNO II
+                                        </p>
+                                        <div class="view"><a href="#">VIEW</a></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide sect2-swi3">
+                                    <div class="summary">
+                                        <ul class="word flex">
+                                            <li>신혼부부</li>
+                                            <li>LED조명</li>
+                                            <li>천연무늬목</li>
+                                        </ul>
+                                        <h3>
+                                            ARNO-Ⅱ
+                                        </h3>
+                                        <p>
+                                            백조의 품 속에서 잠들다, ARNO II
+                                        </p>
+                                        <div class="view"><a href="#">VIEW</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="prev arrow">
+                                <svg>
+                                    <path class="btn_next" d="M 40 10 Q 40 65 40 140">
+                                    </path>
+                                </svg>
+                                <p>PREV</p>
+                            </a>
+                            <a href="#" class="next arrow">
+                                <svg>
+                                    <path class="btn_prev" d="M 10 10 Q 10 65 10 140"></path>
+                                </svg>
+                                <p>NEXT</p>
+                            </a>
+                            <div class="swiper-scrollbar"></div>
+                        </div>
+                    </div>
+                    <div class="tab2" id="tablet-recommend-product">
+                        <div class="swiper mySwiper6">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide sect2-swi1">
+                                    <div class="summary">
+                                        <ul class="word flex">
+                                            <li>신혼부부</li>
+                                            <li>LED조명</li>
+                                            <li>천연무늬목</li>
+                                        </ul>
+                                        <h3>
+                                            ARNO-Ⅱ
+                                        </h3>
+                                        <p>
+                                            백조의 품 속에서 잠들다, ARNO II
+                                        </p>
+                                        <div class="view"><a href="#">VIEW</a></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide sect2-swi2">
+                                    <div class="summary">
+                                        <ul class="word flex">
+                                            <li>신혼부부</li>
+                                            <li>LED조명</li>
+                                            <li>천연무늬목</li>
+                                        </ul>
+                                        <h3>
+                                            ARNO-Ⅱ
+                                        </h3>
+                                        <p>
+                                            백조의 품 속에서 잠들다, ARNO II
+                                        </p>
+                                        <div class="view"><a href="#">VIEW</a></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide sect2-swi3">
+                                    <div class="summary">
+                                        <ul class="word flex">
+                                            <li>신혼부부</li>
+                                            <li>LED조명</li>
+                                            <li>천연무늬목</li>
+                                        </ul>
+                                        <h3>
+                                            ARNO-Ⅱ
+                                        </h3>
+                                        <p>
+                                            백조의 품 속에서 잠들다, ARNO II
+                                        </p>
+                                        <div class="view"><a href="#">VIEW</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="prev arrow">
+                                <svg>
+                                    <path class="btn_next" d="M 40 10 Q 40 65 40 140">
+                                    </path>
+                                </svg>
+                                <p>PREV</p>
+                            </a>
+                            <a href="#" class="next arrow">
+                                <svg>
+                                    <path class="btn_prev" d="M 10 10 Q 10 65 10 140"></path>
+                                </svg>
+                                <p>NEXT</p>
+                            </a>
+                            <div class="swiper-scrollbar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+
+        
+$('#sect2 .tab-menu ul li a').click(function (e) {
+            e.preventDefault()
+            $('#sect2 .tab-menu ul li a').removeClass('on')
+            $(this).addClass('on')
+            let href = $(this).attr('href')
+            $('.tab').hide()
+            $(href).show()
+        })
+
+        $('#sect2 .tablet-tab-menu ul li a').click(function (e) {
+            e.preventDefault()
+            $('#sect2 .tablet-tab-menu ul li a').removeClass('on')
+            $(this).addClass('on')
+            let href = $(this).attr('href')
+            $('.tab2').hide()
+            $(href).show()
+        })
+  
+
+        const swiperSlide = document.querySelectorAll('.swiper3 .swiper-slide')
+        console.log(swiperSlide)
+        //summary .on
+        // ----------------swiper3------------------------------
+        var swiper3 = new Swiper(".mySwiper3", {
+            speed: 1200,
+            slidesPerView: "auto",
+            centeredSlides: true,
+            spaceBetween: 50,
+            scrollbar: {
+                el: ".swiper-scrollbar",
+                hide: false,
+            },
+            navigation: {
+                nextEl: ".next",
+                prevEl: ".prev",
+            },
+
+        });
+      
+        swiper3.on('slideChange', function () {
+
+            let activeIdx = swiper3.activeIndex
+            console.log(activeIdx)
+            swiperSlide.forEach((item) => {
+                item.classList.remove('on')
+            });
+            swiperSlide[activeIdx].classList.add('on');
+        });
+
+ // -----------------swiper4-----------------------------
+        var swiper4 = new Swiper(".mySwiper4", {
+            speed: 1200,
+            slidesPerView: "auto",
+            centeredSlides: true,
+            spaceBetween: 50,
+            scrollbar: {
+                el: ".swiper-scrollbar",
+                hide: false,
+            },
+            navigation: {
+                nextEl: ".next",
+                prevEl: ".prev",
+            },
+
+        });
+      
+        swiper4.on('slideChange', function () {
+
+            let activeIdx = swiper4.activeIndex
+            console.log(activeIdx)
+            swiperSlide.forEach((item) => {
+                item.classList.remove('on')
+            });
+            swiperSlide[activeIdx].classList.add('on');
+        });
+        
+        
+         // -----------------swiper5-----------------------------
+        var swiper5 = new Swiper(".mySwiper5", {
+            speed: 1200,
+            spaceBetween: 50,
+            scrollbar: {
+                el: ".swiper-scrollbar",
+                hide: false,
+            },
+            navigation: {
+                nextEl: ".next",
+                prevEl: ".prev",
+            },
+
+        });
+      
+        swiper5.on('slideChange', function () {
+
+            let activeIdx = swiper5.activeIndex
+            console.log(activeIdx)
+            swiperSlide.forEach((item) => {
+                item.classList.remove('on')
+            });
+            swiperSlide[activeIdx].classList.add('on');
+        });
+
+      // -----------------swiper6-----------------------------
+        var swiper6 = new Swiper(".mySwiper6", {
+            speed: 1200,
+            spaceBetween: 50,
+            scrollbar: {
+                el: ".swiper-scrollbar",
+                hide: false,
+            },
+            navigation: {
+                nextEl: ".next",
+                prevEl: ".prev",
+            },
+
+        });
+      
+        swiper6.on('slideChange', function () {
+
+            let activeIdx = swiper6.activeIndex
+            console.log(activeIdx)
+            swiperSlide.forEach((item) => {
+                item.classList.remove('on')
+            });
+            swiperSlide[activeIdx].classList.add('on');
+        });
+
+
+
+
+
+        let prevScrollTop = 0
+        let header = document.querySelector('header');
+        const sectionElems = document.querySelectorAll('section')
+        window.addEventListener('scroll', function () {
+            let currentScrollTop = window.pageYOffset
+            if (currentScrollTop > prevScrollTop) {
+                header.classList.add('on')
+            } else {
+                header.classList.remove('on')
+            }
+            prevScrollTop = currentScrollTop
+        })
+
+
+
+
+
+
+
+        // $('.main-menu').mouseenter(function () {
+        //     $('.sub-menu').stop().slideDown(500)
+        // })
+        // $('.main-menu').mouseleave(function () {
+        //     $('.sub-menu').stop().slideUp(500)
+        // })
+
+
+
+
+        var swiper2 = new Swiper(".mySwiper2", {
+            pagination: {
+                el: ".swiper-pagination",
+            },
+        });
+
+        var swiper = new Swiper(".mySwiper", {
+            speed: 1200,
+            spaceBetween: 150,
+            navigation: {
+                nextEl: ".next",
+                prevEl: ".prev",
+            },
+        });
+        // document.querySelector('.prev').addEventListener('click', function (e) {
+        //     e.preventDefault()
+        //     swiper.slidePrev()
+        // })
+        // document.querySelector('.next').addEventListener('click', function (e) {
+        //     e.preventDefault()
+        //     swiper.slideNext()
+        // })
+
+        const prev = document.querySelector('a.prev')
+        const next = document.querySelector('a.next')
+
+        prev.addEventListener('mouseenter', function () {
+            this.querySelector('path').setAttribute('d', 'M 40 10 Q 10 65 40 140')
+        })
+        prev.addEventListener('mouseleave', function () {
+            this.querySelector('path').setAttribute('d', 'M 40 10 Q 40 65 40 140');
+        })
+
+        next.addEventListener('mouseenter', function () {
+            this.querySelector('path').setAttribute('d', 'M 10 10 Q 40 65 10 140');
+        })
+        next.addEventListener('mouseleave', function () {
+            this.querySelector('path').setAttribute('d', 'M 10 10 Q 10 65 10 140');
+        })
+
+        $('.sect1-menu ul li a').click(function (e) {
+            e.preventDefault()
+            $('.sect1-menu ul li a').removeClass('on')
+            $(this).addClass('on')
+            let idx = $(this).parent('.sect1-menu ul li').index()
+            let left = (idx * -100) + '%'
+            $('.sect1-video ul').animate({ 'left': left }, 500, "linear");
+            $('li.txt').removeClass('on')
+            $('li.txt').eq(idx).addClass('on')
+        })
+    </script>
+</body>
+
+</html>

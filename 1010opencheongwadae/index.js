@@ -150,7 +150,7 @@ gsap.registerEffect({
         tl.from(chars, { x: x, opacity: 0, filter: 'blur(5px)', stagger: 0.1 })
             .to(`.bg > div:nth-child(${index})`, { opacity: 1 }, 0)
             .to(chars, { delay: 5, opacity: 0, y: y, stagger: 0.05 })
-            .to(`.bg > div:nth-child(${index})`, { opacity: 1 }, 2)
+            // .to(`.bg > div:nth-child(${index})`, { opacity: 1 }, 2)
         return tl;
     }
 });

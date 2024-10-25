@@ -111,163 +111,6 @@ section {
 }
 
 section {
-    &#sect1 {
-        .swiper {
-            width: 100%;
-            height: 100%;
-
-            .swiper-wrapper {
-                color: #fff;
-
-                .swiper-slide {
-                    background-position: center;
-                    background-size: cover;
-
-                    &.slide1 {
-                        background-image: url(./images/slide\ \(1\).jpg);
-                        position: relative;
-
-                        .summary {
-                            position: absolute;
-                            top: 50%;
-                            left: 50%;
-                            transform: translate(-50%, -50%);
-                            text-align: center;
-
-                            p {
-                                font-size: 1.8rem;
-                            }
-
-                            h3 {
-                                font-size: 4.5rem;
-                            }
-                        }
-                    }
-
-                    &.slide2 {
-                        background-image: url(./images/slide\ \(2\).jpg);
-                        position: relative;
-
-                        .summary {
-                            position: absolute;
-                            top: 70%;
-                            left: 32%;
-                            transform: translate(-50%, -50%);
-                            line-height: 3rem;
-
-                            p {
-                                font-size: 1.8rem;
-
-                                b {
-                                    font-size: 2.8rem;
-                                }
-                            }
-                        }
-                    }
-
-                    &.slide3 {
-                        background-image: url(./images/slide\ \(3\).jpg);
-                        position: relative;
-
-                        .summary {
-                            position: absolute;
-                            top: 30%;
-                            left: 30%;
-                            transform: translate(-50%, -50%);
-                            line-height: 3rem;
-
-                            p {
-                                font-size: 2rem;
-                                word-spacing: .6rem;
-                            }
-                        }
-                    }
-
-                    &.slide4 {
-                        background-image: url(./images/slide\ \(4\).jpg);
-                        position: relative;
-
-                        .summary {
-                            position: absolute;
-                            top: 40%;
-                            left: 38%;
-                            transform: translate(-50%, -50%);
-                            line-height: 3.5rem;
-
-                            p {
-                                font-size: 1.8rem;
-                                word-spacing: .6rem;
-
-                                b {
-                                    font-size: 2.3rem;
-                                }
-                            }
-                        }
-                    }
-
-                    &.slide5 {
-                        background-image: url(./images/slide\ \(5\).jpg);
-                        position: relative;
-
-                        .summary {
-                            position: absolute;
-                            top: 50%;
-                            left: 50%;
-                            transform: translate(-50%, -50%);
-                            line-height: 3.5rem;
-
-                            p {
-                                font-size: 2.3rem;
-                                word-spacing: .6rem;
-                            }
-                        }
-                    }
-
-                    &.slide6 {
-                        background-image: url(./images/slide\ \(6\).jpg);
-                        position: relative;
-
-                        .summary {
-                            position: absolute;
-                            top: 35%;
-                            left: 50%;
-                            transform: translate(-50%, -50%);
-                            line-height: 3.5rem;
-
-                            p {
-                                font-size: 2.3rem;
-                                word-spacing: .6rem;
-
-                                b {
-                                    font-size: 2.3rem;
-                                }
-                            }
-                        }
-                    }
-
-                    &.slide7 {
-                        background-image: url(./images/slide\ \(7\).jpg);
-                        position: relative;
-
-                        .summary {
-                            position: absolute;
-                            top: 50%;
-                            left: 50%;
-                            transform: translate(-50%, -50%);
-                            line-height: 3.5rem;
-
-                            p {
-                                font-size: 5rem;
-                                word-spacing: .6rem;
-                            }
-                        }
-                    }
-                }
-            }
-
-        }
-    }
-
     &#sect2 {
         background-image: url(./images/section01.jpg);
         position: relative;
@@ -924,9 +767,12 @@ section {
             .split-box {
                 width: 100%;
                 height: 100%;
+                position: absolute;
 
                 .word {
                     position: absolute;
+                    width: 100%;
+                    height: 100%;
                     color: #fff;
                     z-index: 99;
                     top: 50%;
@@ -939,165 +785,58 @@ section {
                     position: relative;
                     color: #fff;
                     width: 100%;
-                    height: 100%;
+                    height: 100vh;
 
-                    .swiper-slide {
+                    >div {
                         position: absolute;
-                        left: 50%;
-                        top: 50%;
-                        transform: translate(-50%, -50%);
                         width: 100%;
                         height: 100%;
                         background-position: center;
                         background-size: cover;
+                        top: 0;
 
                         &.slide1 {
-                            background-image: url(./images/slide\ \(1\).jpg);
-                            position: relative;
-
-                            .summary {
-                                position: absolute;
-                                top: 50%;
-                                left: 50%;
-                                transform: translate(-50%, -50%);
-                                text-align: center;
-
-                                p {
-                                    font-size: 1.3rem;
-                                }
-
-                                h3 {
-                                    font-size: 2.3rem;
-                                    white-space: nowrap;
-                                }
-                            }
+                            background-image: url(./images/slide1.jpg);
+                            
                         }
 
                         &.slide2 {
-                            background-image: url(./images/slide\ \(2\).jpg);
-                            position: relative;
+                            background-image: url(./images/slide2.jpg);
+                        
 
-                            .summary {
-                                position: absolute;
-                                min-width: 300px;
-                                top: 50%;
-                                left: 50%;
-                                transform: translate(-50%, -50%);
-                                line-height: 3rem;
-                                text-align: center;
-
-                                p {
-                                    font-size: 1.2rem;
-
-                                    b {
-                                        font-size: 1.5rem;
-                                        font-weight: 500;
-                                    }
-                                }
-                            }
                         }
 
                         &.slide3 {
-                            background-image: url(./images/slide\ \(3\).jpg);
-                            position: relative;
+                            background-image: url(./images/slide3.jpg);
+                        
 
-                            .summary {
-                                position: absolute;
-                                top: 30%;
-                                left: 35%;
-
-                                p {
-                                    font-size: 1.3rem;
-                                    word-spacing: .5rem;
-                                }
-                            }
+                            
                         }
 
                         &.slide4 {
-                            background-image: url(./images/slide\ \(4\).jpg);
-                            position: relative;
-
-                            .summary {
-                                text-align: center;
-                                min-width: 350px;
-                                position: absolute;
-                                top: 50%;
-                                left: 50%;
-                                transform: translate(-50%, -50%);
-                                line-height: 3rem;
-
-                                p {
-                                    font-size: 1.2rem;
-                                    word-spacing: .4rem;
-
-                                    b {
-                                        font-size: 1.5rem;
-                                        font-weight: 500;
-                                    }
-                                }
-                            }
+                            background-image: url(./images/slide4.jpg);
+                            
+                           
                         }
 
                         &.slide5 {
-                            background-image: url(./images/slide\ \(5\).jpg);
-                            position: relative;
+                            background-image: url(./images/slide5.jpg);
+                      
 
-                            .summary {
-                                position: absolute;
-                                top: 50%;
-                                left: 50%;
-                                transform: translate(-50%, -50%);
-
-
-                                p {
-                                    font-size: 1.2rem;
-                                    word-spacing: .4rem;
-                                    white-space: nowrap;
-                                }
-                            }
+                           
                         }
 
                         &.slide6 {
-                            background-image: url(./images/slide\ \(6\).jpg);
-                            position: relative;
+                            background-image: url(./images/slide6.jpg);
+                           
 
-                            .summary {
-                                position: absolute;
-                                top: 35%;
-                                left: 50%;
-                                transform: translate(-50%, -50%);
-                                line-height: 3.5rem;
-
-                                p {
-                                    white-space: nowrap;
-                                    font-size: 1.2rem;
-                                    word-spacing: .6rem;
-
-                                    b {
-                                        font-size: 1.5rem;
-                                        font-weight: 500;
-                                    }
-                                }
-                            }
+                          
                         }
 
                         &.slide7 {
-                            background-image: url(./images/slide\ \(7\).jpg);
-                            position: relative;
+                            background-image: url(./images/slide7.jpg);
+                           
 
-                            .summary {
-                                position: absolute;
-                                top: 50%;
-                                left: 50%;
-                                transform: translate(-50%, -50%);
-                                line-height: 3.5rem;
-
-                                p {
-                                    white-space: nowrap;
-                                    font-size: 2.3rem;
-                                    word-spacing: .6rem;
-                                }
-                            }
                         }
                     }
                 }
@@ -1765,6 +1504,7 @@ section {
             .split-box {
                 width: 100%;
                 height: 100%;
+                position: absolute ;
 
                 .word {
                     position: absolute;
@@ -1798,54 +1538,58 @@ section {
                 .bg {
                     color: #fff;
                     width: 100%;
-                    height: 100%;
+                    height: 100vh;
+                    position: relative;
 
                     >div {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
                         background-position: center;
                         background-size: cover;
+                        top: 0;
+                        border: 8px solid #ff0000;
 
                         &.slide1 {
-                            background-image: url(./images/slide\ \(1\).jpg);
-                            position: relative;
+                            background-image: url(./images/slide1.jpg);
+                            
 
                         }
 
                         &.slide2 {
-                            background-image: url(./images/slide\ \(2\).jpg);
-                            position: relative;
+                            background-image: url(./images/slide2.jpg);
+                           
 
-                        
+
                         }
 
                         &.slide3 {
-                            background-image: url(./images/slide\ \(3\).jpg);
-                            position: relative;
+                            background-image: url(./images/slide3.jpg);
+                           
 
-            
+
                         }
 
                         &.slide4 {
-                            background-image: url(./images/slide\ \(4\).jpg);
-                            position: relative;
+                            background-image: url(./images/slide4.jpg);
+                         
 
                         }
 
                         &.slide5 {
-                            background-image: url(./images/slide\ \(5\).jpg);
-                            position: relative
-                        }
-
-                        &.slide6 {
-                            background-image: url(./images/slide\ \(6\).jpg);
-                            position: relative;
-
+                            background-image: url(./images/slide5.jpg);
                           
                         }
 
-                        &.slide7 {
-                            background-image: url(./images/slide\ \(7\).jpg);
-                            position: relative;
+                        &.slide6 {
+                            background-image: url(./images/slide6.jpg);
 
+
+                        }
+
+                        &.slide7 {
+                            background-image: url(./images/slide7.jpg);
+                          
                             // .summary {
                             //     position: absolute;
                             //     top: 50%;

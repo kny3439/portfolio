@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .title {
+            background-color: #ddd;
+            padding: 10px;
+            border-bottom: 1px solid #000;
+            cursor: pointer;
+        }
+
+        .title.on {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .desc {
+            background-color: #eee;
+            max-height: 0;
+            overflow: hidden;
+            transition: .4s;
+            opacity: 0;
+        }
+
+        .inner {
+            width: 100%;
+            height: 100%;
+            padding: 10px 30px;
+        }
+
+        .tab.on .desc {
+            max-height: 200px;
+            opacity: 1;
+        }
+
+        .tab.on .title {
+            background-color: #333;
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="accodion">
+        <div class="tab on">
+            <div class="title on">London</div>
+            <div class="desc">
+                <div class="inner">
+                    <h3>London</h3>
+                    <p>London is the capital city of England.</p>
+                </div>
+            </div>
+        </div>
+        <div class="tab">
+            <div class="title">Paris</div>
+            <div class="desc">
+                <div class="inner">
+                    <h3>Paris</h3>
+                    <p>London is the capital city of England.</p>
+                </div>
+            </div>
+        </div>
+        <div class="tab">
+            <div class="title">Tokyo</div>
+            <div class="desc">
+                <div class="inner">
+                    <h3>Tokyo</h3>
+                    <p>London is the capital city of England.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        const hedings = document.querySelectorAll('.title')
+        const tabs = document.querySelectorAll('.tab')
+        let activeTab = tabs[0]//열려있는 tab을 기억하는 변수
+
+        hedings.forEach((title) => {
+            title.addEventListener('click', function () {
+                // for (t of hedings) {
+                //     t.classList.remove('on')
+                // }
+                // this.classList.add('on')
+                const parentTab = title.parentNode//클릭한 타이틀
+                if (activeTab) {
+                    closeTab(activeTab)//열려 있는 tab close
+                }
+                openTab(parentTab)//클릭한 타이틀 open
+                activeTab = parentTab//클릭해서 열린 해당번째를 기억
+
+
+            })
+        })
+
+        function openTab(tab) {
+            const desc = tab.querySelector('.desc')
+            tab.classList.add('on')
+            desc.style.maxHeight = desc.scrollHeight + 'px'
+            desc.style.opacity = 1
+        }
+        function closeTab(tab) {
+            const desc = tab.querySelector('.desc')
+            tab.classList.remove('on')
+            desc.style.maxHeight = 0
+            desc.style.opacity = 0
+        }
+    </script>
+</body>
+
+</html>
