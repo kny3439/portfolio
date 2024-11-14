@@ -10,191 +10,788 @@ h2 {
   display: flex;
 }
 
-section#title {
-  height: 100vh;
-  background-color: #181818;
-  width: 100%;
-  color: #fff;
-  position: relative;
-}
-section#title > img {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  height: 900px;
-  min-width: 1460px;
-}
-section#title .desc-box {
-  height: 100%;
-  width: 800px;
+#insight .review li {
   display: flex;
-  flex-direction: column;
+  padding: 25px;
   justify-content: space-between;
-  padding: 100px;
+  background-color: rgba(77, 94, 90, 0.4666666667);
 }
-section#title .desc-box p {
-  font-weight: bold;
+#insight .review li span {
+  font-size: 25px;
 }
-section#title .desc-box > div {
-  display: flex;
-  flex-direction: column;
-  height: 70%;
-  justify-content: space-between;
+
+@media (max-width: 700px) {
+  section#title {
+    height: 100vh;
+    background-color: #181818;
+    width: 100%;
+    color: #fff;
+    position: relative;
+  }
+  section#title > img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 600px;
+  }
+  section#title .desc-box {
+    height: 100%;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+  }
+  section#title .desc-box p {
+    font-weight: bold;
+  }
+  section#title .desc-box > div {
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+  }
+  section#title .desc-box > div h1 {
+    font-size: 100px;
+    font-family: "Alumni Sans", serif;
+  }
+  section#title .desc-box > div > div p {
+    margin-bottom: 30px;
+  }
+  section#title .desc-box > div > div .date-box {
+    width: 280px;
+  }
+  section#title .desc-box > div > div .date-box ul {
+    justify-content: space-between;
+  }
+  section#topTxt {
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    background-color: #181818;
+  }
+  section#topTxt p {
+    width: 90%;
+    margin: auto;
+    color: #1C3A33;
+    font-size: 32px;
+    font-family: "Alumni Sans", serif;
+    font-weight: bold;
+    letter-spacing: 1rem;
+  }
+  section#overview {
+    width: 100%;
+    height: 75vh;
+    background-image: url(./images/overview.png);
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    background-repeat: no-repeat;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+  }
+  section#overview::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.302);
+  }
+  section#overview .inner {
+    width: 90%;
+    margin: auto;
+    position: relative;
+    z-index: 9;
+  }
+  section#overview .inner h2 {
+    font-size: 55px;
+    margin-bottom: 60px;
+  }
+  section#overview .inner h3 {
+    font-weight: 300;
+    font-size: 1.3rem;
+    color: #00ffc3;
+    margin-bottom: 50px;
+  }
+  section#overview .inner p {
+    font-weight: 300;
+    line-height: 30px;
+    font-size: 14px;
+  }
+  section#background {
+    width: 100%;
+    height: 150vh;
+    background-color: #181818;
+    display: flex;
+    align-items: center;
+  }
+  section#background .inner {
+    width: 90%;
+    margin: auto;
+    color: #fff;
+  }
+  section#background .inner h2 {
+    font-size: 55px;
+  }
+  section#background .inner > p {
+    font-weight: 300;
+  }
+  section#background .inner .background-chart {
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 60px;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  section#background .inner .background-chart .box {
+    width: 100%;
+    height: 500px;
+    background-color: #272727;
+    border-radius: 25px;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+  }
+  section#background .inner .background-chart .box img {
+    width: 100%;
+    margin: auto;
+  }
+  section#background .inner .background-chart .box p {
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: 300;
+  }
+  section#background .inner .background-chart .box .box-title {
+    text-align: center;
+    font-size: 20px;
+  }
+  section#research {
+    background-color: #181818;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+  section#research .inner {
+    width: 90%;
+    margin: auto;
+    color: #fff;
+  }
+  section#research .inner > p {
+    font-weight: 300;
+  }
+  section#research .inner > h2 {
+    font-size: 55px;
+  }
+  section#research .inner .research-chart {
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 60px;
+    gap: 20px;
+  }
+  section#research .inner .research-chart .box {
+    width: 100%;
+    height: 600px;
+    border: 1px solid #35ffd0;
+    background-color: #272727;
+    border-radius: 25px;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 10;
+  }
+  section#research .inner .research-chart .box img {
+    width: 100%;
+    margin: auto;
+  }
+  section#research .inner .research-chart .box p {
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 300;
+  }
+  section#research .inner .research-chart .box .box-title {
+    text-align: center;
+    font-size: 20px;
+  }
+  section#insight {
+    background-color: #327163;
+    height: 140vh;
+    position: relative;
+    margin-top: -350px;
+  }
+  section#insight .inner {
+    width: 1400px;
+    min-width: 1000px;
+    color: #fff;
+    height: 90vh;
+    border: 1px solid #000;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  section#insight .inner h2 {
+    text-align: center;
+  }
+  section#insight .inner .insight-list {
+    justify-content: space-between;
+  }
+  section#insight .inner .insight-list > li {
+    background-color: #272727;
+    width: 300px;
+    height: 350px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+  }
+  section#insight .inner .insight-list > li > p {
+    font-size: 25px;
+    margin-bottom: 50px;
+  }
+  section#insight .inner .insight-list > li > ul li {
+    list-style: disc;
+    text-align: left;
+    padding: 20px;
+    border: 1px solid #000;
+  }
 }
-section#title .desc-box > div h1 {
-  font-size: 220px;
-  font-family: "Alumni Sans", serif;
+@media (min-width: 701px) {
+  section#title {
+    height: 100vh;
+    background-color: #181818;
+    width: 100%;
+    color: #fff;
+    position: relative;
+  }
+  section#title > img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    min-width: 800px;
+  }
+  section#title .desc-box {
+    height: 100%;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 100px;
+  }
+  section#title .desc-box p {
+    font-weight: bold;
+  }
+  section#title .desc-box > div {
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    justify-content: space-between;
+  }
+  section#title .desc-box > div h1 {
+    font-size: 220px;
+    font-family: "Alumni Sans", serif;
+  }
+  section#title .desc-box > div > div p {
+    margin-bottom: 30px;
+  }
+  section#title .desc-box > div > div .date-box {
+    width: 280px;
+  }
+  section#title .desc-box > div > div .date-box ul {
+    justify-content: space-between;
+  }
+  section#topTxt {
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    background-color: #181818;
+  }
+  section#topTxt p {
+    margin: auto;
+    color: #1C3A33;
+    font-size: 80px;
+    font-family: "Alumni Sans", serif;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1.1rem;
+  }
+  section#overview {
+    width: 100%;
+    height: 70vh;
+    background-image: url(./images/overview.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-repeat: no-repeat;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+  }
+  section#overview::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.302);
+  }
+  section#overview .inner {
+    width: 90%;
+    min-width: 800px;
+    margin: auto;
+    position: relative;
+    z-index: 9;
+  }
+  section#overview .inner h2 {
+    margin-bottom: 60px;
+  }
+  section#overview .inner h3 {
+    font-weight: 300;
+    font-size: 2rem;
+    color: #00ffc3;
+    margin-bottom: 50px;
+  }
+  section#overview .inner p {
+    font-weight: 300;
+    line-height: 30px;
+    font-size: 18px;
+  }
+  section#background {
+    width: 100%;
+    height: 100vh;
+    background-color: #181818;
+    display: flex;
+    align-items: center;
+  }
+  section#background .inner {
+    width: 90%;
+    margin: auto;
+    color: #fff;
+  }
+  section#background .inner > p {
+    font-weight: 300;
+  }
+  section#background .inner .background-chart {
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    justify-content: space-between;
+  }
+  section#background .inner .background-chart .box {
+    width: 49%;
+    height: 600px;
+    background-color: #272727;
+    border-radius: 25px;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+  }
+  section#background .inner .background-chart .box img {
+    width: 90%;
+    margin: auto;
+  }
+  section#background .inner .background-chart .box p {
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 300;
+  }
+  section#background .inner .background-chart .box .box-title {
+    text-align: center;
+    font-size: 24px;
+  }
+  section#background .inner .background-chart .box.box2 img {
+    width: 100%;
+  }
+  section#research {
+    background-color: #181818;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+  section#research .inner {
+    width: 90%;
+    margin: auto;
+    color: #fff;
+  }
+  section#research .inner > p {
+    font-weight: 300;
+  }
+  section#research .inner .research-chart {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 60px;
+  }
+  section#research .inner .research-chart .box {
+    width: 49%;
+    height: 600px;
+    border: 1px solid #35ffd0;
+    background-color: #272727;
+    border-radius: 25px;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 10;
+  }
+  section#research .inner .research-chart .box img {
+    width: 80%;
+    margin: auto;
+  }
+  section#research .inner .research-chart .box p {
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 300;
+  }
+  section#research .inner .research-chart .box .box-title {
+    font-size: 20px;
+  }
+  section#insight {
+    background-color: #327163;
+    height: 160vh;
+    position: relative;
+    overflow: hidden;
+    margin-top: -350px;
+  }
+  section#insight .inner {
+    width: 75%;
+    min-width: 1000px;
+    color: #fff;
+    height: 110vh;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  section#insight .inner h2 {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  section#insight .inner .insight-list {
+    width: 95%;
+    margin: auto;
+    justify-content: space-between;
+  }
+  section#insight .inner .insight-list > li {
+    background-color: #272727;
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  section#insight .inner .insight-list > li > p {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+  section#insight .inner .insight-list > li > ul {
+    padding: 0 0 0 40px;
+  }
+  section#insight .inner .insight-list > li > ul li {
+    list-style: disc;
+    text-align: left;
+    padding: 10px 5px;
+  }
+  section#insight .review-box {
+    position: absolute;
+    width: 100%;
+    bottom: 40px;
+    left: 40%;
+    transform: translateX(-50%);
+  }
+  section#insight .review-box .review {
+    margin-top: 50px;
+    gap: 50px;
+    color: #fff;
+  }
+  section#insight .review-box .review li {
+    border: 1px solid #35ffd0;
+    width: 400px;
+    min-width: 300px;
+    font-size: 14px;
+    border-radius: 15px;
+  }
+  section#insight .review-box .review.review1 {
+    margin-left: 250px;
+  }
+  section#insight .review-box .review.review3 {
+    margin-left: 400px;
+  }
 }
-section#title .desc-box > div > div p {
-  margin-bottom: 30px;
-}
-section#title .desc-box > div > div .date-box {
-  width: 280px;
-}
-section#title .desc-box > div > div .date-box ul {
-  justify-content: space-between;
-}
-section#topTxt {
-  height: 200px;
-  display: flex;
-  justify-content: center;
-  background-color: #181818;
-}
-section#topTxt p {
-  margin: auto;
-  color: #1C3A33;
-  font-size: 106px;
-  font-family: "Alumni Sans", serif;
-  font-weight: bold;
-  letter-spacing: 1.1rem;
-}
-section#overview {
-  width: 100%;
-  height: 610px;
-  background-image: url(./images/overview.png);
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  background-repeat: no-repeat;
-  color: #fff;
-  text-align: center;
-  display: flex;
-  align-items: center;
-}
-section#overview::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  background-color: rgba(0, 0, 0, 0.302);
-}
-section#overview .inner {
-  width: 1000px;
-  min-width: 800px;
-  margin: auto;
-  position: relative;
-  z-index: 9;
-}
-section#overview .inner h2 {
-  margin-bottom: 60px;
-}
-section#overview .inner h3 {
-  font-weight: 300;
-  font-size: 2rem;
-  color: #00ffc3;
-  margin-bottom: 50px;
-}
-section#overview .inner p {
-  font-weight: 300;
-  line-height: 30px;
-  font-size: 18px;
-}
-section#background {
-  width: 100%;
-  height: 93vh;
-  background-color: #181818;
-  display: flex;
-  align-items: center;
-}
-section#background .inner {
-  width: 1400px;
-  min-width: 1000px;
-  margin: auto;
-  color: #fff;
-}
-section#background .inner > p {
-  font-weight: 300;
-}
-section#background .inner .background-chart {
-  width: 100%;
-  gap: 20px;
-  margin-top: 60px;
-}
-section#background .inner .background-chart .box {
-  width: 50%;
-  height: 600px;
-  background-color: rgba(152, 152, 152, 0.1333333333);
-  border-radius: 25px;
-  padding: 35px;
-  display: flex;
-  flex-direction: column;
-}
-section#background .inner .background-chart .box img {
-  width: 80%;
-  margin: auto;
-}
-section#background .inner .background-chart .box p {
-  font-size: 15px;
-  line-height: 30px;
-  font-weight: 300;
-  margin-left: 50px;
-}
-section#background .inner .background-chart .box .box-title {
-  text-align: center;
-  font-size: 24px;
-}
-section#background .inner .background-chart .box.box2 img {
-  width: 95%;
-}
-section#research {
-  background-color: #181818;
-}
-section#research .inner {
-  width: 1400px;
-  min-width: 1000px;
-  margin: auto;
-  color: #fff;
-}
-section#research .inner > p {
-  font-weight: 300;
-}
-section#research .inner .research-chart {
-  width: 100%;
-  gap: 20px;
-  margin-top: 60px;
-}
-section#research .inner .research-chart .box {
-  width: 50%;
-  height: 600px;
-  border: 1px solid #35ffd0;
-  background-color: rgba(152, 152, 152, 0.1333333333);
-  border-radius: 25px;
-  padding: 35px;
-  display: flex;
-  flex-direction: column;
-}
-section#research .inner .research-chart .box img {
-  width: 80%;
-  margin: auto;
-}
-section#research .inner .research-chart .box p {
-  font-size: 15px;
-  line-height: 30px;
-  font-weight: 300;
-  margin-left: 50px;
-}
-section#research .inner .research-chart .box .box-title {
-  text-align: center;
-  font-size: 20px;
+@media (min-width: 1400px) {
+  section#title {
+    height: 100vh;
+    background-color: #181818;
+    width: 100%;
+    color: #fff;
+    position: relative;
+  }
+  section#title > img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 850px;
+    min-width: 1350px;
+  }
+  section#title .desc-box {
+    height: 100%;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 100px;
+  }
+  section#title .desc-box p {
+    font-weight: bold;
+  }
+  section#title .desc-box > div {
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    justify-content: space-between;
+  }
+  section#title .desc-box > div h1 {
+    font-size: 220px;
+    font-family: "Alumni Sans", serif;
+  }
+  section#title .desc-box > div > div p {
+    margin-bottom: 30px;
+  }
+  section#title .desc-box > div > div .date-box {
+    width: 280px;
+  }
+  section#title .desc-box > div > div .date-box ul {
+    justify-content: space-between;
+  }
+  section#topTxt {
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    background-color: #181818;
+  }
+  section#topTxt p {
+    margin: auto;
+    color: #1C3A33;
+    font-size: 106px;
+    font-family: "Alumni Sans", serif;
+    font-weight: bold;
+    letter-spacing: 1.1rem;
+  }
+  section#overview {
+    width: 100%;
+    height: 80vh;
+    background-image: url(./images/overview.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-repeat: no-repeat;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+  }
+  section#overview::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.302);
+  }
+  section#overview .inner {
+    width: 1000px;
+    min-width: 800px;
+    margin: auto;
+    position: relative;
+    z-index: 9;
+  }
+  section#overview .inner h2 {
+    margin-bottom: 60px;
+  }
+  section#overview .inner h3 {
+    font-weight: 300;
+    font-size: 2rem;
+    color: #00ffc3;
+    margin-bottom: 50px;
+  }
+  section#overview .inner p {
+    font-weight: 300;
+    line-height: 30px;
+    font-size: 18px;
+  }
+  section#background {
+    width: 100%;
+    height: 100vh;
+    background-color: #181818;
+    display: flex;
+    align-items: center;
+  }
+  section#background .inner {
+    width: 75%;
+    min-width: 1000px;
+    margin: auto;
+    color: #fff;
+  }
+  section#background .inner > p {
+    font-weight: 300;
+  }
+  section#background .inner .background-chart {
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    justify-content: space-between;
+  }
+  section#background .inner .background-chart .box {
+    width: 49%;
+    height: 600px;
+    background-color: #272727;
+    border-radius: 25px;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+  }
+  section#background .inner .background-chart .box img {
+    width: 80%;
+    margin: auto;
+  }
+  section#background .inner .background-chart .box p {
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 300;
+    margin-left: 50px;
+  }
+  section#background .inner .background-chart .box .box-title {
+    text-align: center;
+    font-size: 24px;
+  }
+  section#background .inner .background-chart .box.box2 img {
+    width: 95%;
+  }
+  section#research {
+    background-color: #181818;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+  section#research .inner {
+    width: 75%;
+    min-width: 1000px;
+    margin: auto;
+    color: #fff;
+  }
+  section#research .inner > p {
+    font-weight: 300;
+  }
+  section#research .inner .research-chart {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 60px;
+  }
+  section#research .inner .research-chart .box {
+    width: 49%;
+    height: 600px;
+    border: 1px solid #35ffd0;
+    background-color: #272727;
+    border-radius: 25px;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 10;
+  }
+  section#research .inner .research-chart .box img {
+    width: 80%;
+    margin: auto;
+  }
+  section#research .inner .research-chart .box p {
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 300;
+    margin-left: 50px;
+  }
+  section#research .inner .research-chart .box .box-title {
+    text-align: center;
+    font-size: 24px;
+  }
+  section#insight {
+    background-color: #327163;
+    height: 160vh;
+    position: relative;
+    margin-top: -350px;
+  }
+  section#insight .inner {
+    width: 75%;
+    min-width: 1000px;
+    color: #fff;
+    height: 110vh;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  section#insight .inner h2 {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  section#insight .inner .insight-list {
+    width: 95%;
+    margin: auto;
+    justify-content: space-between;
+  }
+  section#insight .inner .insight-list > li {
+    background-color: #272727;
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  section#insight .inner .insight-list > li > p {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+  section#insight .inner .insight-list > li > ul {
+    padding: 0 0 0 40px;
+  }
+  section#insight .inner .insight-list > li > ul li {
+    list-style: disc;
+    text-align: left;
+    padding: 10px 5px;
+  }
+  section#insight .review-box {
+    position: absolute;
+    width: 90%;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  section#insight .review-box .review {
+    margin-top: 50px;
+    gap: 50px;
+    color: #fff;
+  }
+  section#insight .review-box .review li {
+    border: 1px solid #35ffd0;
+    width: 400px;
+    border-radius: 15px;
+  }
+  section#insight .review-box .review.review1 {
+    margin-left: 250px;
+  }
+  section#insight .review-box .review.review3 {
+    margin-left: 400px;
+  }
 }

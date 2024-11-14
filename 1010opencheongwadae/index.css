@@ -1,4 +1,4 @@
-@import url(./reset.css);
+@import url(/reset.css);
 @font-face {
   font-family: NotoSerifKR-Medium;
   src: url(./NotoSerifKR-Medium\ \(3\).woff2);
@@ -1800,4 +1800,4 @@ section#sect5 {
     font-size: 14px;
     text-align: right;
   }
-}/*# sourceMappingURL=index.css.map */
+}
