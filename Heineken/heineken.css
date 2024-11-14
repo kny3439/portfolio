@@ -1,0 +1,350 @@
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #008200;
+}
+
+
+figure.video {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+figure.video video {
+    width: 100%;
+    min-width: 1680px;
+}
+
+header {
+    position: fixed;
+    height: 100%;
+    width: 800px;
+    left: -600px;
+    top: 0;
+    background-image: linear-gradient(to right top, #008200, #0c7714, #156b1d, #1b6023, #205527);
+    transform: skewX(-40deg);
+}
+
+header h1 {
+    position: relative;
+    left:400px;
+    top: 10px;
+    width: 200px;
+    transform: skewX(40deg);
+}
+
+/* 부모 header를 skew 해서 nav를 왼쪽에서 오른쪽으로 위치하기 위해 */
+nav {
+    position: absolute;
+    right: 0;
+    top: 150px;
+    width: 200px;
+    color: #b4b4b4;
+
+}
+
+/* a는 inline요소에서 width:100% 아니다, hover 시에 전체 영역에 배경색이 적용이 안되기 때문에 */
+nav a {
+    display: block;
+    font-size: 18px;
+}
+
+/* 부모 a의 영역이 hover skew 되어 있어 좋은데 글자까지 기울어서 b태그를 사용. inline 요소는 transform 적용이 안됨 */
+nav a {
+    display: block;
+    font-weight: normal;
+    transform: skewX(40deg);
+}
+
+li.main-menu {
+    position: relative;
+}
+
+/*메인 메뉴에 있는 a 값만[서브메뉴의 a는 제외]  */
+li.main-menu>a {
+    padding: 15px;
+    font-size: 14px;
+    text-align: center;
+    transition: .4s;
+    text-align: right;
+    margin-right: 10px;
+}
+
+li.main-menu:hover>a {
+    padding: 10px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+
+ul.sub-menu {
+    position: absolute;
+    width: 200px;
+    left: 200px;
+    top: 0;
+
+}
+
+ul.sub-menu span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: .5s;
+    opacity: .5s;
+    font-weight: 200;
+    color: #fff;
+}
+
+li.main-menu:hover ul.sub-menu span{
+   opacity: 1;
+}
+
+ul.sub-menu li a {
+    padding: 5px 10px 10px 20px;
+}
+
+
+
+
+
+.btn img {
+    position: absolute;
+    animation: btn-ani 1.5s linear infinite;
+}
+
+.btn img:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.btn img:nth-child(2) {
+    animation-delay: .5s;
+}
+.btn img:nth-child(3) {
+    animation-delay: 1s;
+}
+
+@keyframes btn-ani {
+    from {
+        opacity: 0;
+        left: 0;
+        transform: scale(.8);
+    }
+
+    to {
+        opacity: 1;
+        left: 150px;
+        transform: scale(1);
+    }
+}
+
+
+
+@keyframes bounce-top {
+    0% {
+        transform: translateY(-45px);
+        animation-timing-function: ease-in;
+        opacity: 1
+    }
+
+    24% {
+        opacity: 1
+    }
+
+    40% {
+        transform: translateY(-20px);
+        animation-timing-function: ease-in
+    }
+
+    65% {
+        transform: translateY(-12px);
+        animation-timing-function: ease-in
+    }
+
+    82% {
+        transform: translateY(-6px);
+        animation-timing-function: ease-in
+    }
+
+    93% {
+        transform: translateY(-4px);
+        animation-timing-function: ease-in
+    }
+
+    25%,
+    55%,
+    75%,
+    87% {
+        transform: translateY(0);
+        animation-timing-function: ease-out
+    }
+
+    100% {
+        transform: translateY(0);
+        animation-timing-function: ease-out;
+        opacity: 1
+    }
+}
+
+aside {
+    position: fixed;
+    right: -800px;
+    bottom: 0;
+    width: 800px;
+    height: 100%;
+    background-image: linear-gradient(to left top, #205527, #1b6023, #156b1d, #0c7714, #008200);
+    transform: skew(-40deg);
+    transition: .35s;
+    cursor: pointer;
+}
+
+.brand {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 100%;
+    /* background-color: rgba(0, 0, 0, 1); */
+    /* background-image: linear-gradient(to left top, #c3c3c3, #bbc9d5, #a6d4d9, #a6dcc2, #ccdba0); */
+    background-image: url(./images/aside2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    transition: .35s;
+}
+
+
+
+aside:hover {
+    right: -600px;
+}
+
+aside:hover .brand {
+    left: 5%;
+}
+
+aside:hover .brand ul li {
+    transform: translateX(0px);
+}
+
+aside:hover .brand ul li:nth-child(1) {
+    transition-delay: 0s;
+}
+
+aside:hover .brand ul li:nth-child(2) {
+    transition-delay: .1s;
+}
+
+aside:hover .brand ul li:nth-child(3) {
+    transition-delay: .2s;
+}
+
+aside:hover .brand ul li:nth-child(4) {
+    transition-delay: .3s;
+}
+
+aside:hover .brand ul li:nth-child(5) {
+    transition-delay: .4s;
+}
+
+.brand ul {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+
+}
+
+.brand ul li {
+    position: absolute;
+    transition: .3s;
+    transform: translateX(600px);
+}
+
+.brand ul li:nth-child(1) {
+    top: -400px;
+    right: -100px;
+}
+
+.brand ul li:nth-child(2) {
+    top: -250px;
+    right: -280px;
+}
+
+.brand ul li:nth-child(3) {
+    top: -250px;
+    right: -100px;
+}
+
+.brand ul li:nth-child(4) {
+    top: -100px;
+    right: -280px;
+}
+
+.brand ul li:nth-child(5) {
+    top: -100px;
+    right: -100px;
+}
+
+.brand ul li img {
+    vertical-align: top;
+    height: 70px;
+    transform: skewX(40deg) scale(1.5);
+}
+
+.brand ul li:nth-child(1) img:hover {
+    content: url('./matcha.webp');
+    transform: skewX(40deg);
+}
+
+.brand ul li:nth-child(2) img:hover {
+    content: url('./cookies-and-cream.webp');
+    transform: skewX(40deg);
+}
+
+.brand ul li:nth-child(3) img:hover {
+    content: url('./strawberry\ \(2\).webp');
+    transform: skewX(40deg);
+}
+
+.brand ul li:nth-child(4) img:hover {
+    content: url('./dark-chocolate.webp');
+    transform: skewX(40deg);
+}
+
+.brand ul li:nth-child(5) img:hover {
+    content: url('./cantaloupe.webp');
+    transform: skewX(40deg);
+}
+
+.brand h3 {
+    color: #fff;
+    transform: skewX(40deg);
+    padding: 10px;
+}
+
+.item {
+    position: absolute;
+    left: -25%;
+    bottom: 15%;
+    width: 200px;
+    animation: bounce-top 1.5s infinite;
+}
+
+.item img {
+    transform: skewX(40deg);
+}
+
+.btn {
+    position: absolute;
+    bottom: 10px;
+    left: -30px;
+    font-size: 80px;
+    color: #fff;
+    width: 200px;
+    height: 100px;
+    transform: skewX(40deg);
+    transition: .35s;
+}
+
+aside:hover .item {
+    left: 100%;
+}
