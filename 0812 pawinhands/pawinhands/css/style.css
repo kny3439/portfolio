@@ -47,6 +47,10 @@ button a {
     transition: 0.5s;
 }
 
+button a.on {
+    color: var(--main-color);
+}
+
 button:hover>a {
     color: var(--main-color);
     border: none;
@@ -91,34 +95,38 @@ header h1 img {
     background-color: #ffffff;
 }
 
+section.on .sect1-contents {}
+
 /* -------sesct1----- */
-.sect1 {
+#sect1 {
     position: relative;
     height: 100vh;
+    width: 100%;
     overflow: hidden;
 }
 
 
-.sect1 figure.video video {
-    min-width: 100%;
+#sect1 figure.video video {
+    min-width: 100vw;
     min-height: 100%;
+    height: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    object-fit: cover;
 }
 
 
 .video::after {
     content: "";
     width: 100%;
-    height: 120vh;
+    height: 100%;
     display: block;
     z-index: 9;
     position: absolute;
     top: 0;
     left: 0;
-
     background-color: rgba(0, 0, 0, .6);
 }
 
@@ -136,7 +144,7 @@ header h1 img {
 }
 
 /* -----sect1-5------ */
-.sect1-5 {
+#sect1-5 {
     height: 70vh;
     width: 95%;
     margin: auto;
@@ -145,7 +153,7 @@ header h1 img {
 }
 
 /* -----sect2---- */
-.sect2 {
+#sect2 {
     height: 100vh;
     width: 100%;
 
@@ -257,7 +265,7 @@ header h1 img {
 
 
 /* ---sect3------ */
-.sect3 {
+#sect3 {
     background-image: linear-gradient(to right bottom, #ff8c19, #ff9f11, #ffb10b, #ffc40e, #ffd61a);
     height: 150vh;
     z-index: -10;
@@ -267,7 +275,7 @@ header h1 img {
     overflow: hidden;
 }
 
-.sect3 figure {
+#sect3 figure {
     width: 90%;
     margin: auto;
     height: 100%;
@@ -275,12 +283,12 @@ header h1 img {
 
 }
 
-.sect3 figure img {
+#sect3 figure img {
     width: 40%;
     position: relative;
 }
 
-.sect3 figure img::after {
+#sect3 figure img::after {
     content: '';
     width: 100%;
     height: 100%;
@@ -292,24 +300,24 @@ header h1 img {
     background-color: rgba(0, 0, 0, .6);
 }
 
-.sect3 figure img:nth-child(2) {
+#sect3 figure img:nth-child(2) {
     float: right;
     margin-top: 10%;
 }
 
-.sect3 figure img:nth-child(3) {
+#sect3 figure img:nth-child(3) {
     position: absolute;
     bottom: 0;
     left: 0;
 }
 
-.sect4 {
+#sect4 {
     position: relative;
     height: 120vh;
     overflow: hidden;
 }
 
-.sect4 figure.video video {
+#sect4 figure.video video {
     min-width: 100%;
     min-height: 100%;
     position: absolute;
@@ -334,7 +342,7 @@ header h1 img {
 }
 
 
-.sect4 .button {
+#sect4 .button {
     width: 30%;
     position: absolute;
     bottom: 10%;
@@ -364,7 +372,7 @@ header h1 img {
 }
 
 /* -------------------sect5-------------------- */
-.sect5 {
+#sect5 {
     height: 100vh;
     background-image: linear-gradient(to left top, #dc7f20, #e8941c, #f2a918, #fabf17, #ffd61a);
     position: relative;
@@ -442,7 +450,7 @@ footer .copy {
         white-space: nowrap;
     }
 
-    .sect1 {
+    #sect1 {
         position: relative;
         height: 100vh;
     }
@@ -458,11 +466,12 @@ footer .copy {
         font-size: 3rem;
     }
 
-    .sect1 figure.video video {
+    #sect1 figure.video video {
         min-width: 100%;
-
-        min-height: 100%;
+        min-height: 100vh;
         position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     /* .sect1 .video::after {
@@ -495,7 +504,7 @@ footer .copy {
         margin-left: 20px;
     }
 
-    .sect1-5 {
+    #sect1-5 {
         position: relative;
     }
 
@@ -508,7 +517,7 @@ footer .copy {
         text-align: left;
     }
 
-    .sect1-5 span {
+    #sect1-5 span {
         position: absolute;
         left: 5%;
         top: 10%;
@@ -537,7 +546,7 @@ footer .copy {
         width: 100%;
     }
 
-    .sect2 figcaption {
+    #sect2 figcaption {
         width: 100%;
         height: 300px;
         background-color: #000000dd;
@@ -546,13 +555,13 @@ footer .copy {
         margin-top: 20px;
     }
 
-    .sect2 figcaption p {
+    #sect2 figcaption p {
         font-size: 1.2rem;
         line-height: 2rem;
         margin-top: 20%;
     }
 
-    .sect2 figcaption button {
+    #sect2 figcaption button {
         margin-top: 8%;
     }
 
@@ -564,7 +573,7 @@ footer .copy {
     }
 
 
-    .sect3 {
+    #sect3 {
         position: relative;
     }
 
@@ -585,12 +594,9 @@ footer .copy {
         padding: 0 20px;
     }
 
-    .sect3 {
-        position: relative;
-    }
 
 
-    .sect3 p:nth-child(2) {
+    #sect3 p:nth-child(2) {
         margin: 1.5rem 0;
         font-size: 2rem;
         position: fixed;
@@ -599,7 +605,7 @@ footer .copy {
 
     }
 
-    .sect3 p:nth-child(3) {
+    #sect3 p:nth-child(3) {
         margin: 1.5rem 0;
         font-size: 2rem;
         position: fixed;
@@ -608,7 +614,7 @@ footer .copy {
 
     }
 
-    .sect3 p:nth-child(4) {
+    #sect3 p:nth-child(4) {
         margin: 1.5rem 0;
         font-size: 1.8rem;
         position: fixed;
@@ -617,22 +623,22 @@ footer .copy {
 
     }
 
-    .sect3 span {
+    #sect3 span {
         font-size: 4.8rem;
         padding: 0 20px;
     }
 
-    .sect3 figure img {
+    #sect3 figure img {
         width: 75%;
 
     }
 
-    .sect3 figure img:nth-child(2) {
+    #sect3 figure img:nth-child(2) {
         float: right;
         margin-top: 40%;
     }
 
-    .sect4 figure.video video {
+    #sect4 figure.video video {
         min-width: 100%;
         min-height: 100%;
         position: absolute;
@@ -652,7 +658,7 @@ footer .copy {
         font-size: 1.2rem;
     }
 
-    .sect4 {
+    #sect4 {
         position: relative;
     }
 
@@ -681,7 +687,7 @@ footer .copy {
         text-align: right;
     }
 
-    .sect4 .button {
+    #sect4 .button {
         width: 70%;
     }
 
@@ -708,7 +714,7 @@ footer .copy {
     }
 
 
-    .sect5 {
+    #sect5 {
         position: relative;
         overflow: hidden;
     }
@@ -799,10 +805,22 @@ footer .copy {
         white-space: nowrap;
     }
 
-    .sect1 {
+    #sect1 {
         position: relative;
         height: 100vh;
     }
+
+    #sect1 figure.video video {
+        min-width: 100vw;
+        min-height: 100%;
+        height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        object-fit: cover;
+    }
+
 
     .sect1-contents h2 {
         font-size: 4rem;
@@ -820,7 +838,7 @@ footer .copy {
         margin-left: 20px;
     }
 
-    .sect1-5 {
+    #sect1-5 {
         position: relative;
     }
 
@@ -832,7 +850,7 @@ footer .copy {
         line-height: 4rem;
     }
 
-    .sect1-5 span {
+    #sect1-5 span {
         position: absolute;
         left: 5%;
         top: 10%;
@@ -854,7 +872,7 @@ footer .copy {
         font-size: 1.3rem;
     }
 
-    .sect2 figcaption {
+    #sect2 figcaption {
         position: absolute;
         width: 500px;
         height: 400px;
@@ -865,13 +883,13 @@ footer .copy {
         padding: 5%;
     }
 
-    .sect2 figcaption p {
+    #sect2 figcaption p {
         font-size: 1.5rem;
         line-height: 2.3rem;
         margin-top: 20%;
     }
 
-    .sect2 figcaption button {
+    #sect2 figcaption button {
         margin-top: 30px;
     }
 
@@ -883,23 +901,23 @@ footer .copy {
     }
 
 
-    .sect3 {
+    #sect3 {
         position: relative;
     }
 
-    .sect3 figure img {
+    #sect3 figure img {
         width: 55%;
 
     }
 
-    .sect3 figure img:nth-child(2) {
+    #sect3 figure img:nth-child(2) {
         float: right;
         margin-top: 20%;
     }
 
 
 
-    .sect3 p:nth-child(2) {
+    #sect3 p:nth-child(2) {
         margin: 2rem 0;
         font-size: 3rem;
         position: fixed;
@@ -908,7 +926,7 @@ footer .copy {
 
     }
 
-    .sect3 p:nth-child(3) {
+    #sect3 p:nth-child(3) {
         margin: 2rem 0;
         font-size: 3rem;
         position: fixed;
@@ -917,7 +935,7 @@ footer .copy {
 
     }
 
-    .sect3 p:nth-child(4) {
+    #sect3 p:nth-child(4) {
         margin: 2rem 0;
         font-size: 2rem;
         position: fixed;
@@ -926,12 +944,12 @@ footer .copy {
 
     }
 
-    .sect3 span {
+    #sect3 span {
         font-size: 6rem;
         padding: 0 20px;
     }
 
-    .sect4 {
+    #sect4 {
         position: relative;
     }
 
@@ -948,7 +966,7 @@ footer .copy {
         display: block;
     }
 
-    .sect4-stats li:nth-child(1) {}
+
 
     .sect4-stats li:nth-child(2) {
         text-align: center;
@@ -958,7 +976,7 @@ footer .copy {
         text-align: right;
     }
 
-    .sect4 .button {
+    #sect4 .button {
         width: 60%;
     }
 
@@ -974,7 +992,7 @@ footer .copy {
         margin-left: 5%;
     }
 
-    .sect5 {
+    #sect5 {
         position: relative;
         overflow: hidden;
     }
@@ -1091,6 +1109,19 @@ footer .copy {
         flex: 1;
     }
 
+    #sect1 figure.video video {
+        min-width: 100vw;
+        min-height: 100%;
+        height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        object-fit: cover;
+    }
+
+
+
     .sect1-contents h2 {
         font-size: 6rem;
     }
@@ -1101,7 +1132,7 @@ footer .copy {
         font-size: 1.5rem;
     }
 
-    .sect1-5 {
+    #sect1-5 {
         position: relative;
     }
 
@@ -1113,7 +1144,7 @@ footer .copy {
         line-height: 5rem;
     }
 
-    .sect1-5 span {
+    #sect1-5 span {
         position: absolute;
         left: 5%;
         top: 10%;
@@ -1162,7 +1193,7 @@ footer .copy {
         font-size: 1.3rem;
     }
 
-    .sect2 figcaption {
+    #sect2 figcaption {
         position: absolute;
         width: 500px;
         height: 400px;
@@ -1173,7 +1204,7 @@ footer .copy {
         margin-left: 150px;
     }
 
-    .sect2 figcaption p {
+    #sect2 figcaption p {
         font-size: 1.5rem;
         line-height: 2.3rem;
         margin-top: 20%;
@@ -1192,21 +1223,21 @@ footer .copy {
     }
 
     /* sect3------ */
-    .sect3 {
+    #sect3 {
         position: relative;
     }
 
-    .sect3 figure img {
+    #sect3 figure img {
         width: 30%;
         position: relative;
     }
 
-    .sect3 figure img:nth-child(2) {
+    #sect3 figure img:nth-child(2) {
         float: right;
         margin-top: 15%;
     }
 
-    .sect3 p:nth-child(2) {
+    #sect3 p:nth-child(2) {
         margin: 2.5rem 0;
         font-size: 3rem;
         position: fixed;
@@ -1215,7 +1246,7 @@ footer .copy {
 
     }
 
-    .sect3 p:nth-child(3) {
+    #sect3 p:nth-child(3) {
         margin: 2.5rem 0;
         font-size: 3rem;
         position: fixed;
@@ -1224,7 +1255,7 @@ footer .copy {
 
     }
 
-    .sect3 p:nth-child(4) {
+    #sect3 p:nth-child(4) {
         margin: 2.5rem 0;
         font-size: 2rem;
         position: fixed;
@@ -1232,14 +1263,14 @@ footer .copy {
         left: 39%;
     }
 
-    .sect3 span {
+    #sect3 span {
         font-size: 6.5rem;
         padding: 0 20px;
     }
 
-    .sect3 button {}
+    #sect3 button {}
 
-    .sect4 {
+    #sect4 {
         position: relative;
     }
 
@@ -1257,11 +1288,11 @@ footer .copy {
         flex: 1;
     }
 
-    .sect4 .button {
+    #sect4 .button {
         width: 40%;
     }
 
-    .sect5 {
+    #sect5 {
         position: relative;
         overflow: hidden;
     }

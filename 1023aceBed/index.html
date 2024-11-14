@@ -7,6 +7,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+
+    </style>
 </head>
 
 <body>
@@ -182,7 +185,7 @@
 
         </div>
         <section id="sect1">
-            <h2>ACE SCIENCE</h2>
+            <h2>ACE NEWS</h2>
             <div class="sect1-container">
                 <div class="sect1-menu">
                     <ul>
@@ -277,7 +280,7 @@
                     </ul>
                 </div>
                 <div class="tabs">
-                    <div class="tab" id="new-product">
+                    <div class="tab on" id="new-product">
                         <div class="swiper swiper3 mySwiper3">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide sect2-swi1 on">
@@ -420,16 +423,17 @@
             </div>
             <div class="tablet-tab">
                 <div class="tablet-tab-menu">
-                    <ul class="flex">
-                        <li><a href="#tablet-new-product">신제품</a></li>
+                    <ul class="flex ">
+                        <li><a href="#tablet-new-product" class="on">신제품</a></li>
+                        <div class="line"></div>
                         <li><a href="#tablet-recommend-product">추천제품</a></li>
                     </ul>
                 </div>
                 <div class="tablet-tabs">
-                    <div class="tab2" id="tablet-new-product">
-                        <div class="swiper mySwiper5">
+                    <div class="tab2 on" id="tablet-new-product">
+                        <div class="swiper swiper5 mySwiper5">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide sect2-swi1">
+                                <div class="swiper-slide sect2-swi1 on">
                                     <div class="summary">
                                         <ul class="word flex">
                                             <li>신혼부부</li>
@@ -495,9 +499,9 @@
                         </div>
                     </div>
                     <div class="tab2" id="tablet-recommend-product">
-                        <div class="swiper mySwiper6">
+                        <div class="swiper swiper6 mySwiper6">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide sect2-swi1">
+                                <div class="swiper-slide sect2-swi1 on">
                                     <div class="summary">
                                         <ul class="word flex">
                                             <li>신혼부부</li>
@@ -564,17 +568,342 @@
                     </div>
                 </div>
             </div>
+            <div class="mobile-tab">
+                <div class="mobile-tab-menu">
+                    <ul class="flex">
+                        <li><a href="#mobile-new-product" class="on">신제품</a></li>
+                        <div class="line"></div>
+                        <li><a href="#mobile-recommend-product">추천제품</a></li>
+                    </ul>
+                </div>
+                <div class="mobile-tabs">
+                    <div class="tab3 on" id="mobile-new-product">
+                        <figure><img src="./images/sect2-swi3.jpg" alt=""></figure>
+                        <div class="summary">
+                            <ul class="word flex">
+                                <li>싱글침대</li>
+                                <li>자석침대</li>
+                                <li>아이침대</li>
+                            </ul>
+                            <h3>BACIO</h3>
+                            <p>당신의 감성으로 채워지는 곳, BACIO</p>
+                            <a href="#" class="arrow"><img src="./images/right-icon.png" alt=""></a>
+                        </div>
+                        <ul class="product flex">
+                            <li>
+                                <a href="#">
+                                    <img src="./images/sect2-swi1.jpg" alt="">
+                                    <span>LUNATO-Ⅳ</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./images/sect2-swi2.jpg" alt="">
+                                    <span>AMANDE</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./images/sect2-swi3.jpg" alt="">
+                                    <span>BACIO</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="view"><a href="#">더보기</a></div>
+                    </div>
+                    <div class="tab3" id="mobile-recommend-product">
+                        <figure><img src="./images/sect2-tab2-swi3.jpg" alt=""></figure>
+                        <div class="summary">
+                            <ul class="word flex">
+                                <li>CF침대</li>
+                                <li>LED조명</li>
+                                <li>기능성</li>
+                                <li>아트월컨셉</li>
+                            </ul>
+                            <h3>LUCE-III</h3>
+                            <p>편안한 밤을 위한 모든 것, LUCE-III</p>
+                            <a href="#" class="arrow"><img src="./images/right-icon.png" alt=""></a>
+                        </div>
+                        <ul class="product flex">
+                            <li>
+                                <a href="#">
+                                    <img src="./images/sect2-tab2-swi1.jpg" alt="">
+                                    <span> ARNO-Ⅱ</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./images/sect2-tab2-swi2.jpg" alt="">
+                                    <span>ERBA</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./images/sect2-tab2-swi3.jpg" alt="">
+                                    <span>LUCE-III</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="view"><a href="#">더보기</a></div>
+                    </div>
+                </div>
+            </div>
         </section>
+        <section id="sect3">
+            <h2>ACE NEWS</h2>
+            <div class="sect3-container flex">
+                <h3>에이스침대의<br>
+                    새로운 소식을 알려드립니다
+                </h3>
+                <div class="sect3-swi">
+                    <ul>
+                        <li><img src="./images/sect3-swi1.jpg" alt=""></li>
+                        <li><img src="./images/sect3-swi2.jpg" alt=""></li>
+                        <li><img src="./images/sect3-swi3.jpg" alt=""></li>
+                    </ul>
+                </div>
+                <div class="sect3-menu">
+                    <ul>
+                        <li>
+                            <a href="#" class="on">
+                                <h4>매장오픈소식</h4>
+                                <p>롯데백화점 잠실점 OPEN</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <h4>매장오픈소식</h4>
+                                <p>에이스스퀘어 중곡점 OPEN</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <h4>매장오픈소식</h4>
+                                <p>에이스스퀘어 의정부점 OPEN</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sect3-swiper">
+                <div class="swiper mySwiper7">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide slide1">
+                            <img src="./images/sect3-swi1.jpg" alt="">
+                            <h4>매장오픈소식</h4>
+                            <p>롯데백화점 잠실점 OPEN</p>
+                        </div>
+                        <div class="swiper-slide slide2">
+                            <img src="./images/sect3-swi2.jpg" alt="">
+                            <h4>매장오픈소식</h4>
+                            <p>에이스스퀘어 중곡점 OPEN</p>
+                        </div>
+                        <div class="swiper-slide slide3">
+                            <img src="./images/sect3-swi3.jpg" alt="">
+                            <h4>매장오픈소식</h4>
+                            <p>에이스스퀘어 의정부점 OPEN</p>
+                        </div>
+                    </div>
+                    <div class="right"><img src="./images/right-icon.png" alt=""></div>
+                    <div class="swiper-scrollbar"></div>
+                </div>
+            </div>
+        </section>
+        <section id="sect4">
+            <h2>NOW SNS</h2>
+            <div class="grid">
+                <div class="swiper mySwiper8">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide slide1">
+                            <div class="box"><img src="./images/grid1.png" alt=""></div>
+                        </div>
+                        <div class="swiper-slide slide2">
+                            <div class="box"><img src="./images/grid2.jpg" alt=""></div>
+                        </div>
+                        <div class="swiper-slide slide3">
+                            <div class="box"><img src="./images/grid3.png" alt=""></div>
+                        </div>
+                        <div class="swiper-slide slide4">
+                            <div class="box"><img src="./images/grid4.jpg" alt=""></div>
+                        </div>
+                        <div class="swiper-slide slide5">
+                            <div class="box"><img src="./images/grid5.jpg" alt=""></div>
+                        </div>
+                        <div class="swiper-slide slide6">
+                            <div class="box"><img src="./images/grid6.png" alt=""></div>
+                        </div>
+                        <div class="swiper-slide slide7">
+                            <div class="box"><img src="./images/grid7.jpg" alt=""></div>
+                        </div>
+                        <div class="swiper-slide slide8">
+                            <div class="box"><img src="./images/grid8.jpg" alt=""></div>
+                        </div>
+                    </div>
+                    <a href="#" class="prev arrow">
+                        <svg>
+                            <path class="btn_next" d="M 40 10 Q 40 65 40 140">
+                            </path>
+                        </svg>
+                        <p>PREV</p>
+                    </a>
+                    <a href="#" class="next arrow">
+                        <svg>
+                            <path class="btn_prev" d="M 10 10 Q 10 65 10 140"></path>
+                        </svg>
+                        <p>NEXT</p>
+                    </a>
+                </div>
+            </div>
+            <div class="sns">
+                <ul class="flex">
+                    <li><a href="#"><img src="./images/sns1.png" alt=""></a></li>
+                    <li><a href="#"><img src="./images/sns2.png" alt=""></a></li>
+                    <li><a href="#"><img src="./images/sns3.png" alt=""></a></li>
+                    <li><a href="#"><img src="./images/sns4.png" alt=""></a></li>
+                </ul>
+            </div>
+        </section>
+        <section id="sect5">
+            <div class="sect5-bg">
+                <img src="./images/store-map.jpg" alt="">
+            </div>
+            <div class="sect5-search">
+                <p>현재 고객님과 가까운<br>
+                    매장을 안내해 드립니다.</p>
+                <form method="get" action="/search" role="search" class="flex">
+                    <input type="search" id="user-search" name="query" placeholder="매장명 및 지역 검색"
+                        aria-label="사이트 내용을 통해 검색">
+                    <button type="submit"><img src="./images/search-icon-wht.png" alt=""></button>
+                </form>
+            </div>
+            <div class="menual">
+                <ul class="flex">
+                    <li>
+                        <a href="#">
+                            <img src="./images/map-icon1.png" alt="">
+                            <p>제품 매뉴얼</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./images/map-icon2.png" alt="">
+                            <p>A/S 및 상담</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./images/map-icon3.png" alt="">
+                            <p>자주 묻는 질문</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="sect6">
+            <div class="sect6-bg">
+                <div class="flex as">
+                    <div class="left">
+                        <h3>고객센터</h3>
+                        <p>1599-7121</p>
+                        <span>(09:30~18:30, 토요일&공휴일 휴무)</span>
+                    </div>
+                    <div class="right">
+                        <h3>A/S 문의</h3>
+                        <p>080-735-7123</p>
+                        <span>(09:30~18:30, 토요일&공휴일 휴무)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="flex">
+            <div class="footer-link">
+                <ul class="flex">
+                    <li><a href="#">기업정보</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#" style="color: #0890c0;font-weight: 700;">개인정보처리방침</a></li>
+                    <li><a href="#">매장개설안내</a></li>
+                    <li><a href="#">특판사업</a></li>
+                    <li><a href="#">고객지원</a></li>
+                    <li><a href="#">구매인증센터</a></li>
+                </ul>
+                <div class="info">
+                    <p>(주)에이스침대 / 사업자등록번호 : 129-81-02666</p>
+                    <p>본사 : 경기도 성남시 중원구 사기막골로 105번길 42(상대원동) / 서울영업본부 : 서울특별시 강남구 도산대로 218 / FAX : 02-544-8788</p>
+                    <p>COPYRIGHT (C) ACE BED CORPORATION ALL RIGHTS RESERVED</p>
+                </div>
+            </div>
+            <div class="family">
+                <div class="site">
+                    <div class="family-site">
+                        <p style="font-weight: 400;">FAMILY SITE</p>
+                        <img src="./images/family-icon2-on.png" alt="">
+                    </div>
+                    <ul class="up">
+                        <img src="./images/family-icon2-wht-on.png" alt="">
+                        <li><a href="#">ENGLISH</a></li>
+                        <li><a href="#">에이스 에비뉴</a></li>
+                        <li><a href="#">에이스 헤리츠</a></li>
+                        <li><a href="#">에이스 침대몰</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
+        $('.family-site').click(function(){
+            $('.up').slideDown()
+        })
+        $('.up>img').click(function(){
+            $('.up').slideUp()
+        })
 
-        
-$('#sect2 .tab-menu ul li a').click(function (e) {
+        var swiper8 = new Swiper(".mySwiper8", {
+            slidesPerView: 2,
+            navigation: {
+                nextEl: ".next",
+                prevEl: ".prev",
+            },
+            grid: {
+                rows: 2,
+            },
+
+            breakpoints: {
+
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                    grid: {
+                        rows: 2,
+                    },
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 30,
+                    grid: {
+                        rows: 2,
+                    },
+                },
+            },
+        });
+
+
+
+        //----------------swiper7
+        var swiper7 = new Swiper(".mySwiper7", {
+            scrollbar: {
+                el: ".swiper-scrollbar",
+                hide: false,
+            },
+        });
+
+
+        $('#sect2 .tab-menu ul li a').click(function (e) {
             e.preventDefault()
             $('#sect2 .tab-menu ul li a').removeClass('on')
             $(this).addClass('on')
+            $(this).parents('.tab').addClass('on')
             let href = $(this).attr('href')
             $('.tab').hide()
             $(href).show()
@@ -588,10 +917,22 @@ $('#sect2 .tab-menu ul li a').click(function (e) {
             $('.tab2').hide()
             $(href).show()
         })
-  
 
-        const swiperSlide = document.querySelectorAll('.swiper3 .swiper-slide')
-        console.log(swiperSlide)
+        $('#sect2 .mobile-tab-menu ul li a').click(function (e) {
+            e.preventDefault()
+            $('#sect2 .mobile-tab-menu ul li a').removeClass('on')
+            $(this).addClass('on')
+            let href = $(this).attr('href')
+            $('.tab3').hide()
+            $(href).show()
+        })
+
+
+        const swiperSlide3 = document.querySelectorAll('.swiper3 .swiper-slide')
+        const swiperSlide4 = document.querySelectorAll('.swiper4 .swiper-slide')
+        const swiperSlide5 = document.querySelectorAll('.swiper5 .swiper-slide')
+        const swiperSlide6 = document.querySelectorAll('.swiper6 .swiper-slide')
+
         //summary .on
         // ----------------swiper3------------------------------
         var swiper3 = new Swiper(".mySwiper3", {
@@ -609,18 +950,18 @@ $('#sect2 .tab-menu ul li a').click(function (e) {
             },
 
         });
-      
+
         swiper3.on('slideChange', function () {
 
             let activeIdx = swiper3.activeIndex
             console.log(activeIdx)
-            swiperSlide.forEach((item) => {
+            swiperSlide3.forEach((item) => {
                 item.classList.remove('on')
             });
-            swiperSlide[activeIdx].classList.add('on');
+            swiperSlide3[activeIdx].classList.add('on');
         });
 
- // -----------------swiper4-----------------------------
+        // -----------------swiper4-----------------------------
         var swiper4 = new Swiper(".mySwiper4", {
             speed: 1200,
             slidesPerView: "auto",
@@ -636,22 +977,22 @@ $('#sect2 .tab-menu ul li a').click(function (e) {
             },
 
         });
-      
+
         swiper4.on('slideChange', function () {
 
             let activeIdx = swiper4.activeIndex
             console.log(activeIdx)
-            swiperSlide.forEach((item) => {
+            swiperSlide4.forEach((item) => {
                 item.classList.remove('on')
             });
-            swiperSlide[activeIdx].classList.add('on');
+            swiperSlide4[activeIdx].classList.add('on');
         });
-        
-        
-         // -----------------swiper5-----------------------------
+
+
+        // -----------------swiper5-----------------------------
         var swiper5 = new Swiper(".mySwiper5", {
             speed: 1200,
-            spaceBetween: 50,
+            spaceBetween: 70,
             scrollbar: {
                 el: ".swiper-scrollbar",
                 hide: false,
@@ -662,21 +1003,21 @@ $('#sect2 .tab-menu ul li a').click(function (e) {
             },
 
         });
-      
+
         swiper5.on('slideChange', function () {
 
             let activeIdx = swiper5.activeIndex
             console.log(activeIdx)
-            swiperSlide.forEach((item) => {
+            swiperSlide5.forEach((item) => {
                 item.classList.remove('on')
             });
-            swiperSlide[activeIdx].classList.add('on');
+            swiperSlide5[activeIdx].classList.add('on');
         });
 
-      // -----------------swiper6-----------------------------
+        // -----------------swiper6-----------------------------
         var swiper6 = new Swiper(".mySwiper6", {
             speed: 1200,
-            spaceBetween: 50,
+            spaceBetween: 70,
             scrollbar: {
                 el: ".swiper-scrollbar",
                 hide: false,
@@ -687,21 +1028,21 @@ $('#sect2 .tab-menu ul li a').click(function (e) {
             },
 
         });
-      
+
         swiper6.on('slideChange', function () {
 
             let activeIdx = swiper6.activeIndex
             console.log(activeIdx)
-            swiperSlide.forEach((item) => {
+            swiperSlide6.forEach((item) => {
                 item.classList.remove('on')
             });
-            swiperSlide[activeIdx].classList.add('on');
+            swiperSlide6[activeIdx].classList.add('on');
         });
 
 
 
 
-
+        //--------------header----------------------
         let prevScrollTop = 0
         let header = document.querySelector('header');
         const sectionElems = document.querySelectorAll('section')
@@ -780,6 +1121,16 @@ $('#sect2 .tab-menu ul li a').click(function (e) {
             $('.sect1-video ul').animate({ 'left': left }, 500, "linear");
             $('li.txt').removeClass('on')
             $('li.txt').eq(idx).addClass('on')
+        })
+
+        $('.sect3-menu ul li a').click(function (e) {
+            e.preventDefault()
+            $('.sect3-menu ul li a').removeClass('on')
+            $(this).addClass('on')
+            let idx2 = $(this).parent('.sect3-menu ul li').index()
+            let left2 = (idx2 * -100) + '%'
+            $('.sect3-swi ul').animate({ 'left': left2 }, 500);
+
         })
     </script>
 </body>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery TODOLIST</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        li {
+            list-style: none;
+            margin: 5px 0;
+            border-bottom: 1px solid #eee;
+            padding: 5px 0;
+        }
+
+        img {
+            vertical-align: top;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            border: 1px solid #d1d1d1;
+            padding: 10px;
+        }
+
+        button {
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        input[type='text'] {
+            padding: 5px;
+            width: 90%;
+        }
+
+        h2 {
+            margin-top: 10px;
+        }
+
+        .flex {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        p {
+            width: 80%;
+        }
+
+        .edit-input {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>나의 할 일</h1>
+        <input type="text" id="add-text" placeholder="할 일 입력">
+        <button id="add-button">추가</button>
+        <div>
+            <h2>할 일 목록</h2>
+            <ul id="memo-list">
+
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $('#add-button').click(function () {
+            const text = $('#add-text').val()
+
+            if (text) {
+                addToList(text)
+                $('#add-text').val('')
+            } else {
+                alert('값을 입력하세요.')
+            }
+        })
+        // -------------------------------------
+        $('#add-text').keydown(function (e) {
+            if (e.key === 'Enter') {
+                $('#add-button').click()
+            }
+        })
+        // -------------------------------------
+        //데이터 CRUD
+        //Create: 생성
+        //Read: 읽기
+        //Update: 수정
+        //Delete: 삭제
+        function addToList(text) {
+            const $li = $('<li>').addClass('flex') //변수 이름 앞에 $를 붙이면 엘리먼트 요소 추가 (객체변수)
+            const $p = $('<p>').text(text)
+            const $div = $('<div>')
+            const $editBtn = $('<button>').text('수정').addClass('edit-button')
+            const $delBtn = $('<button>').text('삭제').addClass('del-button')
+
+            $div.append($editBtn, $delBtn)
+            $li.append($p, $div)
+            $('#memo-list').append($li)
+
+            
+            $delBtn.click(function () {
+                // confirm('정말 삭제하시겠습니다?')
+                $li.remove()
+            })
+            
+            $editBtn.click(function () {
+                const currentText = $p.text()
+                $p.empty()//p에 담겨있는 값을 clear
+                const $editInput = $('<input>').attr('type', 'text').addClass('edit-input').val(currentText)
+                const $saveBtn = $('<button>').text('저장').addClass('save-btn')
+                $p.append($editInput)
+                $editBtn.hide()
+                $delBtn.hide()
+                $div.append($saveBtn)
+
+                $saveBtn.click(function () {
+                    const newText = $editInput.val()
+                    if (newText) {
+                        $p.text(newText)
+
+                        $saveBtn.remove()
+                        $editBtn.show()
+                        $delBtn.show()
+                    }
+                })
+            })
+        }
+    </script>
+</body>
+
+</html>

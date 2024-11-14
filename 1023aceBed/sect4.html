@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        .grid {
+            max-width: 1440px;
+            height: 80vh;
+            margin: 40px auto 0;
+            border: 1px solid #000;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .swiper-wrapper {
+            flex-direction: row;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            cursor: pointer;
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            height: calc((100% - 30px) / 2);
+        }
+
+        .swiper-slide:hover img {
+            transform: scale(1.08);
+        }
+
+        .box {
+            width: 100%;
+            height: 100%;
+            border: 1px solid #000;
+            overflow: hidden;
+            margin: 10px;
+        }
+
+        .box img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: .5s;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="sect4">
+        <h2>NOW SNS</h2>
+        <div class="grid">
+            <div class="swiper mySwiper8">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide slide1">
+                        <div class="box"><img src="./images/grid1.png" alt=""></div>
+                    </div>
+                    <div class="swiper-slide slide2">
+                        <div class="box"><img src="./images/grid2.jpg" alt=""></div>
+                    </div>
+                    <div class="swiper-slide slide3">
+                        <div class="box"><img src="./images/grid3.png" alt=""></div>
+                    </div>
+                    <div class="swiper-slide slide4">
+                        <div class="box"><img src="./images/grid4.jpg" alt=""></div>
+                    </div>
+                    <div class="swiper-slide slide5">
+                        <div class="box"><img src="./images/grid5.jpg" alt=""></div>
+                    </div>
+                    <div class="swiper-slide slide6">
+                        <div class="box"><img src="./images/grid6.png" alt=""></div>
+                    </div>
+                    <div class="swiper-slide slide7">
+                        <div class="box"><img src="./images/grid7.jpg" alt=""></div>
+                    </div>
+                    <div class="swiper-slide slide8">
+                        <div class="box"><img src="./images/grid8.jpg" alt=""></div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+        <div class="sns">
+            <ul class="flex">
+                <li><a href="#"><img src="./images/sns1.png" alt=""></a></li>
+                <li><a href="#"><img src="./images/sns2.png" alt=""></a></li>
+                <li><a href="#"><img src="./images/sns3.png" alt=""></a></li>
+                <li><a href="#"><img src="./images/sns4.png" alt=""></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper8 = new Swiper(".mySwiper8", {
+            slidesPerView: 1,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                    grid: {
+                        rows: 2,
+                    },
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 10,
+                    grid: {
+                        rows: 2,
+                    },
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 10,
+                    grid: {
+                        rows: 2,
+                    },
+                },
+            },
+        });
+    </script>
+</body>
+
+</html>

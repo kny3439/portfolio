@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .flex {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            width: 500px;
+            margin: auto;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .view {
+            flex: 1;
+        }
+
+        .completed {
+            text-decoration: line-through;
+            color: gray;
+        }
+
+        .inputbox {
+            display: flex;
+        }
+
+        .inputbox input {
+            flex: 1;
+        }
+
+        .filter-buttons {
+            display: flex;
+            justify-content: flex-end;
+
+        }
+
+        button {
+            padding: 5px 12px;
+            cursor: pointer;
+        }
+
+
+        input,
+        #add-text[type='text'] {
+            padding: 5px 0;
+        }
+
+        li {
+            margin: 5px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        li p {
+            flex: 1;
+        }
+
+        .edit-input {
+            width: 95%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="view flex">
+            <h2 class="title">
+                나의 할 일
+            </h2>
+            <div class="filter-buttons">
+                <button id="filter-all">ALL</button>
+                <button id="filter-active">진행 중</button>
+                <button id="filter-completed">완료</button>
+            </div>
+        </div>
+        <div class="container">
+            <ul id="memo-list">
+
+            </ul>
+        </div>
+        <div class="inputbox">
+            <input type="text" id="add-text" class="flex">
+            <button onclick="addTodo()">추가</button>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script>
+    <script>
+
+        let todos = [];
+        let filter = 'all';
+
+        // ---------------------------------------------
+        // add, get, delete, update
+        // 01. 초기 설정 및 Firebase 연결
+        // Firebase 프로젝트의 정보를 FirebaseConfig 객체에 담아 초기화
+        const firebaseConfig = {
+            apiKey: "AIzaSyCr4xjBFbmCOzqgQnrvVtBxLcyKm8bfzm0",
+            authDomain: "todo-app-60c64.firebaseapp.com",
+            projectId: "todo-app-60c64",
+            storageBucket: "todo-app-60c64.firebasestorage.app",
+            messagingSenderId: "1024653811856",
+            appId: "1:1024653811856:web:43bcb967a614af13cb7815"
+        };
+        firebase.initializeApp(firebaseConfig);
+        //firebase 데이터베이스를 객체로 CRUD 작업을 할 수 있도록 함.
+        const db = firebase.firestore()
+
+        // -------------------------------------------
+        // firestore 에서 get()메서드를 호출하면 데이터베이스쿼리의 결과를 querySnapshot이라는 객체 형태로 반환된다
+        //firestore가져온 문서데이터들을 포함하면, 가져온 데이터를 todos 배열에 저장
+        function getFirebaseData() {
+            // firestore에서 todo-app collection을 최신순으로 정렬해서 가져와라
+            db.collection('todo-app').orderBy('timestamp', 'desc')
+                .get().then(querySnapshot => {
+                    todos = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }))
+                    renderList()
+                })
+        }
+
+        document.getElementById('add-text').addEventListener('keydown', function (e) {
+            if (e.key === 'Enter') {
+                addTodo()
+            }
+        })
+
+        //02. 할 일 추가--------------------
+        function addTodo() {
+            const text = document.getElementById('add-text')
+            const input_text = text.value
+
+            if (input_text) {
+                const newTodo = {
+                    text: input_text,
+                    completed: false,
+                    //데이터가 언제 추가 되었는지의 시간 정보를 저장
+                    timestamp: firebase.firestore.FieldValue.serverTimestamp()
+                }
+                db.collection('todo-app').add(newTodo).then(() => {
+                    text.value = '';
+                    getFirebaseData();
+                }).catch(err => { console.error(err); })
+            }
+        }
+        //03. 할 일 수정-------------------
+        function updateTodo(id, updataText, completed) {
+            db.collection('todo-app').doc(id).update({ text: updataText, completed })
+                .then(() => getFirebaseData())
+
+
+        }
+        //04. 할 일 삭제------------------
+        function deleteTodo(id) {
+            db.collection('todo-app').doc(id).delete()
+                .then(() => getFirebaseData())
+        }
+
+
+
+        // --------------------------------------------------------------
+
+        function addTodoList(text, completed) {
+            const todo = { text, completed }
+            todos.push(todo)
+            renderList()
+        }
+
+        // ----------------------------------------------------
+        function renderList() {
+            const memoList = document.getElementById('memo-list')
+            memoList.innerHTML = ''
+            const filterdTodo = todos.filter(todo => {
+                if (filter === 'active') return !todo.completed
+                if (filter === 'completed') return todo.completed
+                return true
+            })
+
+            // ----------------------------------------------
+            filterdTodo.forEach((todo, i) => {
+                const li = document.createElement('li')
+                li.classList.add('flex')
+
+                const checkbox = document.createElement('input')
+                checkbox.type = 'checkbox'
+                checkbox.checked = todo.completed
+
+                checkbox.addEventListener('change', function () {
+                    todo.completed = checkbox.checked
+
+                    updateTodo(todo.id, todo.text, checkbox.checked)
+                })
+
+                const p = document.createElement('p')
+                p.textContent = todo.text
+                if (todo.completed) p.classList.add('completed')
+
+                const btndiv = document.createElement('div')
+                const delBtn = document.createElement('button')
+
+                delBtn.textContent = '삭제'
+                delBtn.addEventListener('click', function () {
+                    deleteTodo(todo.id)
+                })
+
+                const editBtn = document.createElement('button')
+                editBtn.textContent = '수정'
+
+                btndiv.appendChild(editBtn)
+                btndiv.appendChild(delBtn)
+
+                li.appendChild(checkbox)
+                li.appendChild(p)
+                li.appendChild(btndiv)
+
+                editBtn.addEventListener('click', function () {
+                    const currentText = todo.text
+                    const editInput = document.createElement('input')
+                    editInput.type = 'text'
+                    editInput.value = currentText
+                    const saveBtn = document.createElement('button')
+                    saveBtn.textContent = '저장'
+                    editInput.classList.add('edit-input')
+
+                    saveBtn.addEventListener('click', function () {
+                        if (editInput.value) {
+
+                            updateTodo(todo.id, editInput.value, todo.completed)
+                        }
+                    })
+                    p.textContent = '';
+                    delBtn.style.display = 'none'
+                    p.appendChild(editInput)
+                    btndiv.replaceChild(saveBtn, editBtn)
+
+                })
+
+                memoList.appendChild(li)
+                console.log(memoList)
+
+            })
+        }
+
+
+
+        document.getElementById('filter-all').addEventListener('click', function () {
+            filter = 'all'
+            renderList()
+        })
+        document.getElementById('filter-active').addEventListener('click', function () {
+            filter = 'active'
+            renderList()
+        })
+        document.getElementById('filter-completed').addEventListener('click', function () {
+            filter = 'completed'
+            renderList()
+        })
+
+        getFirebaseData()
+    </script>
+</body>
+
+</html>

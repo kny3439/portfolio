@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODOLIST JS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        li {
+            list-style: none;
+            margin: 5px 0;
+            border-bottom: 1px solid #eee;
+            padding: 5px 0;
+        }
+
+        img {
+            vertical-align: top;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            border: 1px solid #d1d1d1;
+            padding: 10px;
+        }
+
+        button {
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        input[type='text'] {
+            padding: 5px;
+            width: 90%;
+        }
+
+        h2 {
+            margin-top: 10px;
+        }
+
+        .flex {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        p {
+            width: 80%;
+        }
+
+        .edit-input {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>나의 할 일</h1>
+        <input type="text" id="add-text" placeholder="할 일 입력">
+        <button id="add-button">추가</button>
+        <div>
+            <h2>할 일 목록</h2>
+            <ul id="memo-list">
+
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- localStorage
+     1. 창을 닫아도 사용자가 설정한 테마 유지
+     2. 사이트 재 방문 시 자동 로그인 설정
+     3. 장바구니 내용 저장
+    -->
+
+    <script>
+        const addText = document.getElementById('add-text')
+        const addBtn = document.getElementById('add-button')
+        const memoList = document.getElementById('memo-list')
+
+        window.addEventListener('load', function () {
+            const storageTodo = JSON.parse(localStorage.getItem('todoList'))
+            storageTodo.forEach(todo=>{
+                addToList(todo)
+            })
+        })
+        // -----------------------
+        addBtn.addEventListener('click', function () {
+            const text = addText.value;
+            if (text) {
+                addToList(text)
+                saveStorage()
+                addText.value = '';
+                addText.focus();
+            } else {
+                alert('값을 입력하세요.');
+            }
+        })
+        // ----------------------------
+        addText.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter') {
+                addBtn.click()
+            }
+        })
+        // -----------------------------
+        function addToList(text) {
+            const li = document.createElement('li')
+            li.classList.add('flex')
+
+            const p = document.createElement('p')
+            p.textContent = text
+
+            const div = document.createElement('div')
+            const deleteBtn = document.createElement('button')
+            deleteBtn.textContent = '삭제'
+            deleteBtn.classList.add('del-btn')
+
+            const editBtn = document.createElement('button')
+            editBtn.textContent = '수정'
+            editBtn.classList.add('edit-btn')
+
+            div.appendChild(editBtn)
+            div.appendChild(deleteBtn)
+            li.appendChild(p)
+            li.appendChild(div)
+
+            memoList.appendChild(li)
+
+            deleteBtn.addEventListener('click', function () {
+                li.remove()
+                saveStorage()
+            })
+
+            editBtn.addEventListener('click', function () {
+                const currentText = p.textContent
+                p.textContent = '';
+                const editInput = document.createElement('input')
+                editInput.type = 'text'
+                editInput.value = currentText
+
+                const saveBtn = document.createElement('button')
+                saveBtn.textContent = '저장'
+                saveBtn.classList.add('save-btn')
+
+                p.appendChild(editInput)
+                editBtn.style.display = 'none'
+                deleteBtn.style.display = 'none'
+                div.appendChild(saveBtn)
+
+                saveBtn.addEventListener('click', function () {
+                    const newText = editInput.value
+                    if (newText) {
+                        p.textContent = newText
+                        saveBtn.remove()
+                        editBtn.style.display = 'inline-block'
+                        deleteBtn.style.display = 'inline-block'
+                        saveStorage()
+                    }
+                })
+
+            })
+        }
+
+        // -----------------------------
+        function saveStorage() {
+            const todos = []//값을 읽어 저장 할 배열 생성
+            document.querySelectorAll('#memo-list li p').forEach(p => {
+                todos.push(p.textContent)//생성된 배열에 값을 읽어 저장
+            })
+            //저장된 배열을 localstorage에 JSON 문자열로 저장
+            localStorage.setItem('todoList', JSON.stringify(todos))
+        }
+
+    </script>
+</body>
+
+</html>

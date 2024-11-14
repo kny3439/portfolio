@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
+    <style>
+        .flex {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            width: 500px;
+            margin: auto;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .view {
+            flex: 1;
+        }
+
+        .completed {
+            text-decoration: line-through;
+            color: gray;
+        }
+
+        .inputbox {
+            display: flex;
+        }
+
+        .inputbox input {
+            flex: 1;
+        }
+
+        .filter-buttons {
+            display: flex;
+            justify-content: flex-end;
+
+        }
+
+        button {
+            padding: 5px 12px;
+            cursor: pointer;
+        }
+
+
+        input,
+        #add-text[type='text'] {
+            padding: 5px 0;
+        }
+
+        li {
+            margin: 5px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        li p {
+            flex: 1;
+        }
+
+        .edit-input {
+            width: 95%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="view flex">
+            <h2 class="title">
+                나의 할 일
+            </h2>
+            <div class="filter-buttons">
+                <button id="filter-all">ALL</button>
+                <button id="filter-active">진행 중</button>
+                <button id="filter-completed">완료</button>
+            </div>
+        </div>
+        <div class="container">
+            <ul id="memo-list">
+
+            </ul>
+        </div>
+        <div class="inputbox">
+            <input type="text" id="add-text" class="flex">
+            <button id="add-button">추가</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+
+        const apiURL = 'http://localhost:3000/todos'
+
+        // const 데이터 값이 입력 안됨
+        let todos = []// 할 일 목록 배열
+        let filter = 'all'// 초기 필터 상태
+        // 데이터를 서버와 주고 받는 처리 방법[REST APT]
+        // 초기 상태: 페이지가 로드되면 fetchTodos 함수 호출 서버에서 할 일 목록을 가져옴
+        //값을 입력 후 addTodo 함수가 호출되면 서버에 POST 요청을 보내 파일을 저장
+        // 수정 버튼을 클릭하면 입력한 데이터 값을 읽어들여 저장 버튼을 클릭 서버에 PATCH요청에 updateTodo를 호출 해 값 변경
+        // 완료 된 일, 할 일을 구분하는 check버튼 onchange 서버에 PATCH요청에 updateTodo를 호출에 값 변경
+        // 할 일 삭제: 삭제 버튼을 클릭하면 deleteTodo 호출되어 서버에 DELETE요철을 보내 데이터 삭제
+        // UI 업데이트: 서버와의 데이터 동기화를 renderList 호출하여 처리
+
+
+        //01. 서버에 가져오기
+        function fecthTodos() {
+
+            axios.get(apiURL)
+                .then(res => {
+                    console.log(res.data);
+                    todos = res.data
+                    renderList();
+                }).catch(err => {
+                    console.error(err)
+                })
+
+
+        }
+        //02. 할 일 추가--------------------
+        function addTodo(text) {
+            const newTodo = { text, completed: false }
+
+            axios.post(apiURL, newTodo)
+                .then(res => {
+                    todos.push(data);
+                    renderList()
+                })
+        }
+        //03. 할 일 수정-------------------
+        function updateTodo(id, updataText, completed) {
+            const updateTodo = { text: updataText, completed }
+
+            axios.patch(`${apiURL}/${id}`, updateTodo)
+                .then(() => {
+                    const todo = todos.find(todo => todo.id === id)
+                    todo.text = updataText
+                    todo.completed = completed
+                    renderList()
+                })
+        }
+        //04. 할 일 삭제------------------
+        function deleteTodo(id) {
+
+            axios.delete(`${apiURL}/${id}`).then(() => {
+                todos = todos.filter(todo => todo.id !== id)
+                renderList()
+            })
+        }
+
+
+        document.getElementById('add-button').addEventListener('click', function () {
+            const text = document.getElementById('add-text').value
+
+            if (text) {
+                addTodo(text);
+                document.getElementById('add-text').value = '';
+                document.getElementById('add-text').focus();
+            }
+            else {
+                alert('값을 입력하세요.');
+            }
+        })
+
+
+        document.getElementById('add-text').addEventListener('keydown', function (e) {
+            if (e.key === 'Enter') {
+                document.getElementById('add-button').click()
+            }
+        })
+
+
+        // --------------------------------------------------------------
+
+        function addTodoList(text, completed) {
+            const todo = { text, completed }
+            todos.push(todo)
+            renderList()
+        }
+
+        // ----------------------------------------------------
+        function renderList() {
+            const memoList = document.getElementById('memo-list')
+            memoList.innerHTML = ''
+            const filterdTodo = todos.filter(todo => {
+                if (filter === 'active') return !todo.completed
+                if (filter === 'completed') return todo.completed
+                return true
+            })
+
+            // ----------------------------------------------
+            filterdTodo.forEach((todo, i) => {
+                const li = document.createElement('li')
+                li.classList.add('flex')
+
+                const checkbox = document.createElement('input')
+                checkbox.type = 'checkbox'
+                checkbox.checked = todo.completed
+
+                checkbox.addEventListener('change', function () {
+                    todo.completed = checkbox.checked
+
+                    updateTodo(todo.id, todo.text, checkbox.checked)
+                })
+
+                const p = document.createElement('p')
+                p.textContent = todo.text
+                if (todo.completed) p.classList.add('completed')
+
+                const btndiv = document.createElement('div')
+                const delBtn = document.createElement('button')
+
+                delBtn.textContent = '삭제'
+                delBtn.addEventListener('click', function () {
+                    deleteTodo(todo.id)
+                })
+
+                const editBtn = document.createElement('button')
+                editBtn.textContent = '수정'
+
+                btndiv.appendChild(editBtn)
+                btndiv.appendChild(delBtn)
+
+                li.appendChild(checkbox)
+                li.appendChild(p)
+                li.appendChild(btndiv)
+
+                editBtn.addEventListener('click', function () {
+                    const currentText = todo.text
+                    const editInput = document.createElement('input')
+                    editInput.type = 'text'
+                    editInput.value = currentText
+                    const saveBtn = document.createElement('button')
+                    saveBtn.textContent = '저장'
+                    editInput.classList.add('edit-input')
+
+                    saveBtn.addEventListener('click', function () {
+                        if (editInput.value) {
+
+                            updateTodo(todo.id, editInput.value, checkbox.completed)
+                        }
+                    })
+                    p.textContent = '';
+                    delBtn.style.display = 'none'
+                    p.appendChild(editInput)
+                    btndiv.replaceChild(saveBtn, editBtn)
+
+                })
+
+                memoList.appendChild(li)
+                console.log(memoList)
+
+            })
+        }
+
+
+
+        document.getElementById('filter-all').addEventListener('click', function () {
+            filter = 'all'
+            renderList()
+        })
+        document.getElementById('filter-active').addEventListener('click', function () {
+            filter = 'active'
+            renderList()
+        })
+        document.getElementById('filter-completed').addEventListener('click', function () {
+            filter = 'completed'
+            renderList()
+        })
+
+        fecthTodos()
+    </script>
+</body>
+
+</html>

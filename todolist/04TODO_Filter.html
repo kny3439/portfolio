@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
+    <style>
+        .flex {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            width: 500px;
+            margin: auto;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .view {
+            flex: 1;
+        }
+
+        .completed {
+            text-decoration: line-through;
+            color: gray;
+        }
+
+        .inputbox {
+            display: flex;
+        }
+
+        .inputbox input {
+            flex: 1;
+        }
+
+        .filter-buttons {
+            display: flex;
+            justify-content: flex-end;
+
+        }
+
+        button {
+            padding: 5px 12px;
+            cursor: pointer;
+        }
+
+
+        input,
+        #add-text[type='text'] {
+            padding: 5px 0;
+        }
+
+        li {
+            margin: 5px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        li p {
+            flex: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="view flex">
+            <h2 class="title">
+                나의 할 일
+            </h2>
+            <div class="filter-buttons">
+                <button id="filter-all">ALL</button>
+                <button id="filter-active">진행 중</button>
+                <button id="filter-completed">완료</button>
+            </div>
+        </div>
+        <div class="container">
+            <ul id="memo-list">
+
+            </ul>
+        </div>
+        <div class="inputbox">
+            <input type="text" id="add-text" class="flex">
+            <button id="add-button">추가</button>
+        </div>
+    </div>
+
+    <script>
+        // 할 일을 추가하면 배열에 저장하고,
+        // 추가버튼 클릭 동시에 조건에 맞는 리스트 표시 [기본 ALL]
+        // 각각의 리스트에 대해 체크박스, 수정, 삭제 기능 표시
+        // 각각의 기능 수정시 변경된 내용을 배열에 다시 저장하고 그 결과가 즉시 반영 되도록 한다
+
+        const todos = []  //할 일 목록 저장
+        let filter = 'all'  //초기 필터 값
+
+
+        //01. add-button 클릭하면 입력 될 할 일 (add-text)이 리스트에 추가
+        document.getElementById('add-button').addEventListener('click', function () {
+            const text = document.getElementById('add-text').value
+
+            if (text) {
+                addTodoList(text, false);//기본값은 모두 진행해야 할 일이기 때문에 false
+                document.getElementById('add-text').value = '';
+                document.getElementById('add-text').focus();
+            }
+            else {
+                alert('값을 입력하세요.');
+            }
+        })
+
+
+        //01. add-text 입력시 'Enter'키를 누르면 할 일 추가
+        document.getElementById('add-text').addEventListener('keydown', function (e) {
+            if (e.key === 'Enter') {
+                document.getElementById('add-button').click()
+            }
+        })
+
+
+        // --------------------------------------------------------------
+        //01. 할 일을 추가 할 때 addTodoList 함수가 호출되어 입력값이 todo배열에 추가
+        //01. renderList 함수가 호출되고 화면에 리스트가 업데이트
+        function addTodoList(text, completed) {
+            const todo = { text, completed } //입력값 가져오기
+            todos.push(todo) //입력 데이터 배열에 저장
+            renderList()
+        }
+
+        // ----------------------------------------------------
+        //02. renderList 함수는 todos 배열을 화면에 출력하는 역할
+        // 02. 현재 filter 값에 따라 할 일을 all, active, completed 로 필터링
+        function renderList() {
+            const memoList = document.getElementById('memo-list')
+            memoList.innerHTML = ''
+            const filterdTodo = todos.filter(todo => {
+                if (filter === 'active') return !todo.completed
+                if (filter === 'completed') return todo.completed
+                return true
+            })
+
+            // ----------------------------------------------
+            //02. 할 일 목록 <li>에 요소 생성
+            filterdTodo.forEach((todo, i) => {
+                const li = document.createElement('li')
+                li.classList.add('flex')
+
+
+                //02.체크박스
+                const checkbox = document.createElement('input')
+                checkbox.type = 'checkbox'
+                checkbox.checked = todo.completed
+
+                //03.할 일 상태 업데이트
+                checkbox.addEventListener('change', function () {
+                    todo.completed = checkbox.checked
+
+                    //03.체크박스를 클릭하면 renderList 함수가 다시 호출 되어 UI에 즉시 반영 
+                    renderList()
+                })
+
+                //02. 입력 값 표시(p)
+                const p = document.createElement('p')
+                p.textContent = todo.text
+                if (todo.completed) p.classList.add('completed')
+                //02. 수정, 삭제(button)
+                const btndiv = document.createElement('div')
+                const delBtn = document.createElement('button')
+
+                //04. '삭제' 버튼 클릭시 해당 할 일 항목 todos배열에서 제거
+                delBtn.textContent = '삭제'
+                delBtn.addEventListener('click', function () {
+                    todos.splice(i, 1)
+                    //04. 삭제 후 renderList 함수 호출 리스트가 다시 재 랜더링
+                    renderList()
+                })
+
+                //05. 할 일 수정
+                const editBtn = document.createElement('button')
+                editBtn.textContent = '수정'
+                //05. 수정 버튼 클릭시 해당 항목의 텍스트가 input 필드에 입력되고
+                editBtn.addEventListener('click', function () {
+                    const currentText = todo.text
+                    const editInput = document.createElement('input')
+                    editInput.type = 'text'
+                    editInput.value = currentText
+                    //05. 저장 버튼이 나타난다
+                    const saveBtn = document.createElement('button')
+                    saveBtn.textContent = '저장'
+
+                    //05. 수정 후 '저장'버튼 클릭하면 텍스트가 업데이트 되고
+                    //05. todos 배열 값에 저장하고, UI업데이트
+                    saveBtn.addEventListener('click', function () {
+                        if (editInput) {
+                            todo.text = editInput.value
+                            renderList()
+                        }
+                    })
+                    p.appendChild(editInput)
+                    btndiv.replaceChild(saveBtn, editBtn)
+                })
+                btndiv.appendChild(editBtn)
+                btndiv.appendChild(delBtn)
+
+                li.appendChild(checkbox)
+                li.appendChild(p)
+                li.appendChild(btndiv)
+                memoList.appendChild(li)
+            })
+        }
+
+
+
+        document.getElementById('filter-all').addEventListener('click', function () {
+            filter = 'all'
+            renderList()
+        })
+        document.getElementById('filter-active').addEventListener('click', function () {
+            filter = 'active'
+            renderList()
+        })
+        document.getElementById('filter-completed').addEventListener('click', function () {
+            filter = 'completed'
+            renderList()
+        })
+    </script>
+</body>
+
+</html>
